@@ -1,0 +1,28 @@
+{
+  "server": {
+    "port": 4000,
+    "host": "localhost"
+  },
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "maxDuration": 20,
+    "defaultDuration": 10
+  },
+  "paths": {
+    "storage": {
+      "images": "storage/images",
+      "audio": "storage/audio",
+      "videos": "storage/videos"
+    },
+    "credentials": "client_secret.json",
+    "token": "token.json"
+  },
+  "defaults": {
+    "characterStyle": "stylized",
+    "bgmVolume": 0.18,
+    "captionFont": "Impact",
+    "captionColor": "yellow"
+  }
+}

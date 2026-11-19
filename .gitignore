@@ -1,0 +1,17 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Google OAuth credentials
+client_secret.json
+token.json
+credentials.json
+
+# Generated files
+node_modules/
+dist/
+build/
+
+# Logs
+*.log

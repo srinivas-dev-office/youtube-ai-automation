@@ -1,0 +1,25 @@
+{
+  "name": "youtube-cartoon-agent",
+  "version": "1.0.0",
+  "description": "Automated YouTube Shorts Cartoon Generator powered by Gemini AI and FFmpeg",
+  "main": "pipeline.js",
+  "scripts": {
+    "dashboard": "node backend/server.js",
+    "start": "node backend/server.js",
+    "auth": "node authorize-youtube.js",
+    "upload": "node upload-youtube.js"
+  },
+  "keywords": [
+    "youtube",
+    "shorts",
+    "cartoon",
+    "gemini",
+    "ffmpeg",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^188.0.0"
+  }
+}

@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animio AI – AI Creative Video Studio</title>
+  <link rel="icon" type="image/jpeg" href="/assets/animio_logo.jpg">
+  
+  <!-- Inter, Noto Sans Telugu & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Anti-Flash Theme Script -->
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem("studio_theme") || "dark";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="studio-body">
+
+  <!-- ========================================================================= -->
+  <!-- 1. VIEW A: MAIN AI STUDIO DASHBOARD                                       -->
+  <!-- ========================================================================= -->
+  <div id="mainAiStudioView" class="studio-view-container">
+    
+    <!-- Top Header (Main Studio) -->
+    <header class="studio-top-header">
+      <div class="header-section left">
+        <div class="studio-brand">
+          <div class="brand-logo-container" title="Animio AI – AI Creative Video Studio">
+            <img src="/assets/animio_logo.jpg" alt="Animio AI" class="brand-logo-img" onerror="this.style.display='none'">
+          </div>
+          <div class="brand-text">
+            <div class="brand-title-row">
+              <span class="brand-title">Animio</span>
+              <span class="brand-ai-badge">AI</span>
+            </div>
+            <span class="brand-tagline">AI Creative Video Studio</span>
+          </div>
+        </div>
+
+        <div class="project-info-pill">
+          <span class="project-name" id="mainProjectTitle">The Little Star's Dream ⭐</span>
+          <span class="save-status-badge">
+            <span class="status-dot green"></span> Animio Ready
+          </span>
+        </div>
+      </div>
+
+      <div class="header-section center">
+        <!-- Prominent Edit Video Button that opens the Advanced Editor -->
+        <button class="btn btn-purple btn-md shadow-glow" id="btnOpenAdvancedEditor">
+          <span>✂️</span> <strong>Edit Video (Advanced Editor)</strong>
+        </button>
+      </div>
+
+      <div class="header-section right">
+        <button class="btn btn-insta btn-sm" id="btnMainPublishInsta" title="Export & Prepare for Instagram Reels">
+          <span class="insta-icon">📸</span> Instagram Reels
+        </button>
+
+        <button class="btn btn-yt btn-sm" id="btnMainPublishYt" title="Publish directly to YouTube Channel">
+          <span class="yt-play-icon">▶</span> Publish YouTube
+        </button>
+
+        <button class="theme-toggle-btn" id="btnMainThemeToggle" title="Toggle Dark/Light Mode">
+          <span class="theme-icon light">☀️</span>
+          <span class="theme-icon dark">🌙</span>
+        </button>
+
+        <div class="profile-btn" title="My Story Star Connected">👤</div>
+      </div>
+    </header>
+
+    <!-- Main AI Studio Body (Creation controls & preview) -->
+    <div class="ai-studio-grid">
+      
+      <!-- Left Column: Creation & Settings -->
+      <div class="ai-studio-col-left">
+        
+        <!-- Unified Production Pipeline Indicator -->
+        <div class="pipeline-status-bar" id="pipelineStatusBar">
+          <div class="pipe-step-item active" id="pipeStepStory">
+            <span class="pipe-step-dot"></span>
+            <span>1. Story &amp; Screenplay</span>
+          </div>
+          <span class="pipe-arrow">➔</span>
+          <div class="pipe-step-item" id="pipeStepChar">
+            <span class="pipe-step-dot"></span>
+            <span>2. Consistent Characters</span>
+          </div>
+          <span class="pipe-arrow">➔</span>
+          <div class="pipe-step-item" id="pipeStepScenes">
+            <span class="pipe-step-dot"></span>
+            <span>3. Storyboard Visuals</span>
+          </div>
+          <span class="pipe-arrow">➔</span>
+          <div class="pipe-step-item" id="pipeStepRender">
+            <span class="pipe-step-dot"></span>
+            <span>4. Master Video</span>
+          </div>
+        </div>
+
+        <!-- Character Style Selection (8 Styles) -->
+        <div class="studio-card mb-3">
+          <div class="flex-between mb-2">
+            <span class="card-heading">1. Character Visual Style</span>
+            <span class="badge purple" id="mainActiveStyleLabel">Realistic Style</span>
+          </div>
+          <div class="style-cards-grid" id="mainStyleCardsGrid">
+            <div class="style-mini-card active" data-style="realistic">
+              <img src="/storage/images/style_realistic.svg" alt="Realistic" class="style-mini-img" onerror="this.src='/storage/images/character_ref.png'">
+              <span>Realistic</span>
+            </div>
+            <div class="style-mini-card" data-style="stylized">
+              <img src="/storage/images/style_stylized.svg" alt="Stylized" class="style-mini-img">
+              <span>Stylized</span>
+            </div>
+            <div class="style-mini-card" data-style="anime">
+              <img src="/storage/images/style_anime.svg" alt="Anime" class="style-mini-img">
+              <span>Anime</span>
+            </div>
+            <div class="style-mini-card" data-style="chibi">
+              <img src="/storage/images/style_chibi.svg" alt="Chibi" class="style-mini-img">
+              <span>Chibi</span>
+            </div>
+            <div class="style-mini-card" data-style="rubberhose">
+              <img src="/storage/images/style_rubberhose.svg" alt="Rubber Hose" class="style-mini-img">
+              <span>Rubber Hose</span>
+            </div>
+            <div class="style-mini-card" data-style="flat">
+              <img src="/storage/images/style_flat.svg" alt="Flat" class="style-mini-img">
+              <span>Geometric</span>
+            </div>
+            <div class="style-mini-card" data-style="pixel">
+              <img src="/storage/images/style_pixel.svg" alt="Pixel" class="style-mini-img">
+              <span>Pixel Art</span>
+            </div>
+            <div class="style-mini-card" data-style="3d">
+              <img src="/storage/images/style_3d.svg" alt="3D" class="style-mini-img">
+              <span>3D Poly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Idea & Gemini Screenplay Generator -->
+        <div class="studio-card mb-3">
+          <div class="flex-between mb-2">
+            <span class="card-heading">2. Story Idea & Category</span>
+            <button class="btn btn-ghost btn-xs text-purple" id="btnMainAiSuggestIdeas">
+              <span>✨</span> AI Suggest
+            </button>
+          </div>
+
+          <!-- Story Category Selection Grid (13 Categories) -->
+          <div class="mb-2">
+            <div class="flex-between mb-1">
+              <label class="field-hint">Select Story Category / Genre</label>
+              <span class="badge blue text-xs" id="activeCategoryBadge">Animation</span>
+            </div>
+            <div class="category-cards-grid" id="storyCategoryGrid">
+              <div class="category-card" data-category="Horror">
+                <span class="cat-icon">👻</span>
+                <span class="cat-label">Horror</span>
+              </div>
+              <div class="category-card active" data-category="Animation">
+                <span class="cat-icon">🎨</span>
+                <span class="cat-label">Animation</span>
+              </div>
+              <div class="category-card" data-category="Fantasy">
+                <span class="cat-icon">🧙‍♂️</span>
+                <span class="cat-label">Fantasy</span>
+              </div>
+              <div class="category-card" data-category="Adventure">
+                <span class="cat-icon">🗺️</span>
+                <span class="cat-label">Adventure</span>
+              </div>
+              <div class="category-card" data-category="Comedy">
+                <span class="cat-icon">😂</span>
+                <span class="cat-label">Comedy</span>
+              </div>
+              <div class="category-card" data-category="Thriller">
+                <span class="cat-icon">⚡</span>
+                <span class="cat-label">Thriller</span>
+              </div>
+              <div class="category-card" data-category="Mystery">
+                <span class="cat-icon">🔍</span>
+                <span class="cat-label">Mystery</span>
+              </div>
+              <div class="category-card" data-category="Romance">
+                <span class="cat-icon">💖</span>
+                <span class="cat-label">Romance</span>
+              </div>
+              <div class="category-card" data-category="Mythology">
+                <span class="cat-icon">🏹</span>
+                <span class="cat-label">Mythology</span>
+              </div>
+              <div class="category-card" data-category="Action">
+                <span class="cat-icon">💥</span>
+                <span class="cat-label">Action</span>
+              </div>
+              <div class="category-card" data-category="Educational">
+                <span class="cat-icon">📚</span>
+                <span class="cat-label">Educational</span>
+              </div>
+              <div class="category-card" data-category="Kids Stories">
+                <span class="cat-icon">🧸</span>
+                <span class="cat-label">Kids Stories</span>
+              </div>
+              <div class="category-card" data-category="Custom">
+                <span class="cat-icon">✨</span>
+                <span class="cat-label">Custom</span>
+              </div>
+            </div>
+            <div id="customCategoryBox" class="mt-2 d-none">
+              <input type="text" id="customCategoryInput" class="studio-input" placeholder="Enter custom genre (e.g. Cyberpunk Sci-Fi Noir)...">
+            </div>
+          </div>
+
+          <label class="field-hint mb-1 d-block">Story Idea / Narrative Prompt</label>
+          <textarea id="mainIdeaPromptInput" class="studio-textarea" rows="3" placeholder="Enter story idea or character narrative...">A young girl moves into an old haunted house and discovers a mysterious ghost girl.</textarea>
+          
+          <div class="form-row-3 mt-2">
+            <div>
+              <label class="field-hint">Duration</label>
+              <select id="mainSelectDuration" class="studio-select">
+                <option value="10">10s (Fast • 3 Scenes)</option>
+                <option value="20" selected>20s (Standard • 4 Scenes)</option>
+                <option value="30">30s (Extended • 6 Scenes)</option>
+                <option value="60">60s (1 Minute • 10 Scenes)</option>
+                <option value="120">120s (2 Minutes • 16 Scenes)</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-hint">Language</label>
+              <select id="mainSelectLanguage" class="studio-select">
+                <option value="telugu" selected>🇮🇳 Telugu (తెలుగు)</option>
+                <option value="english">🌐 English</option>
+                <option value="hindi">🇮🇳 Hindi (हिंदी)</option>
+                <option value="tamil">🇮🇳 Tamil (தமிழ்)</option>
+                <option value="kannada">🇮🇳 Kannada (ಕನ್ನಡ)</option>
+                <option value="malayalam">🇮🇳 Malayalam (മലയാളം)</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-hint">Voice Personality</label>
+              <select id="mainSelectVoice" class="studio-select">
+                <option value="te-IN-MohanNeural" selected>Mohan (Storytelling)</option>
+                <option value="te-IN-ShrutiNeural">Shruti (Emotional)</option>
+                <option value="te-IN-AnandNeural">Anand (Young)</option>
+                <option value="te-IN-KavyaNeural">Kavya (Young)</option>
+                <option value="te-IN-RamaiahNeural">Ramaiah (Mature)</option>
+                <option value="te-Google-Standard">Telugu Cloud Voice</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn btn-purple btn-md w-100 mt-3 shadow-glow" id="btnMainGenerateStory">
+            <span>🪄</span> Generate Complete Story & Screenplay
+          </button>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- STEP 3: CHARACTER STUDIO & CONSISTENCY HUB                        -->
+        <!-- ================================================================= -->
+        <div class="studio-card mb-3" id="step3CharacterHub">
+          <!-- Hub Header -->
+          <div class="flex-between mb-3 border-b pb-2">
+            <div>
+              <div class="flex-row align-center gap-2">
+                <span class="card-heading">3. Character Studio & Consistency Hub</span>
+                <span class="badge blue" id="charStoryCategoryBadge">Animation</span>
+              </div>
+              <p class="field-hint mt-1">Characters identified for your story. Generate, edit profiles and lock primary visual references for scene consistency.</p>
+            </div>
+            <div class="flex-row gap-2">
+              <button class="btn btn-outline btn-xs" id="btnCharGenAll" title="Generate fresh images for all characters">
+                <span>⚡</span> Generate All References
+              </button>
+              <button class="btn btn-purple btn-xs shadow-glow" id="btnCharAddNew">
+                <span>➕</span> Add Character
+              </button>
+            </div>
+          </div>
+
+          <!-- Spacious Character Cards Grid -->
+          <div class="char-studio-cards-grid" id="charStudioCardsGrid">
+            <!-- Dynamically populated with large character cards -->
+          </div>
+        </div>
+
+        <!-- Sequential Storyboard Scene Cards -->
+        <div class="studio-card">
+          <div class="flex-between mb-2">
+            <div>
+              <span class="card-heading">4. Multi-Scene Visuals &amp; Storyboard</span>
+              <p class="field-hint mt-1">Images: <strong>Google Nano Banana 2</strong> • Animation: <strong>Google Veo 3.1</strong></p>
+            </div>
+            <div class="flex-row gap-2">
+              <button class="btn btn-primary btn-xs" id="btnMainGenerateAllImages" title="Generate all scene images with Google Nano Banana 2">
+                <span>🎨</span> Generate All Images
+              </button>
+              <button class="btn btn-purple btn-xs shadow-glow" id="btnMainAnimateAllScenes" title="Animate all scenes into video clips with Google Veo 3.1">
+                <span>🎥</span> Animate All (Veo 3.1)
+              </button>
+            </div>
+          </div>
+          <!-- Live Batch Generation Progress Bar -->
+          <div class="batch-progress-wrapper mb-3 d-none" id="batchProgressWrapper">
+            <div class="flex-between mb-1">
+              <span class="text-xs font-bold text-purple" id="batchProgressLabel">Processing Batch Tasks...</span>
+              <span class="text-xs text-muted" id="batchProgressPercent">0%</span>
+            </div>
+            <div class="studio-progress-bar">
+              <div class="studio-progress-fill" id="batchProgressFill" style="width: 0%;"></div>
+            </div>
+          </div>
+          <div class="main-scenes-list" id="mainScenesList">
+            <!-- Populated dynamically with scene cards -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Studio Live Player & Output -->
+      <div class="ai-studio-col-right">
+        <div class="studio-card sticky-card">
+          <div class="flex-between mb-2">
+            <span class="card-heading">Master Video Preview</span>
+            <div class="aspect-pills-group">
+              <button class="aspect-pill active" data-aspect="9:16">9:16 Shorts</button>
+              <button class="aspect-pill" data-aspect="16:9">16:9 Landscape</button>
+              <button class="aspect-pill" data-aspect="1:1">1:1 Square</button>
+            </div>
+          </div>
+
+          <!-- Video Canvas / Player with Live Telugu Lip-Sync Viseme Overlay -->
+          <div class="main-video-container" id="mainVideoContainer" style="aspect-ratio: 9/16; position: relative; overflow: hidden;">
+            <video id="mainStudioPlayer" controls playsinline poster="/storage/images/character_ref.png" style="width: 100%; height: 100%; object-fit: cover;">
+              <source src="/api/video" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+            
+            <!-- Telugu Viseme Character Lip-Sync Overlay -->
+            <div id="characterMouthOverlay" class="character-mouth-overlay d-none" style="position: absolute; bottom: 35%; left: 50%; transform: translateX(-50%); pointer-events: none; z-index: 10;">
+              <svg id="characterMouthSvg" width="120" height="70" viewBox="-60 -35 120 70">
+                <!-- Viseme 0: Closed / Bilabial (P, B, M) -->
+                <g id="viseme0" class="viseme-shape">
+                  <ellipse cx="0" cy="0" rx="26" ry="3" fill="#3B1010" stroke="#1A0505" stroke-width="1.5" />
+                </g>
+                <!-- Viseme 1: Half Open (T, D, S, N) -->
+                <g id="viseme1" class="viseme-shape d-none">
+                  <path d="M -28 0 Q 0 14 28 0 Q 0 -8 -28 0 Z" fill="#8B0000" stroke="#4A0000" stroke-width="1.5" />
+                  <rect x="-14" y="-3" width="28" height="5" rx="1.5" fill="#FFFFFF" opacity="0.85" />
+                </g>
+                <!-- Viseme 2: Round (U, OO, O) -->
+                <g id="viseme2" class="viseme-shape d-none">
+                  <circle cx="0" cy="0" r="16" fill="#8B0000" stroke="#4A0000" stroke-width="1.5" />
+                  <circle cx="0" cy="0" r="9" fill="#3B0505" />
+                </g>
+                <!-- Viseme 3: Wide Open (A, AA, AI) -->
+                <g id="viseme3" class="viseme-shape d-none">
+                  <path d="M -36 -4 Q 0 28 36 -4 Q 0 -16 -36 -4 Z" fill="#8B0000" stroke="#4A0000" stroke-width="1.5" />
+                  <rect x="-20" y="-4" width="40" height="7" rx="2" fill="#FFFFFF" opacity="0.9" />
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Lip-Sync Telemetry Pill -->
+          <div class="lipsync-telemetry-bar mt-2 p-2 bg-dark-subtle rounded flex-between align-center" id="lipsyncBar">
+            <div class="flex-row align-center gap-2">
+              <span class="badge purple" id="visemeBadge">Viseme: Rest</span>
+              <span class="text-xs text-muted" id="phonemeDetail">Telugu Audio Sync Ready</span>
+            </div>
+            <button class="btn btn-outline btn-xs" id="btnToggleLipSyncOverlay" title="Toggle SVG Character Mouth Preview">
+              👄 Lip-Sync Preview
+            </button>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="mt-3 flex-row gap-2">
+            <button class="btn btn-primary btn-md flex-1" id="btnMainRenderVideo">
+              <span>🎬</span> Render Master Video
+            </button>
+            <a class="btn btn-outline btn-md flex-1 text-center" id="btnDownloadMasterVideo" href="/api/video" download="animio_creative_video.mp4" style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px;">
+              <span>⬇</span> Download Video
+            </a>
+          </div>
+          <button class="btn btn-ghost btn-sm w-100 mt-2" id="btnMainOpenEditorSide">
+            <span>✂️</span> Open in Advanced Editor
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. VIEW B: DEDICATED ADVANCED VIDEO EDITOR WORKSPACE                      -->
+  <!-- ========================================================================= -->
+  <div id="advancedVideoEditorView" class="studio-view-container d-none">
+    
+    <!-- Top Toolbar (CapCut / Premiere Pro Layout) -->
+    <header class="editor-top-toolbar">
+      <div class="toolbar-left">
+        <button class="btn btn-outline btn-sm" id="btnBackToAiStudio" title="Return to Main AI Studio">
+          <span>⬅</span> Back to Studio
+        </button>
+
+        <div class="editor-brand-mini" title="Animio AI – AI Creative Video Studio">
+          <img src="/assets/animio_logo.jpg" alt="Animio AI" class="brand-logo-mini" onerror="this.style.display='none'">
+          <span class="brand-title-mini">Animio <span class="brand-ai-badge-sm">AI</span></span>
+        </div>
+
+        <div class="editor-project-pill">
+          <input type="text" id="editorProjectTitleInput" class="editor-title-field" value="The Little Star's Dream ⭐">
+          <span class="autosave-tag" id="editorAutosaveTag">● Autosaved</span>
+        </div>
+      </div>
+
+      <div class="toolbar-center">
+        <div class="btn-group">
+          <button class="icon-btn" id="editorBtnUndo" title="Undo (Ctrl+Z)">↶</button>
+          <button class="icon-btn" id="editorBtnRedo" title="Redo (Ctrl+Y)">↷</button>
+        </div>
+        <div class="header-divider"></div>
+        <button class="btn btn-ghost btn-sm" id="editorBtnPreview">
+          <span>👁️</span> Preview
+        </button>
+      </div>
+
+      <div class="toolbar-right">
+        <button class="btn btn-outline btn-sm" id="editorBtnSaveProject">
+          <span>💾</span> Save
+        </button>
+        <button class="btn btn-insta btn-sm" id="editorBtnExportInsta" title="Instagram Reels Export">
+          <span>📸</span> Reels
+        </button>
+        <button class="btn btn-primary btn-sm" id="editorBtnExportMp4">
+          <span>⬇</span> Export MP4
+        </button>
+        <button class="theme-toggle-btn" id="btnEditorThemeToggle" title="Toggle Theme">
+          <span class="theme-icon light">☀️</span>
+          <span class="theme-icon dark">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Editor Body (Left Toolbar, Inspector Panel, Center Viewport) -->
+    <div class="editor-main-workspace">
+      
+      <!-- Left Category Sidebar (11 Categories) -->
+      <nav class="editor-left-nav" aria-label="Editing Categories">
+        <button class="nav-category-item active" data-category="media" title="Media Library & Upload">
+          <span class="cat-icon">📁</span>
+          <span class="cat-label">Media</span>
+        </button>
+        <button class="nav-category-item" data-category="character" title="AI Character Studio & In-Scene Person Replacement">
+          <span class="cat-icon">🎭</span>
+          <span class="cat-label">Character</span>
+        </button>
+        <button class="nav-category-item" data-category="text" title="Typography & Text Layers">
+          <span class="cat-icon">🔤</span>
+          <span class="cat-label">Text</span>
+        </button>
+        <button class="nav-category-item" data-category="captions" title="Subtitles & Timing">
+          <span class="cat-icon">💬</span>
+          <span class="cat-label">Captions</span>
+        </button>
+        <button class="nav-category-item" data-category="filters" title="Color Filters">
+          <span class="cat-icon">🪄</span>
+          <span class="cat-label">Filters</span>
+        </button>
+        <button class="nav-category-item" data-category="effects" title="Visual Effects">
+          <span class="cat-icon">✨</span>
+          <span class="cat-label">Effects</span>
+        </button>
+        <button class="nav-category-item" data-category="transitions" title="Transitions">
+          <span class="cat-icon">🔀</span>
+          <span class="cat-label">Transitions</span>
+        </button>
+        <button class="nav-category-item" data-category="stickers" title="Stickers & Overlays">
+          <span class="cat-icon">🎨</span>
+          <span class="cat-label">Stickers</span>
+        </button>
+        <button class="nav-category-item" data-category="audio" title="Audio & Voiceover">
+          <span class="cat-icon">🎵</span>
+          <span class="cat-label">Audio</span>
+        </button>
+        <button class="nav-category-item" data-category="color" title="Colour Grading">
+          <span class="cat-icon">🌈</span>
+          <span class="cat-label">Color</span>
+        </button>
+        <button class="nav-category-item" data-category="animation" title="Keyframe Animation">
+          <span class="cat-icon">⚡</span>
+          <span class="cat-label">Animation</span>
+        </button>
+      </nav>
+
+      <!-- Category Settings / Inspector Panel -->
+      <section class="editor-category-inspector" id="categoryInspectorPanel">
+        
+        <!-- 1. MEDIA CATEGORY -->
+        <div class="category-view active" id="catViewMedia">
+          <h3 class="inspector-title">📁 Media Assets</h3>
+          <p class="inspector-desc">Upload, replace, and transform scene visuals.</p>
+
+          <div class="media-upload-dropzone mt-2" id="mediaDropzone">
+            <span class="upload-icon">📤</span>
+            <span class="text-xs font-bold">Upload Images & Videos</span>
+            <input type="file" id="mediaFileInput" accept="image/*,video/*" class="d-none">
+          </div>
+
+          <div class="scene-media-list mt-3" id="editorSceneMediaList">
+            <!-- Scene media items with Replace/Crop/Delete -->
+          </div>
+
+          <!-- Transform Controls -->
+          <div class="inspector-subbox mt-3">
+            <h4 class="subbox-title">Transform & Motion</h4>
+            <div class="control-row mt-2">
+              <span class="control-label">Scale</span>
+              <input type="range" id="mediaScaleRange" class="studio-range" min="50" max="180" value="100">
+              <span class="control-val" id="valMediaScale">100%</span>
+            </div>
+            <div class="form-row-2 mt-2">
+              <div>
+                <span class="field-hint">Pos X</span>
+                <input type="number" id="mediaPosX" class="studio-input" value="0">
+              </div>
+              <div>
+                <span class="field-hint">Pos Y</span>
+                <input type="number" id="mediaPosY" class="studio-input" value="0">
+              </div>
+            </div>
+            <div class="control-row mt-2">
+              <span class="control-label">Rotation</span>
+              <input type="range" id="mediaRotateRange" class="studio-range" min="-180" max="180" value="0">
+              <span class="control-val" id="valMediaRotate">0°</span>
+            </div>
+            <div class="control-row mt-2">
+              <span class="control-label">Opacity</span>
+              <input type="range" id="mediaOpacityRange" class="studio-range" min="0" max="100" value="100">
+              <span class="control-val" id="valMediaOpacity">100%</span>
+            </div>
+            <div class="flex-row gap-2 mt-2">
+              <button class="btn btn-outline btn-xs flex-1" id="btnFlipH">Flip Horizontal</button>
+              <button class="btn btn-outline btn-xs flex-1" id="btnFlipV">Flip Vertical</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. AI CHARACTER REPLACEMENT & CONSISTENCY CATEGORY -->
+        <div class="category-view" id="catViewCharacter">
+          <div class="flex-between">
+            <h3 class="inspector-title">🎭 AI Character Replacement</h3>
+            <span class="badge blue">Consistency AI</span>
+          </div>
+          <p class="inspector-desc">Select a character in any scene, replace them, and preserve background &amp; lighting.</p>
+
+          <div class="form-group mt-2">
+            <label class="field-hint">Target Scene</label>
+            <select id="charReplaceSceneSelect" class="studio-select">
+              <option value="1">Scene 1</option>
+              <option value="2">Scene 2</option>
+              <option value="3">Scene 3</option>
+              <option value="4">Scene 4</option>
+            </select>
+          </div>
+
+          <div class="form-group mt-2">
+            <label class="field-hint">Person / Character to Replace in Scene</label>
+            <input type="text" id="charReplaceOriginal" class="studio-input" value="Person in foreground" placeholder="e.g. Rama, Old Man, Background figure">
+          </div>
+
+          <div class="form-group mt-2">
+            <label class="field-hint">New Character Identity &amp; Costume</label>
+            <textarea id="charReplaceNew" class="studio-textarea" rows="2" placeholder="e.g. Lord Shiva with blue throat, crescent moon and trident">Lord Shiva with crescent moon, blue radiant complexion, sacred rudraksha beads, tiger skin sash, divine golden trident</textarea>
+          </div>
+
+          <div class="quick-archetype-pills mt-2" id="quickArchetypePills">
+            <button class="archetype-pill" data-archetype="Photoreal Warrior Prince with radiant glow">Warrior</button>
+            <button class="archetype-pill" data-archetype="Modern Cyberpunk Hero with glowing neon visor">Cyberpunk</button>
+            <button class="archetype-pill" data-archetype="Mythological Deva with celestial aura">Deva</button>
+            <button class="archetype-pill" data-archetype="Cute Pixar-style companion mascot">Pixar Mascot</button>
+            <button class="archetype-pill" data-archetype="Vibrant modern anime prodigy">Anime Hero</button>
+          </div>
+
+          <div class="form-row-2 mt-2">
+            <div>
+              <label class="field-hint">Facial Expression</label>
+              <select id="charReplaceExpression" class="studio-select">
+                <option value="Serene, peaceful and divine">Serene &amp; Divine</option>
+                <option value="Fierce, heroic and focused">Fierce &amp; Heroic</option>
+                <option value="Warm, smiling and joyful">Warm &amp; Smiling</option>
+                <option value="Deep devotion and reverence">Devotional</option>
+                <option value="Awestruck and surprised">Awestruck</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-hint">Pose / Action</label>
+              <select id="charReplacePose" class="studio-select">
+                <option value="Walking gracefully in foreground">Walking Gracefully</option>
+                <option value="Standing tall with dignity">Standing Tall</option>
+                <option value="Reverent salutation with folded hands">Anjali Mudra (Greeting)</option>
+                <option value="Dynamic combat action stance">Dynamic Action</option>
+                <option value="Observing quietly from distance">Quiet Observer</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex-row gap-2 mt-3">
+            <button class="btn btn-purple btn-sm flex-1" id="btnPreviewCharReplace">
+              <span>✨</span> Generate Preview
+            </button>
+          </div>
+
+          <!-- Preview & Before/After Comparison Box -->
+          <div class="replace-preview-container mt-3 d-none" id="replacePreviewContainer">
+            <div class="flex-between mb-1">
+              <span class="text-xs font-bold">Replacement Comparison</span>
+              <span class="badge green" id="replaceStatusBadge">Preview Ready</span>
+            </div>
+            <div class="split-comparison-grid">
+              <div class="comparison-card">
+                <span class="comp-label">Before</span>
+                <img id="compBeforeImg" src="/assets/scene1.png" alt="Before">
+              </div>
+              <div class="comparison-card">
+                <span class="comp-label">AI Replaced</span>
+                <img id="compAfterImg" src="/assets/scene1.png" alt="After">
+              </div>
+            </div>
+            
+            <div class="flex-row gap-2 mt-2">
+              <button class="btn btn-success btn-sm flex-1" id="btnApplyCharReplace">
+                <span>✅</span> Apply to Scene
+              </button>
+              <button class="btn btn-primary btn-sm flex-1" id="btnApplyCharReplaceAll">
+                <span>🌐</span> Apply All Scenes
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. TEXT & TYPOGRAPHY CATEGORY -->
+        <div class="category-view" id="catViewText">
+          <div class="flex-between">
+            <h3 class="inspector-title">🔤 Text Layers</h3>
+            <button class="btn btn-purple btn-xs" id="btnAddTextLayer">+ Add Text Layer</button>
+          </div>
+          <p class="inspector-desc">Supports English and native Telugu (తెలుగు) script.</p>
+
+          <div class="form-group mt-2">
+            <label class="field-hint">Text Content</label>
+            <input type="text" id="activeTextContent" class="studio-input" value="Heroic Adventure">
+          </div>
+
+          <div class="form-group mt-2">
+            <label class="field-hint">Font Family (Telugu & English)</label>
+            <select id="activeTextFont" class="studio-select">
+              <option value="'Noto Sans Telugu', sans-serif" selected>🇮🇳 Noto Sans Telugu (తెలుగు)</option>
+              <option value="'Impact', sans-serif">Impact (Bold Shorts)</option>
+              <option value="'Inter', sans-serif">Inter Modern</option>
+              <option value="'Arial', sans-serif">Arial Bold</option>
+              <option value="'Comic Sans MS', sans-serif">Comic Sans (Cartoon)</option>
+            </select>
+          </div>
+
+          <div class="control-row mt-2">
+            <span class="control-label">Size</span>
+            <input type="range" id="activeTextSize" class="studio-range" min="16" max="80" value="38">
+            <span class="control-val" id="valActiveTextSize">38px</span>
+          </div>
+
+          <div class="form-row-2 mt-2">
+            <div>
+              <span class="field-hint">Text Color</span>
+              <input type="color" id="activeTextColor" class="studio-color-picker" value="#fef08a">
+            </div>
+            <div>
+              <span class="field-hint">Outline Color</span>
+              <input type="color" id="activeTextOutlineColor" class="studio-color-picker" value="#000000">
+            </div>
+          </div>
+
+          <div class="flex-row gap-2 mt-2">
+            <button class="btn btn-outline btn-xs flex-1 active" id="btnTextAlignCenter">Center</button>
+            <button class="btn btn-outline btn-xs flex-1" id="btnTextAlignLeft">Left</button>
+            <button class="btn btn-outline btn-xs flex-1" id="btnTextAlignRight">Right</button>
+          </div>
+        </div>
+
+        <!-- 3. CAPTIONS / SUBTITLES CATEGORY -->
+        <div class="category-view" id="catViewCaptions">
+          <h3 class="inspector-title">💬 Subtitle Lines & Timing</h3>
+          <p class="inspector-desc">Synchronized with narration audio.</p>
+          <div class="captions-timeline-list mt-2" id="captionsTimelineList">
+            <!-- Populated dynamically with subtitle lines -->
+          </div>
+        </div>
+
+        <!-- 4. FILTERS CATEGORY -->
+        <div class="category-view" id="catViewFilters">
+          <h3 class="inspector-title">🪄 Color Grading Filters</h3>
+          <p class="inspector-desc">Choose a filter preset and adjust intensity.</p>
+          <div class="filters-gallery-grid mt-2" id="filtersGalleryGrid">
+            <!-- 11 Filter Presets -->
+            <div class="filter-option-card active" data-filter="normal">
+              <div class="filter-swatch normal"></div>
+              <span>Normal</span>
+            </div>
+            <div class="filter-option-card" data-filter="cinematic">
+              <div class="filter-swatch cinematic"></div>
+              <span>Cinematic</span>
+            </div>
+            <div class="filter-option-card" data-filter="vintage">
+              <div class="filter-swatch vintage"></div>
+              <span>Vintage</span>
+            </div>
+            <div class="filter-option-card" data-filter="warm">
+              <div class="filter-swatch warm"></div>
+              <span>Warm</span>
+            </div>
+            <div class="filter-option-card" data-filter="cool">
+              <div class="filter-swatch cool"></div>
+              <span>Cool</span>
+            </div>
+            <div class="filter-option-card" data-filter="dramatic">
+              <div class="filter-swatch dramatic"></div>
+              <span>Dramatic</span>
+            </div>
+            <div class="filter-option-card" data-filter="bw">
+              <div class="filter-swatch bw"></div>
+              <span>B &amp; W</span>
+            </div>
+            <div class="filter-option-card" data-filter="sepia">
+              <div class="filter-swatch sepia"></div>
+              <span>Sepia</span>
+            </div>
+            <div class="filter-option-card" data-filter="vivid">
+              <div class="filter-swatch vivid"></div>
+              <span>Vivid</span>
+            </div>
+            <div class="filter-option-card" data-filter="dreamy">
+              <div class="filter-swatch dreamy"></div>
+              <span>Dreamy</span>
+            </div>
+            <div class="filter-option-card" data-filter="cartoon">
+              <div class="filter-swatch cartoon"></div>
+              <span>Cartoon</span>
+            </div>
+          </div>
+
+          <div class="control-row mt-3">
+            <span class="control-label">Intensity</span>
+            <input type="range" id="filterIntensityRange" class="studio-range" min="0" max="100" value="100">
+            <span class="control-val" id="valFilterIntensity">100%</span>
+          </div>
+        </div>
+
+        <!-- 5. EFFECTS CATEGORY (16 Effects) -->
+        <div class="category-view" id="catViewEffects">
+          <h3 class="inspector-title">✨ Visual Effects</h3>
+          <p class="inspector-desc">Apply cinematic camera shakes, particles, and glows.</p>
+          <div class="effects-grid mt-2" id="effectsGrid">
+            <button class="effect-btn active" data-effect="none">None</button>
+            <button class="effect-btn" data-effect="glow">Glow</button>
+            <button class="effect-btn" data-effect="blur">Blur</button>
+            <button class="effect-btn" data-effect="grain">Film Grain</button>
+            <button class="effect-btn" data-effect="glitch">Glitch</button>
+            <button class="effect-btn" data-effect="rgb">RGB Split</button>
+            <button class="effect-btn" data-effect="zoom">Zoom Burst</button>
+            <button class="effect-btn" data-effect="shake">Camera Shake</button>
+            <button class="effect-btn" data-effect="flash">Flash</button>
+            <button class="effect-btn" data-effect="vignette">Vignette</button>
+            <button class="effect-btn" data-effect="rain">Rain Drops</button>
+            <button class="effect-btn" data-effect="snow">Snow Drift</button>
+            <button class="effect-btn" data-effect="particles">Particles</button>
+            <button class="effect-btn" data-effect="sparkles">Sparkles</button>
+            <button class="effect-btn" data-effect="magic">Magic Aura</button>
+          </div>
+          <div class="control-row mt-3">
+            <span class="control-label">Effect Power</span>
+            <input type="range" id="effectIntensityRange" class="studio-range" min="0" max="100" value="50">
+            <span class="control-val" id="valEffectIntensity">50%</span>
+          </div>
+        </div>
+
+        <!-- 6. TRANSITIONS CATEGORY -->
+        <div class="category-view" id="catViewTransitions">
+          <h3 class="inspector-title">🔀 Scene Transitions</h3>
+          <p class="inspector-desc">Smooth seamless transitions between clips.</p>
+          <div class="transitions-grid mt-2">
+            <button class="trans-btn active" data-trans="fade">Fade</button>
+            <button class="trans-btn" data-trans="dissolve">Dissolve</button>
+            <button class="trans-btn" data-trans="slide">Slide Left</button>
+            <button class="trans-btn" data-trans="zoom">Zoom</button>
+            <button class="trans-btn" data-trans="wipe">Wipe</button>
+            <button class="trans-btn" data-trans="flash">Flash</button>
+            <button class="trans-btn" data-trans="blur">Blur Cross</button>
+          </div>
+          <div class="control-row mt-3">
+            <span class="control-label">Duration</span>
+            <input type="range" id="transDurationRange" class="studio-range" min="2" max="15" value="4">
+            <span class="control-val" id="valTransDuration">0.4s</span>
+          </div>
+        </div>
+
+        <!-- 7. STICKERS CATEGORY -->
+        <div class="category-view" id="catViewStickers">
+          <h3 class="inspector-title">🎨 Stickers &amp; Elements</h3>
+          <p class="inspector-desc">Click sticker to place onto video.</p>
+          <div class="stickers-picker-grid mt-2">
+            <button class="sticker-item" data-sticker="⭐">⭐</button>
+            <button class="sticker-item" data-sticker="🔥">🔥</button>
+            <button class="sticker-item" data-sticker="✨">✨</button>
+            <button class="sticker-item" data-sticker="💖">💖</button>
+            <button class="sticker-item" data-sticker="🏹">🏹</button>
+            <button class="sticker-item" data-sticker="🎬">🎬</button>
+            <button class="sticker-item" data-sticker="👑">👑</button>
+            <button class="sticker-item" data-sticker="🎉">🎉</button>
+            <button class="sticker-item" data-sticker="🚀">🚀</button>
+            <button class="sticker-item" data-sticker="🦁">🦁</button>
+            <button class="sticker-item" data-sticker="💬">💬</button>
+            <button class="sticker-item" data-sticker="⚡">⚡</button>
+          </div>
+        </div>
+
+        <!-- 8. AUDIO CATEGORY -->
+        <div class="category-view" id="catViewAudio">
+          <h3 class="inspector-title">🎵 Audio &amp; Voice Controls</h3>
+          <p class="inspector-desc">Synchronize voiceover, BGM and sound effects.</p>
+          
+          <div class="control-row mt-2">
+            <span class="control-label">Voiceover</span>
+            <input type="range" id="audioVoiceVol" class="studio-range" min="0" max="100" value="100">
+            <span class="control-val" id="valAudioVoiceVol">100%</span>
+          </div>
+
+          <div class="control-row mt-2">
+            <span class="control-label">Music (BGM)</span>
+            <input type="range" id="audioMusicVol" class="studio-range" min="0" max="50" value="18">
+            <span class="control-val" id="valAudioMusicVol">18%</span>
+          </div>
+
+          <div class="control-row mt-2">
+            <span class="control-label">Speed</span>
+            <input type="range" id="audioSpeedRange" class="studio-range" min="75" max="150" value="100">
+            <span class="control-val" id="valAudioSpeed">1.0x</span>
+          </div>
+
+          <div class="flex-row gap-2 mt-3">
+            <button class="btn btn-outline btn-xs flex-1" id="btnAudioFadeIn">Fade In</button>
+            <button class="btn btn-outline btn-xs flex-1" id="btnAudioFadeOut">Fade Out</button>
+          </div>
+        </div>
+
+        <!-- 9. COLOUR GRADING CATEGORY (13 Controls) -->
+        <div class="category-view" id="catViewColor">
+          <div class="flex-between">
+            <h3 class="inspector-title">🌈 Colour Grading</h3>
+            <button class="btn btn-outline btn-xs" id="btnResetColorGrading">Reset</button>
+          </div>
+          <p class="inspector-desc">Professional color calibration sliders.</p>
+
+          <div class="color-sliders-list mt-2">
+            <div class="control-row">
+              <span class="control-label">Brightness</span>
+              <input type="range" id="cgBrightness" class="studio-range" min="50" max="150" value="100">
+              <span class="control-val" id="valCgBrightness">0</span>
+            </div>
+            <div class="control-row mt-1">
+              <span class="control-label">Contrast</span>
+              <input type="range" id="cgContrast" class="studio-range" min="50" max="180" value="110">
+              <span class="control-val" id="valCgContrast">+10</span>
+            </div>
+            <div class="control-row mt-1">
+              <span class="control-label">Saturation</span>
+              <input type="range" id="cgSaturation" class="studio-range" min="0" max="200" value="120">
+              <span class="control-val" id="valCgSaturation">+20</span>
+            </div>
+            <div class="control-row mt-1">
+              <span class="control-label">Exposure</span>
+              <input type="range" id="cgExposure" class="studio-range" min="-50" max="50" value="0">
+              <span class="control-val" id="valCgExposure">0</span>
+            </div>
+            <div class="control-row mt-1">
+              <span class="control-label">Temperature</span>
+              <input type="range" id="cgTemperature" class="studio-range" min="-50" max="50" value="0">
+              <span class="control-val" id="valCgTemperature">0</span>
+            </div>
+            <div class="control-row mt-1">
+              <span class="control-label">Tint</span>
+              <input type="range" id="cgTint" class="studio-range" min="-50" max="50" value="0">
+              <span class="control-val" id="valCgTint">0</span>
+            </div>
+            <div class="control-row mt-1">
+              <span class="control-label">Vignette</span>
+              <input type="range" id="cgVignette" class="studio-range" min="0" max="100" value="20">
+              <span class="control-val" id="valCgVignette">20%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. ANIMATION CATEGORY -->
+        <div class="category-view" id="catViewAnimation">
+          <h3 class="inspector-title">⚡ Clip Animation</h3>
+          <p class="inspector-desc">Apply organic animated motions.</p>
+          <div class="effects-grid mt-2">
+            <button class="anim-btn active" data-anim="pan-right">Pan Right</button>
+            <button class="anim-btn" data-anim="pan-left">Pan Left</button>
+            <button class="anim-btn" data-anim="zoom-in">Zoom In</button>
+            <button class="anim-btn" data-anim="zoom-out">Zoom Out</button>
+            <button class="anim-btn" data-anim="bounce">Bounce</button>
+            <button class="anim-btn" data-anim="rotate">3D Tilt</button>
+          </div>
+          <div class="control-row mt-3">
+            <span class="control-label">Easing</span>
+            <select id="animEasingSelect" class="studio-select flex-1">
+              <option value="ease-in-out">Ease In-Out</option>
+              <option value="linear">Linear</option>
+              <option value="ease-out">Ease Out</option>
+              <option value="spring">Spring</option>
+            </select>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Center Video Viewport Stage -->
+      <section class="editor-center-stage">
+        <!-- Top Aspect & Timecode Bar -->
+        <div class="editor-viewport-topbar">
+          <div class="aspect-pills-group">
+            <button class="aspect-pill active" data-editor-aspect="9:16">9:16 Shorts</button>
+            <button class="aspect-pill" data-editor-aspect="16:9">16:9 Landscape</button>
+            <button class="aspect-pill" data-editor-aspect="1:1">1:1 Square</button>
+          </div>
+
+          <div class="timecode-display" id="editorTimecode">00:00.0 / 00:20.0</div>
+
+          <div class="flex-row gap-2">
+            <button class="icon-btn" id="btnEditorFullscreen" title="Full Screen Preview">⛶</button>
+          </div>
+        </div>
+
+        <!-- Video Canvas & Interactive Overlays -->
+        <div class="editor-canvas-container" id="editorCanvasContainer">
+          <div class="editor-canvas-viewport" id="editorCanvasViewport" style="aspect-ratio: 9/16;">
+            <video id="editorMainVideo" playsinline poster="/storage/images/character_ref.png">
+              <source src="/api/video" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Dynamic Overlays Layer (Stickers & Text) -->
+            <div class="editor-overlays-layer" id="editorOverlaysLayer">
+              <div class="video-subtitle-overlay">
+                <span class="caption-text-box" id="editorCaptionTextBox"></span>
+              </div>
+            </div>
+
+            <!-- Environmental Particles Overlay (Fire Embers, Rain, Snow, Gold Dust, Magic Aura) -->
+            <div class="particles-overlay-layer" id="particlesOverlay"></div>
+          </div>
+        </div>
+
+        <!-- Playback Controls Bar -->
+        <div class="editor-playback-bar">
+          <div class="playback-buttons">
+            <button class="icon-btn" id="btnFrameBack" title="-1 Frame">⏮</button>
+            <button class="play-pause-btn" id="btnEditorPlayPause" title="Play / Pause">▶</button>
+            <button class="icon-btn" id="btnEditorStop" title="Stop">⏹</button>
+            <button class="icon-btn" id="btnFrameForward" title="+1 Frame">⏭</button>
+          </div>
+          
+          <div class="active-clip-info text-xs text-secondary" id="activeClipInfoText">
+            Scene 1 Selected (2.5s)
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bottom Advanced Multi-Track Timeline (8 Tracks) -->
+    <footer class="editor-bottom-timeline">
+      <div class="timeline-toolbar">
+        <div class="timeline-tools-left">
+          <button class="icon-btn sm" id="btnTlSplit" title="Split Clip at Playhead">✂ Split</button>
+          <button class="icon-btn sm" id="btnTlTrim" title="Trim Selected Clip">⎸Trim</button>
+          <button class="icon-btn sm" id="btnTlDuplicate" title="Duplicate Clip">📋 Duplicate</button>
+          <button class="icon-btn sm text-error" id="btnTlDelete" title="Delete Clip">🗑 Delete</button>
+        </div>
+
+        <div class="timeline-tools-center">
+          <span class="timeline-needle-time" id="editorPlayheadTime">00:00.0</span>
+        </div>
+
+        <div class="timeline-tools-right">
+          <span class="field-hint">Zoom</span>
+          <button class="icon-btn sm" id="btnTlZoomOut">🔍-</button>
+          <input type="range" id="editorTlZoomSlider" class="studio-range mini" min="50" max="200" value="100">
+          <button class="icon-btn sm" id="btnTlZoomIn">🔍+</button>
+        </div>
+      </div>
+
+      <!-- 8-Track Workspace -->
+      <div class="timeline-workspace" id="editorTimelineWorkspace">
+        <!-- Track Headers -->
+        <div class="track-headers-column">
+          <div class="ruler-header-spacer"></div>
+          <div class="track-header"><span class="track-icon">🎬</span> Video</div>
+          <div class="track-header"><span class="track-icon">🖼️</span> Overlays</div>
+          <div class="track-header"><span class="track-icon">🔤</span> Text</div>
+          <div class="track-header"><span class="track-icon">💬</span> Captions</div>
+          <div class="track-header"><span class="track-icon">🎙️</span> Voiceover</div>
+          <div class="track-header"><span class="track-icon">🎵</span> Music</div>
+          <div class="track-header"><span class="track-icon">🔊</span> SFX</div>
+          <div class="track-header"><span class="track-icon">✨</span> Effects</div>
+        </div>
+
+        <!-- Multi-Track Lanes with Draggable Playhead Needle -->
+        <div class="track-lanes-scroll" id="editorTrackLanesScroll">
+          <!-- Playhead Needle -->
+          <div class="timeline-playhead" id="editorPlayhead">
+            <div class="playhead-handle"></div>
+            <div class="playhead-line"></div>
+          </div>
+
+          <!-- Time Ruler -->
+          <div class="timeline-ruler" id="editorTimelineRuler"></div>
+
+          <!-- 1. Video Track -->
+          <div class="track-lane video-lane" id="tlTrackVideo"></div>
+
+          <!-- 2. Overlays Track -->
+          <div class="track-lane overlay-lane" id="tlTrackOverlay">
+            <div class="audio-clip-block" style="background:rgba(147,51,234,0.2); border:1px solid #9333EA; color:#9333EA;">
+              <span>🖼️ Character Reference Overlay</span>
+            </div>
+          </div>
+
+          <!-- 3. Text Track -->
+          <div class="track-lane text-lane" id="tlTrackText"></div>
+
+          <!-- 4. Subtitles Track -->
+          <div class="track-lane subtitles-lane" id="tlTrackSubtitles"></div>
+
+          <!-- 5. Voice Track -->
+          <div class="track-lane voice-lane" id="tlTrackVoice">
+            <div class="audio-clip-block voice">
+              <span>🎙️ Telugu Narration Voiceover</span>
+            </div>
+          </div>
+
+          <!-- 6. Music Track -->
+          <div class="track-lane music-lane" id="tlTrackMusic">
+            <div class="audio-clip-block music">
+              <span>🎵 Cinematic Ambient Soundtrack</span>
+            </div>
+          </div>
+
+          <!-- 7. SFX Track -->
+          <div class="track-lane sfx-lane" id="tlTrackSfx">
+            <div class="audio-clip-block" style="background:rgba(234,179,8,0.2); border:1px solid #EAB308; color:#EAB308;">
+              <span>🔊 Atmospheric Whoosh &amp; Magic Chimes</span>
+            </div>
+          </div>
+
+          <!-- 8. Effects Track -->
+          <div class="track-lane effects-lane" id="tlTrackEffects">
+            <div class="effect-clip-block">
+              <span>✨ Camera Motion &amp; Color Grading</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Exporting Modal Backdrop -->
+  <div class="modal-backdrop" id="exportModal" role="dialog" aria-modal="true">
+    <div class="modal-box" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3 class="modal-title">🎬 Production &amp; Render Queue</h3>
+        <button class="modal-close" id="btnCloseExportModal">&times;</button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="flex-row items-center justify-between mb-2">
+          <span class="text-xs font-semibold text-secondary" id="exportJobIdLabel">JOB: INITIALIZING</span>
+          <span class="badge badge-purple" id="exportPercentBadge" style="font-size: 13px; font-weight: 700;">0%</span>
+        </div>
+
+        <div class="progress-bar-container mb-3" style="height: 10px; border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.08);">
+          <div class="progress-bar-fill" id="exportProgressFill" style="width: 0%; transition: width 0.4s ease; background: linear-gradient(90deg, #8b5cf6, #ec4899);"></div>
+        </div>
+
+        <h4 id="exportStatusHeading" style="font-size: 15px; margin: 8px 0 4px 0;">Starting render job...</h4>
+        <p class="text-xs text-secondary mt-0" id="exportStatusDetail">Synchronizing audio narration and visual frames...</p>
+        
+        <!-- Multi-stage progress tracking list -->
+        <div class="render-stages-list mt-3">
+          <div class="render-stage-row" id="stageRowVoice">
+            <div class="render-stage-left">
+              <span class="stage-status-icon wait" id="iconStageVoice">○</span>
+              <span>1. Telugu / Multilingual AI Voiceover</span>
+            </div>
+            <span class="text-xs text-secondary" id="labelStageVoice">Waiting</span>
+          </div>
+
+          <div class="render-stage-row" id="stageRowScenes">
+            <div class="render-stage-left">
+              <span class="stage-status-icon wait" id="iconStageScenes">○</span>
+              <span>2. Scene Camera Zoom &amp; Pan Clips</span>
+            </div>
+            <span class="text-xs text-secondary" id="labelStageScenes">Waiting</span>
+          </div>
+
+          <div class="render-stage-row" id="stageRowStitch">
+            <div class="render-stage-left">
+              <span class="stage-status-icon wait" id="iconStageStitch">○</span>
+              <span>3. Seamless XFade Scene Transitions</span>
+            </div>
+            <span class="text-xs text-secondary" id="labelStageStitch">Waiting</span>
+          </div>
+
+          <div class="render-stage-row" id="stageRowComposite">
+            <div class="render-stage-left">
+              <span class="stage-status-icon wait" id="iconStageComposite">○</span>
+              <span>4. Audio-Reactive Wave &amp; Subtitles</span>
+            </div>
+            <span class="text-xs text-secondary" id="labelStageComposite">Waiting</span>
+          </div>
+
+          <div class="render-stage-row" id="stageRowFinalize">
+            <div class="render-stage-left">
+              <span class="stage-status-icon wait" id="iconStageFinalize">○</span>
+              <span>5. Master Video Encoding &amp; Delivery</span>
+            </div>
+            <span class="text-xs text-secondary" id="labelStageFinalize">Waiting</span>
+          </div>
+        </div>
+
+        <div class="flex-row gap-2 justify-center mt-3 d-none" id="exportActionButtons">
+          <a href="/api/video" download="final-video.mp4" class="btn btn-primary btn-md" id="btnDownloadExport">
+            <span>⬇</span> Download MP4
+          </a>
+          <button class="btn btn-yt btn-md" id="btnExportPublishYt">
+            <span>▶</span> Publish to YouTube
+          </button>
+          <button class="btn btn-secondary btn-md" id="btnMinimizeExport">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instagram Reels Export Modal -->
+  <div class="modal-backdrop" id="instagramModal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">📸 Instagram Reels Studio</h3>
+        <button class="modal-close" id="btnCloseInstaModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="text-xs text-secondary mb-3">Optimized 9:16 vertical MP4 with trending tags ready for Instagram Reels.</p>
+        
+        <div class="form-group mb-3">
+          <label class="field-hint">Reels Caption &amp; Hashtags</label>
+          <textarea id="instaCaptionText" class="studio-textarea" rows="4"></textarea>
+        </div>
+
+        <div class="flex-row gap-2">
+          <button class="btn btn-outline btn-sm flex-1" id="btnCopyInstaCaption">
+            <span>📋</span> Copy Caption &amp; Tags
+          </button>
+          <a href="/api/video" download="instagram-reel.mp4" class="btn btn-insta btn-sm flex-1">
+            <span>⬇</span> Download Reel MP4
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Character Edit Modal / Separate Slide-Over Editor -->
+  <div class="modal-backdrop" id="charEditModal" role="dialog" aria-modal="true">
+    <div class="modal-box char-edit-modal-box">
+      <div class="modal-header">
+        <div class="flex-row align-center gap-2">
+          <span class="modal-icon">🎭</span>
+          <div>
+            <h3 class="modal-title" id="charModalTitle">Edit Character Profile</h3>
+            <span class="text-xs text-secondary">Configure identity attributes, multi-angle views and consistency anchors</span>
+          </div>
+        </div>
+        <button class="modal-close" id="btnCloseCharEditModal">&times;</button>
+      </div>
+
+      <div class="char-modal-body-grid">
+        <!-- Col 1: Visuals, Perspectives & Upload -->
+        <div class="char-modal-visuals-col">
+          <div class="char-modal-preview-box">
+            <div class="char-badge-overlay" id="charModalPrimaryBadge">
+              <span class="badge gold">⭐ Approved Primary Reference</span>
+            </div>
+            <img src="/storage/images/style_realistic.svg" id="charModalShowcaseImg" class="char-modal-preview-img" alt="Character Preview">
+            <div class="char-view-tag" id="charModalViewLabel">Front Portrait</div>
+          </div>
+
+          <!-- Perspectives switcher -->
+          <div class="char-perspectives-selector mt-2" id="charModalPerspTabs">
+            <button class="persp-tab active" data-view="front">Front</button>
+            <button class="persp-tab" data-view="full">Full Body</button>
+            <button class="persp-tab" data-view="profile">Profile</button>
+            <button class="persp-tab" data-view="closeup">Close-up</button>
+            <button class="persp-tab" data-view="action">Action</button>
+          </div>
+
+          <!-- Image Action buttons -->
+          <div class="flex-row gap-2 mt-2">
+            <button class="btn btn-gold btn-xs flex-1" id="btnModalSetPrimary">
+              <span>⭐</span> Set Primary
+            </button>
+            <button class="btn btn-purple btn-xs flex-1" id="btnModalRegenView">
+              <span>🔄</span> Regenerate View
+            </button>
+            <button class="btn btn-outline btn-xs" id="btnModalUploadPhoto" title="Upload Photo">
+              <span>📤</span>
+            </button>
+            <a id="btnModalDownloadImg" href="#" download="character-reference.png" class="btn btn-outline btn-xs" title="Download Image">
+              <span>⬇</span>
+            </a>
+            <input type="file" id="charPhotoFileInput" accept="image/*" class="d-none">
+          </div>
+
+          <!-- Multi-View History Gallery -->
+          <div class="mt-3">
+            <div class="flex-between mb-1">
+              <span class="text-xs font-bold">Concept Angles Gallery</span>
+              <span class="text-xs text-secondary" id="charModalViewCount">1 View</span>
+            </div>
+            <div class="char-views-grid" id="charModalViewsGrid">
+              <!-- Dynamically populated view thumbnails -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Identity Attributes & Narrative Description -->
+        <div class="char-modal-fields-col">
+          <input type="hidden" id="charEditHiddenId" value="">
+          
+          <div class="form-row-2 mb-2">
+            <div>
+              <label class="field-hint">Character Name</label>
+              <input type="text" id="charInputName" class="studio-input" placeholder="e.g. Lily">
+            </div>
+            <div>
+              <label class="field-hint">Character Role</label>
+              <input type="text" id="charSelectRole" class="studio-input" placeholder="e.g. Lead Protagonist, Ghost Girl">
+            </div>
+          </div>
+
+          <div class="form-row-2 mb-2">
+            <div>
+              <label class="field-hint">Age Appearance</label>
+              <input type="text" id="charSelectAge" class="studio-input" placeholder="e.g. Young Girl (10-12 years)">
+            </div>
+            <div>
+              <label class="field-hint">Gender</label>
+              <input type="text" id="charSelectGender" class="studio-input" placeholder="e.g. Female, Male, Spirit">
+            </div>
+          </div>
+
+          <div class="form-row-2 mb-2">
+            <div>
+              <label class="field-hint">Appearance &amp; Skin Tone</label>
+              <input type="text" id="charInputSkin" class="studio-input" placeholder="e.g. Fair with freckles, translucent pale">
+            </div>
+            <div>
+              <label class="field-hint">Body Type / Physique</label>
+              <input type="text" id="charInputBody" class="studio-input" placeholder="e.g. Petite youthful, floating ethereal">
+            </div>
+          </div>
+
+          <div class="form-row-2 mb-2">
+            <div>
+              <label class="field-hint">Hair Style &amp; Color</label>
+              <input type="text" id="charInputHair" class="studio-input" placeholder="e.g. Wavy chestnut brown, floating silver">
+            </div>
+            <div>
+              <label class="field-hint">Facial Features &amp; Eyes</label>
+              <input type="text" id="charInputFace" class="studio-input" placeholder="e.g. Big curious hazel eyes, glowing cyan">
+            </div>
+          </div>
+
+          <div class="form-row-2 mb-2">
+            <div>
+              <label class="field-hint">Clothing / Costume</label>
+              <input type="text" id="charInputCostume" class="studio-input" placeholder="e.g. Yellow hooded raincoat, Victorian lace dress">
+            </div>
+            <div>
+              <label class="field-hint">Accessories &amp; Items</label>
+              <input type="text" id="charInputAccessories" class="studio-input" placeholder="e.g. Brass lantern, crystal necklace">
+            </div>
+          </div>
+
+          <div class="form-row-2 mb-2">
+            <div>
+              <label class="field-hint">Identifying Features</label>
+              <input type="text" id="charInputFeatures" class="studio-input" placeholder="e.g. Bright red boots, soft bioluminescent aura">
+            </div>
+            <div>
+              <label class="field-hint">Personality &amp; Demeanor</label>
+              <input type="text" id="charInputPersonality" class="studio-input" placeholder="e.g. Brave, empathetic, mysterious guardian">
+            </div>
+          </div>
+
+          <div class="form-group mb-2">
+            <label class="field-hint">Custom Character Prompt Description</label>
+            <textarea id="charInputDescription" class="studio-textarea" rows="2" placeholder="Full visual description used for generation..."></textarea>
+          </div>
+
+          <div class="flex-row gap-2 mt-3 pt-2 border-t">
+            <button class="btn btn-purple btn-sm flex-1 shadow-glow" id="btnSaveCharProfile">
+              <span>💾</span> Save Character Profile
+            </button>
+            <button class="btn btn-primary btn-sm flex-1" id="btnSaveAndGenerateChar">
+              <span>✨</span> Save &amp; Generate Image
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

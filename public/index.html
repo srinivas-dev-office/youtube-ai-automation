@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Animio AI - AI Creative Video Studio</title>
+  <link rel="icon" type="image/jpeg" href="/assets/animio_logo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ice: '#E9F0F5',
+            navy: {
+              DEFAULT: '#172C45',
+              950: '#0A1522',
+              900: '#0E1B2D',
+              850: '#132437',
+              800: '#172C45',
+              700: '#203A5B',
+              600: '#2A4D78'
+            },
+            tangerine: {
+              DEFAULT: '#FF693D',
+              400: '#FF855D',
+              500: '#FF693D',
+              600: '#E55428'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #0A1522;
+      color: #E9F0F5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    @keyframes pulseTangerine {
+
+      0%,
+      100% {
+        box-shadow: 0 0 14px rgba(255, 105, 61, 0.25);
+      }
+
+      50% {
+        box-shadow: 0 0 28px rgba(255, 105, 61, 0.45);
+      }
+    }
+
+    .pulse-tangerine {
+      animation: pulseTangerine 2.5s infinite;
+    }
+
+    .duration-pill.active {
+      background: linear-gradient(135deg, #FF693D, #FF855D) !important;
+      color: #ffffff !important;
+      border-color: #FF693D !important;
+      font-weight: 800;
+      box-shadow: 0 4px 16px rgba(255, 105, 61, 0.35);
+    }
+
+    .style-card.active {
+      border-color: #FF693D !important;
+      background: rgba(255, 105, 61, 0.12) !important;
+      box-shadow: 0 0 16px rgba(255, 105, 61, 0.25);
+    }
+
+    .style-card.active .style-check {
+      display: flex !important;
+      background-color: #FF693D !important;
+      color: #ffffff !important;
+    }
+
+    /* Sleek custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0A1522;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #203A5B;
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF693D;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-[#0A1522] text-[#E9F0F5] min-h-screen flex flex-col font-sans antialiased selection:bg-[#FF693D] selection:text-white">
+
+  <!-- Header -->
+  <header
+    class="border-b border-[#E9F0F5]/10 bg-[#0E1B2D]/90 backdrop-blur sticky top-0 z-50 px-6 py-3 flex items-center justify-between shadow-lg">
+    <!-- Brand & Good Logo -->
+    <div class="flex items-center space-x-3">
+      <div
+        class="relative w-10 h-10 rounded-2xl bg-[#172C45] border-2 border-[#FF693D] flex items-center justify-center shadow-lg shadow-[#FF693D]/25 overflow-hidden group">
+        <!-- Modern Cartoon Camera & Film Clapper SVG -->
+        <svg class="w-6 h-6 text-[#FF693D] transition group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4zM10 16.5v-6l5 3-5 3z" />
+        </svg>
+        <span
+          class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#FF693D] rounded-full border border-[#0E1B2D] flex items-center justify-center text-[7px] text-white font-black">★</span>
+      </div>
+      <div>
+        <h1 class="text-base font-black tracking-wide text-[#E9F0F5] flex items-center space-x-1.5">
+          <span>TOON<span class="text-[#FF693D]">CRAFT</span></span>
+          <span
+            class="text-[9px] uppercase tracking-wider font-extrabold px-2 py-0.5 rounded-full bg-[#FF693D]/20 text-[#FF693D] border border-[#FF693D]/40">AI
+            Studio</span>
+          <span
+            class="text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded bg-[#172C45] text-[#E9F0F5]/80 border border-[#E9F0F5]/15">Max
+            20s</span>
+        </h1>
+        <p class="text-[11px] text-[#E9F0F5]/70">Style ➔ Script ➔ Scene Visuals ➔ 9:16 Shorts Master</p>
+      </div>
+    </div>
+
+    <!-- Status & Connect -->
+    <div class="flex items-center space-x-3">
+      <!-- AI Engine & Key Status -->
+      <div id="aiEngineBadge"
+        class="flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#172C45] text-[#E9F0F5] border border-[#FF693D]/40 cursor-pointer hover:border-[#FF693D] hover:bg-[#203A5B] transition shadow"
+        onclick="toggleApiKeyModal()" title="Click to view or edit Gemini API Key for 8K Imagen 3">
+        <span class="w-2 h-2 rounded-full bg-[#FF693D]"></span>
+        <span id="aiEngineText">AI: Free Tier (Horde/Pollinations)</span>
+        <span class="text-[9px] bg-[#FF693D] text-white px-1.5 py-0.5 rounded font-extrabold ml-1">KEY</span>
+      </div>
+
+      <div id="ytStatusBadge"
+        class="flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-medium bg-[#172C45] text-[#E9F0F5]/80 border border-[#203A5B]">
+        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
+        <span id="ytStatusText">Checking YouTube Status...</span>
+      </div>
+      <button id="btnConnectYt" onclick="startYouTubeAuth()"
+        class="hidden px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-red-600 hover:bg-red-500 text-white transition flex items-center space-x-1.5 shadow-md">
+        <span>Connect Channel</span>
+      </button>
+      <a href="https://studio.youtube.com" target="_blank"
+        class="text-xs text-[#E9F0F5]/70 hover:text-[#E9F0F5] flex items-center space-x-1 border border-[#203A5B] hover:border-[#FF693D]/50 px-3 py-1.5 rounded-lg transition bg-[#172C45]/50">
+        <span>Studio</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- API Key Configuration Dropdown Panel -->
+  <div id="apiKeyModal" class="hidden bg-[#0E1B2D] border-b border-[#FF693D]/30 px-6 py-3.5 transition-all shadow-2xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div class="space-y-1">
+        <div class="flex items-center space-x-2">
+          <span class="text-base text-[#FF693D]">🔑</span>
+          <h3 class="text-xs font-bold text-[#E9F0F5] uppercase tracking-wider">AI Image Generator Settings</h3>
+          <span
+            class="text-[10px] bg-emerald-500/20 text-emerald-300 font-bold px-2 py-0.5 rounded border border-emerald-500/30">Free
+            Tier Active (No Key Needed)</span>
+        </div>
+        <p class="text-[11px] text-[#E9F0F5]/80">
+          Enter a <b class="text-[#FF693D]">Google Gemini API Key</b> to unlock <b>Google Imagen 3 (8K Pixar/Disney
+            quality)</b>.
+          <a href="https://aistudio.google.com/apikey" target="_blank"
+            class="text-[#FF855D] underline font-bold ml-1 hover:text-white">Get free key from Google AI Studio
+            &rarr;</a>
+        </p>
+        <p class="text-[10px] text-[#E9F0F5]/60">
+          ✨ If left empty, our built-in <b>Free Tier (AI Horde & Pollinations)</b> automatically generates real cartoon
+          images with zero keys required!
+        </p>
+      </div>
+      <div class="flex items-center space-x-2 w-full md:w-auto">
+        <input type="password" id="geminiApiKeyInput" placeholder="Paste Gemini API Key here (AIzaSy...)"
+          class="bg-[#0A1522] border border-[#172C45] rounded-xl px-3 py-2 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D] w-full sm:w-64" />
+        <button onclick="saveApiKey()" id="btnSaveApiKey"
+          class="px-4 py-2 text-xs font-bold rounded-xl bg-gradient-to-r from-[#FF693D] to-[#FF855D] text-white hover:opacity-90 shadow-md transition whitespace-nowrap">
+          Save Key
+        </button>
+        <button onclick="toggleApiKeyModal()" class="text-[#E9F0F5]/60 hover:text-white text-xs px-2 py-1">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Grid Content -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+    <!-- Left Column: Story Ideas & Studio Editors (7 Cols) -->
+    <div class="lg:col-span-7 space-y-6">
+
+      <!-- 🚀 MASTER 1-CLICK AUTO-PILOT BANNER -->
+      <div
+        class="bg-gradient-to-r from-[#172C45] via-[#132437] to-[#172C45] border-2 border-[#FF693D]/50 rounded-2xl p-4 sm:p-5 shadow-2xl relative overflow-hidden pulse-tangerine">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center space-x-2">
+              <span class="text-2xl">🚀</span>
+              <h2 class="text-sm font-black text-[#FF693D] uppercase tracking-wider">1-Click Full Auto-Pilot Creation
+              </h2>
+              <span class="text-[10px] bg-[#FF693D] text-white font-black px-2 py-0.5 rounded-full uppercase">Zero
+                Effort</span>
+            </div>
+            <p class="text-xs text-[#E9F0F5]/90">
+              Pick your <b class="text-[#FF855D]">Character Style</b> & idea, and AI automatically creates everything:
+              <b class="text-white">Script</b> ➔ <b class="text-white">Scene Images</b> ➔ <b
+                class="text-white">Voiceover</b> ➔ <b class="text-white">Master Short (Max 20s)</b>!
+            </p>
+          </div>
+          <button id="btnAutoPilot" onclick="runOneClickAutoPilot()"
+            class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-[#FF693D] to-[#FF855D] hover:from-[#E55428] hover:to-[#FF693D] text-white font-black text-xs shadow-xl shadow-[#FF693D]/30 hover:scale-105 active:scale-95 transition flex items-center justify-center space-x-2 whitespace-nowrap">
+            <span>✨ Start 1-Click Auto Creation</span>
+          </button>
+        </div>
+
+        <!-- Auto-Pilot Live Steps Progress Indicator -->
+        <div id="autopilotProgress" class="hidden mt-4 pt-3 border-t border-[#FF693D]/30">
+          <div class="flex items-center justify-between text-[11px] font-bold text-[#E9F0F5] mb-1.5">
+            <span id="autoStepStatus">Generating story idea and script...</span>
+            <span id="autoStepPercent" class="text-[#FF693D]">25%</span>
+          </div>
+          <div class="w-full bg-[#0A1522] rounded-full h-2 overflow-hidden border border-[#172C45]">
+            <div id="autoProgressBar"
+              class="bg-gradient-to-r from-[#FF693D] to-[#FF855D] h-2 transition-all duration-500" style="width: 25%">
+            </div>
+          </div>
+          <div class="grid grid-cols-4 gap-1 mt-2 text-[10px] text-center text-[#E9F0F5]/60">
+            <div id="badgeStep1" class="text-[#FF693D] font-bold">1. Style & Idea 💡</div>
+            <div id="badgeStep2" class="text-[#E9F0F5]/40">2. Script 📜</div>
+            <div id="badgeStep3" class="text-[#E9F0F5]/40">3. Images 🎨</div>
+            <div id="badgeStep4" class="text-[#E9F0F5]/40">4. Movie 🎬</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Step Navigation Pills (Simple & Easy to Use) -->
+      <div
+        class="bg-[#132437] border border-[#E9F0F5]/10 rounded-2xl p-2.5 flex items-center justify-between text-[11px] font-bold text-[#E9F0F5]/80 overflow-x-auto shadow-md">
+        <span class="flex items-center space-x-1.5 text-[#FF693D] whitespace-nowrap px-2">
+          <span>🎨</span><span>1. Style</span>
+        </span>
+        <span class="text-[#E9F0F5]/30">&rarr;</span>
+        <span class="flex items-center space-x-1.5 text-[#E9F0F5] whitespace-nowrap px-2">
+          <span>💡</span><span>2. Idea & Time</span>
+        </span>
+        <span class="text-[#E9F0F5]/30">&rarr;</span>
+        <span class="flex items-center space-x-1.5 text-[#E9F0F5] whitespace-nowrap px-2">
+          <span>🎙️</span><span>3. Script</span>
+        </span>
+        <span class="text-[#E9F0F5]/30">&rarr;</span>
+        <span class="flex items-center space-x-1.5 text-[#E9F0F5] whitespace-nowrap px-2">
+          <span>🎬</span><span>4. Visuals</span>
+        </span>
+        <span class="text-[#E9F0F5]/30">&rarr;</span>
+        <span class="flex items-center space-x-1.5 text-[#E9F0F5] whitespace-nowrap px-2">
+          <span>💬</span><span>5. Captions</span>
+        </span>
+      </div>
+
+      <!-- SECTION: Character Style Selection (8 Styles) -->
+      <div class="bg-[#132437] border border-[#E9F0F5]/10 rounded-2xl p-5 shadow-xl">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-lg text-[#FF693D]">🎨</span>
+            <h2 class="text-sm font-bold text-[#E9F0F5] uppercase tracking-wider">Select Character Visual Style</h2>
+          </div>
+          <span
+            class="text-[11px] text-[#FF693D] font-bold bg-[#FF693D]/10 px-2.5 py-0.5 rounded-full border border-[#FF693D]/30"
+            id="currentStyleLabel">Exaggerated / Stylized</span>
+        </div>
+
+        <p class="text-xs text-[#E9F0F5]/70 mb-3">Choose the visual aesthetic for your characters and scene imagery:</p>
+
+        <!-- 8 Character Style Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+
+          <!-- 1. Realistic Style -->
+          <button type="button" onclick="selectCharacterStyle('realistic')" id="styleBtn-realistic"
+            class="style-card text-left p-2.5 rounded-xl bg-[#0E1B2D] border border-[#172C45] hover:border-[#FF693D]/50 transition relative group shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-base group-hover:scale-110 transition">👤</span>
+              <span
+                class="style-check hidden w-3.5 h-3.5 rounded-full bg-[#FF693D] items-center justify-center text-[9px] font-bold text-white">✓</span>
+            </div>
+            <p class="text-xs font-bold text-[#E9F0F5]">Realistic Style</p>
+            <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-2 mt-0.5">Natural human proportions, realistic anatomy,
+              lighting, and shading.</p>
+          </button>
+
+          <!-- 2. Exaggerated / Stylized Style (Default) -->
+          <button type="button" onclick="selectCharacterStyle('stylized')" id="styleBtn-stylized"
+            class="style-card active text-left p-2.5 rounded-xl bg-[#0E1B2D] border border-[#172C45] hover:border-[#FF693D]/50 transition relative group shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-base group-hover:scale-110 transition">🎭</span>
+              <span
+                class="style-check flex w-3.5 h-3.5 rounded-full bg-[#FF693D] items-center justify-center text-[9px] font-bold text-white">✓</span>
+            </div>
+            <p class="text-xs font-bold text-[#E9F0F5]">Stylized / Pixar</p>
+            <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-2 mt-0.5">Oversized features, expressive faces, and
+              dynamic poses.</p>
+          </button>
+
+          <!-- 3. Anime and Manga Style -->
+          <button type="button" onclick="selectCharacterStyle('anime')" id="styleBtn-anime"
+            class="style-card text-left p-2.5 rounded-xl bg-[#0E1B2D] border border-[#172C45] hover:border-[#FF693D]/50 transition relative group shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-base group-hover:scale-110 transition">🌸</span>
+              <span
+                class="style-check hidden w-3.5 h-3.5 rounded-full bg-[#FF693D] items-center justify-center text-[9px] font-bold text-white">✓</span>
+            </div>
+            <p class="text-xs font-bold text-[#E9F0F5]">Anime & Manga</p>
+            <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-2 mt-0.5">Large expressive eyes, simplified facial
+              features, distinctive hair.</p>
+          </button>
+
+          <!-- 4. Chibi Style -->
+          <button type="button" onclick="selectCharacterStyle('chibi')" id="styleBtn-chibi"
+            class="style-card text-left p-2.5 rounded-xl bg-[#0E1B2D] border border-[#172C45] hover:border-[#FF693D]/50 transition relative group shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-base group-hover:scale-110 transition">🐣</span>
+              <span
+                class="style-check hidden w-3.5 h-3.5 rounded-full bg-[#FF693D] items-center justify-center text-[9px] font-bold text-white">✓</span>
+            </div>
+            <p class="text-xs font-bold text-[#E9F0F5]">Chibi Style</p>
+            <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-2 mt-0.5">Cute characters with oversized heads and small
+              cute bodies.</p>
+          </button>
+
+          <!-- 5. Cartoon / Rubber Hose Style -->
+          <button type="button" onclick="selectCharacterStyle('rubber_hose')" id="styleBtn-rubber_hose"
+            class="style-card text-left p-2.5 rounded-xl bg-[#0E1B2D] border border-[#172C45] hover:border-[#FF693D]/50 transition relative group shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-base group-hover:scale-110 transition">🧤</span>
+              <span
+                class="style-check hidden w-3.5 h-3.5 rounded-full bg-[#FF693D] items-center justify-center text-[9px] font-bold text-white">✓</span>
+            </div>
+            <p class="text-xs font-bold text-[#E9F0F5]">Rubber Hose</p>
+            <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-2 mt-0.5">Playful, exaggerated proportions with fluid
+              cartoon movements.</p>
+          </button>
+
+          <!-- 6. Flat / Geometric Style -->
+          <button type="button" onclick="selectCharacterStyle('flat_geometric')" id="styleBtn-flat_geometric"
+            class="style-card text-left p-2.5 rounded-xl bg-[#0E1B2D] border border-[#172C45] hover:border-[#FF693D]/50 transition relative group shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-base group-hover:scale-110 transition">🔷</span>
+              <span
+                class="style-check hidden w-3.5 h-3.5 rounded-full bg-[#FF693D] items-center justify-center text-[9px] font-bold text-white">✓</span>
+            </div>
+            <p class="text-xs font-bold text-[#E9F0F5]">Flat / Geometric</p>
+            <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-2 mt-0.5">Simple geometric shapes, bold colours, and clean
+              designs.</p>
+          </button>
+
+          <!-- 7. Pixel Style -->
+          <button type="button" onclick="selectCharacterStyle('pixel')" id="styleBtn-pixel"
+            class="style-card text-left p-2.5 rounded-xl bg-[#0E1B2D] border border-[#172C45] hover:border-[#FF693D]/50 transition relative group shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-base group-hover:scale-110 transition">👾</span>
+              <span
+                class="style-check hidden w-3.5 h-3.5 rounded-full bg-[#FF693D] items-center justify-center text-[9px] font-bold text-white">✓</span>
+            </div>
+            <p class="text-xs font-bold text-[#E9F0F5]">Pixel Art Style</p>
+            <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-2 mt-0.5">Retro video-game-inspired pixel art and 16-bit
+              nostalgia.</p>
+          </button>
+
+          <!-- 8. 3D / Low-Poly Style -->
+          <button type="button" onclick="selectCharacterStyle('low_poly')" id="styleBtn-low_poly"
+            class="style-card text-left p-2.5 rounded-xl bg-[#0E1B2D] border border-[#172C45] hover:border-[#FF693D]/50 transition relative group shadow-sm">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-base group-hover:scale-110 transition">💎</span>
+              <span
+                class="style-check hidden w-3.5 h-3.5 rounded-full bg-[#FF693D] items-center justify-center text-[9px] font-bold text-white">✓</span>
+            </div>
+            <p class="text-xs font-bold text-[#E9F0F5]">3D / Low-Poly</p>
+            <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-2 mt-0.5">3D characters with depth, lighting, and
+              polygon-based designs.</p>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- SECTION 1: Step 1 – Idea Generation & Duration Selector (MAX 20 SECONDS) -->
+      <div class="bg-[#132437] border border-[#E9F0F5]/10 rounded-2xl p-5 shadow-xl">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-lg text-[#FF693D]">💡</span>
+            <h2 class="text-sm font-bold text-[#E9F0F5] uppercase tracking-wider">Step 1: Idea Generation & Duration
+              (Max 20s)</h2>
+          </div>
+          <span
+            class="text-[11px] text-[#FF693D] font-semibold bg-[#FF693D]/10 px-2 py-0.5 rounded border border-[#FF693D]/30"
+            id="durationSceneHint">10s (4 Scenes)</span>
+        </div>
+
+        <!-- Video Duration Selector: 5s, 10s, 15s, 20s MAX ONLY -->
+        <div class="mb-4 bg-[#0E1B2D] p-3 rounded-xl border border-[#172C45]">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-[#E9F0F5]">Target Duration (Max 20s Only):</span>
+            <span
+              class="text-[10px] text-[#FF693D] font-bold bg-[#FF693D]/15 px-2 py-0.5 rounded border border-[#FF693D]/30">Strictly
+              20s Maximum</span>
+          </div>
+          <div class="grid grid-cols-4 gap-2">
+            <button type="button" onclick="setDuration(5, true)" id="durBtn5"
+              class="duration-pill py-2 px-2 rounded-lg border border-[#203A5B] bg-[#172C45] text-xs text-center transition flex flex-col items-center hover:border-[#FF693D]/40">
+              <span class="text-xs font-extrabold text-[#E9F0F5]">⏱️ 5s</span>
+              <span class="text-[9px] opacity-80 text-[#E9F0F5]/70">2 Scenes</span>
+            </button>
+            <button type="button" onclick="setDuration(10, true)" id="durBtn10"
+              class="duration-pill active py-2 px-2 rounded-lg border border-[#203A5B] bg-[#172C45] text-xs text-center transition flex flex-col items-center hover:border-[#FF693D]/40">
+              <span class="text-xs font-extrabold text-[#E9F0F5]">⏱️ 10s</span>
+              <span class="text-[9px] opacity-80 text-[#E9F0F5]/70">4 Scenes</span>
+            </button>
+            <button type="button" onclick="setDuration(15, true)" id="durBtn15"
+              class="duration-pill py-2 px-2 rounded-lg border border-[#203A5B] bg-[#172C45] text-xs text-center transition flex flex-col items-center hover:border-[#FF693D]/40">
+              <span class="text-xs font-extrabold text-[#E9F0F5]">⏱️ 15s</span>
+              <span class="text-[9px] opacity-80 text-[#E9F0F5]/70">4 Scenes</span>
+            </button>
+            <button type="button" onclick="setDuration(20, true)" id="durBtn20"
+              class="duration-pill py-2 px-2 rounded-lg border border-[#203A5B] bg-[#172C45] text-xs text-center transition flex flex-col items-center hover:border-[#FF693D]/40">
+              <span class="text-xs font-extrabold text-[#FF693D]">⏱️ 20s (MAX)</span>
+              <span class="text-[9px] opacity-80 text-[#E9F0F5]/70">5 Scenes</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Random Worldwide Topic Button & Title -->
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs font-bold text-[#E9F0F5]">Worldwide Topic Discovery:</span>
+          <button onclick="pickRandomWorldwideIdea()"
+            class="px-3 py-1 rounded-lg bg-[#172C45] hover:bg-[#203A5B] text-[#FF693D] border border-[#FF693D]/40 text-xs font-bold transition flex items-center space-x-1.5 shadow">
+            <span>🎲 Random Worldwide Idea</span>
+          </button>
+        </div>
+
+        <!-- Curated Global Topic Chips -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3.5" id="topicChips">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- Custom Single Idea Input & Generate Button -->
+        <div class="space-y-2">
+          <label class="text-[11px] text-[#E9F0F5]/70 block">Enter any random idea, or edit the selected worldwide
+            topic:</label>
+          <div class="flex flex-col sm:flex-row gap-2">
+            <input type="text" id="sbInput"
+              value="The Little Star's Dream: A tiny glowing star falls into a quiet forest, a cute rabbit discovers it crying, helps it fly back to the sky, and the star waves goodbye whisper 'You are my hero!'"
+              placeholder="Enter any random topic (e.g. A baby dragon toast marshmallow, Mars rover tulip)..."
+              class="flex-1 bg-[#0A1522] border border-[#172C45] rounded-xl px-3.5 py-2.5 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D] transition placeholder-[#E9F0F5]/30" />
+            <button id="btnGenerateSb" onclick="generateStoryboard()"
+              class="px-5 py-2.5 text-xs font-bold rounded-xl bg-gradient-to-r from-[#FF693D] to-[#FF855D] hover:from-[#E55428] hover:to-[#FF693D] text-white shadow-lg shadow-[#FF693D]/25 transition flex items-center justify-center space-x-1.5 whitespace-nowrap">
+              <span>⚡ Generate Script (Step 2)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: Step 2 – Script Generation (Editable) -->
+      <div class="bg-[#132437] border border-[#E9F0F5]/10 rounded-2xl p-5 shadow-xl">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center space-x-2">
+            <span class="text-lg text-[#FF693D]">🎙️</span>
+            <h2 class="text-sm font-bold text-[#E9F0F5] uppercase tracking-wider">Step 2: Script Generation (YouTube
+              Short)</h2>
+          </div>
+          <span id="scriptWordCountBadge"
+            class="text-[10px] text-[#FF693D] font-bold bg-[#FF693D]/10 px-2 py-0.5 rounded border border-[#FF693D]/30">~30
+            Words (10s)</span>
+        </div>
+        <p class="text-xs text-[#E9F0F5]/70 mb-2">Review or edit your voiceover story script. Step 3 scenes
+          automatically synchronize to match this text:</p>
+        <textarea id="sbNarration" rows="3" oninput="onNarrationInput()"
+          placeholder="Your engaging narration script for YouTube Shorts will appear here..."
+          class="w-full bg-[#0A1522] border border-[#172C45] rounded-xl p-3 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D] transition mb-2.5 leading-relaxed"></textarea>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+          <button id="btnSyncScenes" onclick="generateScenesFromNarration()"
+            class="px-4 py-2 text-xs font-bold rounded-xl bg-[#172C45] hover:bg-[#203A5B] text-[#FF693D] border border-[#FF693D]/40 transition flex items-center space-x-1.5 shadow">
+            <span>⚡ Breakdown into Step 3 Scenes</span>
+          </button>
+          <span id="narrationSyncStatus" class="text-[11px] font-medium text-[#E9F0F5]/50">Click button above to
+            synchronize Step 3 scenes</span>
+        </div>
+      </div>
+
+      <!-- SECTION 3: Step 3 – Multi-Scene Storyboard & Image Generation -->
+      <div class="bg-[#132437] border border-[#E9F0F5]/10 rounded-2xl p-5 shadow-xl">
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-[#172C45] mb-4 gap-2">
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="text-lg text-[#FF693D]">🎬</span>
+              <h2 class="text-sm font-bold text-[#E9F0F5] uppercase tracking-wider">Step 3: Multi-Scene Storyboard & AI
+                Images</h2>
+            </div>
+            <p class="text-xs text-[#E9F0F5]/70 mt-0.5" id="sceneCountHeader">4 Sequential Scenes (Total: 10s • Max 20s)
+            </p>
+          </div>
+
+          <!-- Auto-Generate All Scene Images Button -->
+          <button id="btnGenerateAllImages" onclick="generateAllSceneImages()"
+            class="px-4 py-2 text-xs font-bold rounded-xl bg-gradient-to-r from-[#FF693D] to-[#FF855D] hover:from-[#E55428] hover:to-[#FF693D] text-white shadow-lg shadow-[#FF693D]/25 transition flex items-center justify-center space-x-1.5 whitespace-nowrap">
+            <span>🎨 Auto-Generate All Scene Images (AI)</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Grid of Scene Cards -->
+        <div id="scenesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <!-- Injected dynamically based on duration (2, 4, or 5 cards) -->
+        </div>
+      </div>
+
+      <!-- SECTION 4: Subtitles & Captions Studio (WITH ON / OFF TOGGLE) -->
+      <div class="bg-[#132437] border border-[#E9F0F5]/10 rounded-2xl p-5 shadow-xl">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-lg text-[#FF693D]">💬</span>
+            <h2 class="text-sm font-bold text-[#E9F0F5] uppercase tracking-wider">Step 4: Subtitles & Captions Control
+            </h2>
+          </div>
+
+          <!-- Captions ON / OFF Toggle Switch -->
+          <div class="flex items-center space-x-2 bg-[#0E1B2D] px-3 py-1.5 rounded-xl border border-[#172C45]">
+            <span class="text-xs font-semibold text-[#E9F0F5]/80">Captions:</span>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input type="checkbox" id="toggleCaptions" checked class="sr-only peer" onchange="updateCaptionsToggle()">
+              <div
+                class="w-9 h-5 bg-[#172C45] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#FF693D]">
+              </div>
+            </label>
+            <span id="captionStatusText" class="text-xs font-bold text-[#FF693D]">ON</span>
+          </div>
+        </div>
+
+        <!-- Captions Styling Options -->
+        <div id="captionsOptionsPanel" class="space-y-3">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            <div>
+              <label class="text-[10px] text-[#E9F0F5]/60 block mb-1">Position</label>
+              <select id="captionPosition"
+                class="w-full bg-[#0A1522] border border-[#172C45] rounded-lg p-2 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D]">
+                <option value="bottom" selected>Bottom (Shorts Standard)</option>
+                <option value="center">Center</option>
+                <option value="top">Top</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[10px] text-[#E9F0F5]/60 block mb-1">Font Family</label>
+              <select id="captionFont"
+                class="w-full bg-[#0A1522] border border-[#172C45] rounded-lg p-2 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D]">
+                <option value="Impact" selected>Impact (Bold Shorts)</option>
+                <option value="Arial">Arial Bold</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Comic Sans MS">Comic Sans (Cartoon)</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[10px] text-[#E9F0F5]/60 block mb-1">Text Color</label>
+              <select id="captionColor"
+                class="w-full bg-[#0A1522] border border-[#172C45] rounded-lg p-2 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D]">
+                <option value="yellow" selected>💛 Golden Yellow</option>
+                <option value="white">🤍 Pure White</option>
+                <option value="cyan">🩵 Vibrant Cyan</option>
+                <option value="lime">💚 Lime Green</option>
+                <option value="magenta">🩷 Hot Pink</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[10px] text-[#E9F0F5]/60 block mb-1">Badge Style</label>
+              <select id="captionBox"
+                class="w-full bg-[#0A1522] border border-[#172C45] rounded-lg p-2 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D]">
+                <option value="badge" selected>Dark Contrast Box</option>
+                <option value="outline">Clean Outline</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Dynamic Subtitle Lines Container -->
+          <div>
+            <label class="text-[10px] text-[#E9F0F5]/70 block mb-1">Subtitle Lines (Clean Text - No Emojis):</label>
+            <div id="subtitlesList" class="space-y-1.5">
+              <!-- Dynamically populated to match scene count -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Audio & Color Settings -->
+        <div class="mt-4 pt-3 border-t border-[#172C45] grid grid-cols-1 sm:grid-cols-2 gap-3 items-center">
+          <div>
+            <label class="text-[10px] text-[#E9F0F5]/70 block mb-1">Background Music Volume: <span id="bgmVolumeDisplay"
+                class="text-[#FF693D] font-bold">18%</span></label>
+            <input type="range" id="bgmVolumeSlider" min="0" max="0.5" step="0.02" value="0.18"
+              oninput="document.getElementById('bgmVolumeDisplay').textContent = Math.round(this.value * 100) + '%'"
+              class="w-full accent-[#FF693D] cursor-pointer">
+          </div>
+          <div class="flex items-center space-x-2 bg-[#0E1B2D] p-2.5 rounded-xl border border-[#172C45]">
+            <span class="text-base text-[#FF693D]">🎨</span>
+            <div>
+              <p class="text-xs font-bold text-[#E9F0F5]">Stylized Color Grading Active</p>
+              <p class="text-[10px] text-[#E9F0F5]/60">Contrast & saturation boost (No emojis in frames)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Vertical Video Player & Studio Output (5 Cols) -->
+    <div class="lg:col-span-5 space-y-6">
+
+      <!-- Vertical 9:16 Shorts Player Card -->
+      <div
+        class="bg-[#132437] border border-[#E9F0F5]/10 rounded-2xl p-5 shadow-xl flex flex-col items-center sticky top-20">
+        <div class="flex items-center justify-between w-full mb-3">
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#FF693D] animate-pulse"></span>
+            <h2 class="text-sm font-bold text-[#E9F0F5]">9:16 YouTube Short Preview</h2>
+          </div>
+          <span
+            class="text-[11px] font-mono text-[#E9F0F5]/80 bg-[#172C45] border border-[#203A5B] px-2 py-0.5 rounded">1080
+            × 1920</span>
+        </div>
+
+        <!-- Vertical Video Container -->
+        <div
+          class="relative w-full max-w-[280px] aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-2xl border-2 border-[#172C45] flex items-center justify-center group hover:border-[#FF693D]/50 transition">
+          <video id="videoPlayer" controls autoplay loop playsinline class="w-full h-full object-cover">
+            <source id="videoSource" src="/api/video" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+
+        <!-- Render & Update Button -->
+        <div class="w-full mt-4 space-y-2">
+          <button id="btnRenderMain" onclick="renderStoryboardMovie()"
+            class="w-full py-3 text-xs font-bold rounded-xl bg-gradient-to-r from-[#FF693D] to-[#FF855D] hover:from-[#E55428] hover:to-[#FF693D] text-white shadow-lg shadow-[#FF693D]/25 transition flex items-center justify-center space-x-2 hover:scale-[1.01] active:scale-[0.99]">
+            <span>🎬 Render / Update Master Video</span>
+          </button>
+          <p id="renderStatusMsg" class="text-[11px] text-center text-[#E9F0F5]/70 min-h-[1.2rem]"></p>
+        </div>
+
+        <!-- YouTube Publishing Details Card -->
+        <div class="w-full mt-4 pt-4 border-t border-[#172C45] space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="text-base text-red-500">▶️</span>
+              <h3 class="text-xs font-bold text-[#E9F0F5] uppercase tracking-wider">YouTube Metadata</h3>
+            </div>
+            <span class="text-[10px] text-[#E9F0F5]/60">Ready to Publish</span>
+          </div>
+
+          <div>
+            <label class="text-[10px] text-[#E9F0F5]/60 block mb-0.5">Title</label>
+            <input type="text" id="ytTitle" value="The Little Star's Dream ⭐🐰 | Bedtime Story Short"
+              class="w-full bg-[#0A1522] border border-[#172C45] rounded-lg p-2 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D]" />
+          </div>
+
+          <div>
+            <label class="text-[10px] text-[#E9F0F5]/60 block mb-0.5">Description</label>
+            <textarea id="ytDescription" rows="2"
+              class="w-full bg-[#0A1522] border border-[#172C45] rounded-lg p-2 text-xs text-[#E9F0F5]/80 focus:outline-none focus:border-[#FF693D]">Once upon a magical night, a tiny star fell from the sky... A cute rabbit came to the rescue! #Shorts #Animation #Cute #BedtimeStory</textarea>
+          </div>
+
+          <button id="btnPublishYt" onclick="publishToYouTube()"
+            class="w-full py-2.5 text-xs font-bold rounded-xl bg-red-600 hover:bg-red-500 text-white transition flex items-center justify-center space-x-1.5 shadow-md shadow-red-600/20">
+            <span>🚀 1-Click Publish to YouTube</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    // Worldwide Topics Catalog
+    const WORLDWIDE_IDEAS = [
+      {
+        emoji: "🇯🇵",
+        country: "Japan",
+        title: "Kyoto Snow Fox",
+        subtitle: "Golden Lantern Guide",
+        prompt: "Kyoto Snow Fox & Golden Lanterns: A fluffy white kitsune fox in Kyoto discovers glowing golden maple leaves that turn into floating lanterns, guiding lost forest travelers safely home through the bamboo grove."
+      },
+      {
+        emoji: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        country: "Scotland",
+        title: "Baby Loch Ness",
+        subtitle: "Bubble Starlight Flight",
+        prompt: "Baby Nessie's Bubble Ride: A cute baby Loch Ness monster blows glowing blue starlight bubbles, giving tiny Highland sheep a magical flying ride across the misty loch under the Scottish moonlight."
+      },
+      {
+        emoji: "🇪🇬",
+        country: "Egypt",
+        title: "The Sphinx Kitten",
+        subtitle: "Secret Pyramid Yarn",
+        prompt: "The Sphinx Kitten's Treasure: A tiny golden kitten wearing a pharaoh necklace solves an ancient hieroglyphic riddle inside the Great Pyramid, unlocking a hidden chamber filled with magical glowing yarn balls."
+      },
+      {
+        emoji: "🇧🇷",
+        country: "Brazil",
+        title: "Amazon Glow Frog",
+        subtitle: "Samba Moonflower",
+        prompt: "Amazon Glow Frog & Samba Flower: A turquoise neon tree frog in the Brazilian rainforest wakes a rare nocturnal moonflower that begins playing energetic samba rhythms, turning the canopy into a joyful carnival."
+      },
+      {
+        emoji: "🇳🇴",
+        country: "Norway",
+        title: "Aurora Reindeer",
+        subtitle: "Northern Lights Trail",
+        prompt: "Aurora Reindeer's Sky Trail: A baby reindeer with silver hooves gallops over snowy Norwegian fjords, leaving dazzling green and magenta northern lights streaking across the Arctic night sky."
+      },
+      {
+        emoji: "🇮🇳",
+        country: "India",
+        title: "Rainbow Elephant",
+        subtitle: "Holi Candy Monsoon",
+        prompt: "The Rainbow Holi Elephant: An energetic baby elephant sprays sparkling mystical Holi festival powders into the monsoon clouds, raining colorful candy drops over the cheering village animals."
+      },
+      {
+        emoji: "🚀",
+        country: "Mars",
+        title: "Mars Space Rover",
+        subtitle: "The Crystal Tulip",
+        prompt: "Space Rover & The First Martian Tulip: A lonely cute robotic rover on Mars discovers a glowing crystal tulip growing in the red dust, and carefully shields it from a meteor shower with its solar panel."
+      },
+      {
+        emoji: "🐼",
+        country: "China",
+        title: "Panda Kung Fu",
+        subtitle: "Bamboo Feasting Quest",
+        prompt: "Panda Master: Kung Fu Quest: A cute chubby panda practices bamboo balance in misty mountain forest, rolls down the hill like a giant dumpling, and makes an acrobatic feast landing catching dumplings midair!"
+      }
+    ];
+
+    const STYLE_LABELS = {
+      "realistic": "Realistic Style",
+      "stylized": "Exaggerated / Stylized Style",
+      "anime": "Anime and Manga Style",
+      "chibi": "Chibi Style",
+      "rubber_hose": "Cartoon / Rubber Hose Style",
+      "flat_geometric": "Flat / Geometric Style",
+      "pixel": "Pixel Art Style",
+      "low_poly": "3D / Low-Poly Style"
+    };
+
+    const STYLE_PREFIXES = {
+      "realistic": "Photorealistic style, natural anatomy, cinema lighting, 8k photographic render: ",
+      "stylized": "Exaggerated stylized 3D animation style, expressive face, vibrant lighting, 8k 3D render: ",
+      "anime": "High quality modern anime and manga style, Makoto Shinkai aesthetic, large expressive eyes, vibrant cel-shading: ",
+      "chibi": "Ultra cute chibi character style, oversized head and cute body, kawaii 3D render: ",
+      "rubber_hose": "1930s vintage rubber hose animation style, pie eyes, white gloves, fluid limbs: ",
+      "flat_geometric": "Flat geometric vector art illustration style, minimalist shapes, bold colors: ",
+      "pixel": "Retro 16-bit video game pixel art style, sharp sprites, vibrant 90s arcade aesthetic: ",
+      "low_poly": "Stylish 3D low-poly art style, faceted polygon surfaces, volumetric lighting: "
+    };
+
+    let currentStoryboard = null;
+    let selectedDuration = 10; // Max 20s: 5, 10, 15, or 20
+    let selectedCharacterStyle = "stylized";
+    let activeAssets = {};
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderTopicChips();
+      fetchStatus();
+      loadDefaultStoryboard();
+    });
+
+    function selectCharacterStyle(styleKey, updatePrompts = true) {
+      selectedCharacterStyle = styleKey;
+
+      // Update UI selection on all 8 style cards
+      document.querySelectorAll('.style-card').forEach(card => card.classList.remove('active'));
+      const activeBtn = document.getElementById(`styleBtn-${styleKey}`);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const label = document.getElementById('currentStyleLabel');
+      if (label) label.textContent = STYLE_LABELS[styleKey] || styleKey;
+
+      if (currentStoryboard) {
+        currentStoryboard.characterStyle = styleKey;
+      }
+
+      // Update scene prompt textareas dynamically with the new character style prefix
+      if (updatePrompts) {
+        const stylePrefix = STYLE_PREFIXES[styleKey] || `${STYLE_LABELS[styleKey]}, `;
+        const sceneCount = (currentStoryboard?.scenes?.length) || (selectedDuration <= 6 ? 2 : (selectedDuration <= 16 ? 4 : 5));
+        for (let i = 1; i <= sceneCount; i++) {
+          const promptEl = document.getElementById(`scene${i}Prompt`);
+          if (promptEl) {
+            let text = promptEl.value;
+            for (const pfx of Object.values(STYLE_PREFIXES)) {
+              if (text.startsWith(pfx)) {
+                text = text.substring(pfx.length);
+                break;
+              }
+            }
+            for (const lbl of Object.values(STYLE_LABELS)) {
+              if (text.startsWith(lbl + ", ")) {
+                text = text.substring(lbl.length + 2);
+                break;
+              }
+            }
+            promptEl.value = `${stylePrefix}${text}`;
+            if (currentStoryboard?.scenes?.[i - 1]) {
+              currentStoryboard.scenes[i - 1].pixarPrompt = promptEl.value;
+            }
+          }
+        }
+      }
+    }
+
+    function setDuration(dur, shouldRegenerate = false) {
+      // Strictly enforce max 20 seconds
+      selectedDuration = Math.min(20, Math.max(5, parseInt(dur, 10) || 10));
+
+      // Update pills UI
+      [5, 10, 15, 20].forEach(d => {
+        const btn = document.getElementById(`durBtn${d}`);
+        if (btn) {
+          if (d === selectedDuration) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        }
+      });
+
+      const count = selectedDuration <= 6 ? 2 : (selectedDuration <= 16 ? 4 : 5);
+      document.getElementById('durationSceneHint').textContent = `${selectedDuration}s (${count} Scenes)`;
+      document.getElementById('sceneCountHeader').textContent = `${count} Sequential Scenes (Total: ${selectedDuration}s • Max 20s)`;
+
+      const wordsEstimate = selectedDuration === 5 ? "~15 Words (5s)" : (selectedDuration === 10 ? "~30 Words (10s)" : (selectedDuration === 15 ? "~45 Words (15s)" : "~60 Words (20s MAX)"));
+      document.getElementById('scriptWordCountBadge').textContent = wordsEstimate;
+
+      if (currentStoryboard) {
+        currentStoryboard.duration = selectedDuration;
+      }
+
+      // ONLY regenerate if explicitly requested by clicking the duration pill
+      if (shouldRegenerate && currentStoryboard && currentStoryboard.scenes) {
+        generateStoryboard();
+      }
+    }
+
+    function renderTopicChips() {
+      const container = document.getElementById('topicChips');
+      if (!container) return;
+      container.innerHTML = WORLDWIDE_IDEAS.map((topic, index) => `
+        <button type="button" onclick="selectTopicByIndex(${index})"
+          class="topic-card text-left p-2 rounded-xl bg-[#0E1B2D] hover:bg-[#172C45] border border-[#172C45] hover:border-[#FF693D]/80 transition group shadow-sm">
+          <div class="flex items-center space-x-1.5 mb-0.5">
+            <span class="text-sm group-hover:scale-110 transition">${topic.emoji}</span>
+            <p class="text-xs font-bold text-[#E9F0F5] group-hover:text-[#FF693D] truncate">${topic.title}</p>
+          </div>
+          <p class="text-[9px] text-[#E9F0F5]/60 line-clamp-1">${topic.country} • ${topic.subtitle}</p>
+        </button>
+      `).join('');
+    }
+
+    function selectTopicByIndex(index) {
+      const topic = WORLDWIDE_IDEAS[index];
+      if (!topic) return;
+      document.getElementById('sbInput').value = topic.prompt;
+      generateStoryboard();
+    }
+
+    function pickRandomWorldwideIdea() {
+      const idx = Math.floor(Math.random() * WORLDWIDE_IDEAS.length);
+      selectTopicByIndex(idx);
+    }
+
+    function selectTopic(promptText) {
+      document.getElementById('sbInput').value = promptText;
+      generateStoryboard();
+    }
+
+    function updateCaptionsToggle() {
+      const isChecked = document.getElementById('toggleCaptions').checked;
+      const statusText = document.getElementById('captionStatusText');
+      const panel = document.getElementById('captionsOptionsPanel');
+
+      if (isChecked) {
+        statusText.textContent = "ON";
+        statusText.className = "text-xs font-bold text-[#FF693D]";
+        panel.classList.remove('opacity-40', 'pointer-events-none');
+      } else {
+        statusText.textContent = "OFF";
+        statusText.className = "text-xs font-bold text-[#E9F0F5]/40";
+        panel.classList.add('opacity-40', 'pointer-events-none');
+      }
+    }
+
+    async function generateStoryboard() {
+      const prompt = document.getElementById('sbInput').value.trim() || "The Little Star's Dream";
+      const btn = document.getElementById('btnGenerateSb');
+      btn.disabled = true;
+      btn.innerHTML = `<svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg> Generating Script...`;
+
+      try {
+        const res = await fetch(`/api/generate-storyboard?_t=${Date.now()}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          cache: 'no-store',
+          body: JSON.stringify({
+            prompt,
+            duration: selectedDuration,
+            characterStyle: selectedCharacterStyle
+          })
+        });
+        const data = await res.json();
+        if (data.storyboard) {
+          populateStoryboard(data.storyboard, false);
+          // Progressively generate all scene images
+          generateAllSceneImages(true);
+        }
+      } catch (err) {
+        alert("Failed to generate storyboard: " + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<span>⚡ Generate Script (Step 2)</span>`;
+      }
+    }
+
+    function onNarrationInput() {
+      const syncIndicator = document.getElementById('narrationSyncStatus');
+      if (syncIndicator) {
+        syncIndicator.innerHTML = `<span class="inline-block w-2 h-2 rounded-full bg-yellow-400 mr-1"></span> Edited. Click 'Breakdown into Step 3 Scenes' to synchronize`;
+        syncIndicator.className = "text-[11px] font-medium text-amber-400 flex items-center";
+      }
+    }
+
+    async function generateScenesFromNarration(isAuto = false) {
+      const narration = document.getElementById('sbNarration').value.trim();
+      if (!narration) return;
+
+      const btn = document.getElementById('btnSyncScenes');
+      const syncIndicator = document.getElementById('narrationSyncStatus');
+
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = `<svg class="animate-spin -ml-1 mr-1.5 h-3.5 w-3.5 text-amber-300" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg> Generating Scenes...`;
+      }
+      if (syncIndicator) {
+        syncIndicator.innerHTML = `<span class="inline-block w-2 h-2 rounded-full bg-amber-400 animate-ping mr-1"></span> AI analyzing narration & updating Step 3 scenes...`;
+        syncIndicator.className = "text-[11px] font-medium text-amber-300 flex items-center";
+      }
+
+      try {
+        const res = await fetch(`/api/generate-from-narration?_t=${Date.now()}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          cache: 'no-store',
+          body: JSON.stringify({
+            narration,
+            duration: selectedDuration,
+            characterStyle: selectedCharacterStyle
+          })
+        });
+        const data = await res.json();
+        if (data.storyboard && data.storyboard.scenes) {
+          populateScenesOnly(data.storyboard);
+          if (syncIndicator) {
+            syncIndicator.innerHTML = `✅ Step 3 Storyboard scenes & prompts automatically updated!`;
+            syncIndicator.className = "text-[11px] font-semibold text-emerald-400 flex items-center";
+          }
+          // Progressively generate scene images
+          generateAllSceneImages(true);
+        }
+      } catch (err) {
+        if (syncIndicator) {
+          syncIndicator.innerHTML = `❌ Failed to generate scenes: ${err.message}`;
+          syncIndicator.className = "text-[11px] font-medium text-red-400 flex items-center";
+        }
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = `<span>⚡ Breakdown into Step 3 Scenes</span>`;
+        }
+      }
+    }
+
+    function populateStoryboard(sb, triggerImageGen = false) {
+      currentStoryboard = sb;
+      document.getElementById('sbNarration').value = sb.narration || "";
+
+      if (sb.duration) {
+        setDuration(Math.min(20, sb.duration), false);
+      }
+      if (sb.characterStyle && !selectedCharacterStyle) {
+        selectCharacterStyle(sb.characterStyle, false);
+      }
+
+      populateScenesOnly(sb);
+
+      // YouTube Metadata
+      if (sb.youtube?.title) document.getElementById('ytTitle').value = sb.youtube.title;
+      if (sb.youtube?.description) document.getElementById('ytDescription').value = sb.youtube.description;
+
+      if (triggerImageGen) {
+        generateAllSceneImages(true);
+      }
+    }
+
+    function populateScenesOnly(sb) {
+      const scenes = sb.scenes || [];
+      renderSceneCards(scenes);
+      renderSubtitlesList(sb.subtitles || scenes.map(s => s.title));
+    }
+
+    function updateSceneEffect(sceneNum, val) {
+      if (currentStoryboard?.scenes?.[sceneNum - 1]) {
+        currentStoryboard.scenes[sceneNum - 1].effect = val;
+      }
+    }
+
+    function updateSceneDuration(sceneNum, val) {
+      if (currentStoryboard?.scenes?.[sceneNum - 1]) {
+        currentStoryboard.scenes[sceneNum - 1].duration = parseFloat(val) || 2.5;
+      }
+    }
+
+    function updateSceneTitle(sceneNum, val) {
+      if (currentStoryboard?.scenes?.[sceneNum - 1]) {
+        currentStoryboard.scenes[sceneNum - 1].title = val;
+      }
+    }
+
+    function updateScenePrompt(sceneNum, val) {
+      if (currentStoryboard?.scenes?.[sceneNum - 1]) {
+        currentStoryboard.scenes[sceneNum - 1].pixarPrompt = val;
+      }
+    }
+
+    function renderSceneCards(scenes) {
+      const grid = document.getElementById('scenesGrid');
+      if (!grid) return;
+
+      const actColors = [
+        "text-[#FF693D]", "text-[#FF855D]", "text-[#E9F0F5]", "text-[#FF693D]",
+        "text-[#FF855D]", "text-[#E9F0F5]", "text-[#FF693D]", "text-[#FF855D]"
+      ];
+
+      grid.innerHTML = scenes.map((sc, index) => {
+        const sceneNum = sc.sceneNumber || (index + 1);
+        const color = actColors[index % actColors.length];
+        const dur = sc.duration || (selectedDuration <= 6 ? 2.5 : (selectedDuration <= 11 ? 2.5 : (selectedDuration <= 16 ? 3.75 : 4.0)));
+        const effect = sc.effect || (index === 0 ? "star_fall" : (index === 1 ? "rabbit_discover" : "star_launch"));
+
+        return `
+          <div class="bg-[#0E1B2D] border border-[#172C45] rounded-xl p-3 flex flex-col justify-between space-y-2 group hover:border-[#FF693D]/50 transition shadow-md">
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[10px] font-extrabold ${color} uppercase tracking-wider">Act ${sceneNum}</span>
+                <input id="scene${sceneNum}Duration" type="number" step="0.5" min="1" max="10" value="${dur}"
+                  onchange="updateSceneDuration(${sceneNum}, this.value)"
+                  class="w-12 bg-[#0A1522] border border-[#172C45] rounded px-1 text-[10px] text-center text-[#FF693D] font-bold focus:outline-none focus:border-[#FF693D]" title="Duration in seconds" />
+              </div>
+              <input id="scene${sceneNum}Title" type="text" value="${sc.title || `Act ${sceneNum}`}"
+                oninput="updateSceneTitle(${sceneNum}, this.value)"
+                class="w-full bg-transparent font-bold text-xs text-[#E9F0F5] border-b border-[#172C45] pb-1 mb-2 focus:outline-none focus:border-[#FF693D]" />
+
+              <!-- Scene Preview Box (Instant Display & Realtime Spinner) -->
+              <div id="scene${sceneNum}Box" class="relative h-32 w-full bg-[#0A1522] rounded-lg border border-[#172C45] flex items-center justify-center overflow-hidden mb-2 group-hover:border-[#FF693D]/60 transition shadow-inner">
+                <img id="scene${sceneNum}Img" 
+                     src="/assets/scene${sceneNum}.png?_t=${Date.now()}" 
+                     alt="Scene ${sceneNum}" 
+                     class="w-full h-full object-cover transition duration-300"
+                     onload="this.style.display='block'; const ph=document.getElementById('scene${sceneNum}Placeholder'); if(ph) ph.style.display='none';"
+                     onerror="this.style.display='none'; const ph=document.getElementById('scene${sceneNum}Placeholder'); if(ph) ph.style.display='flex';">
+                <div id="scene${sceneNum}Placeholder" class="hidden flex-col items-center justify-center text-center p-2">
+                  <span class="text-2xl mb-1 opacity-70">🖼️</span>
+                  <span class="text-[10px] text-[#E9F0F5] font-bold">Scene ${sceneNum} Frame</span>
+                  <span class="text-[8px] text-[#FF693D]">Click Auto-Generate</span>
+                </div>
+                <div id="scene${sceneNum}Spinner" class="hidden absolute inset-0 bg-[#0A1522]/90 backdrop-blur-sm flex flex-col items-center justify-center space-y-1.5 text-center p-2 z-10">
+                  <svg class="animate-spin h-6 w-6 text-[#FF693D]" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+                  <span class="text-[10px] font-bold text-[#FF855D]">Generating AI Image...</span>
+                </div>
+              </div>
+
+              <!-- Camera Movement -->
+              <div class="mb-1.5">
+                <label class="text-[9px] text-[#E9F0F5]/60 block mb-0.5">Camera Motion</label>
+                <select id="scene${sceneNum}Effect" onchange="updateSceneEffect(${sceneNum}, this.value)" class="w-full bg-[#0A1522] border border-[#172C45] rounded p-1 text-[10px] text-[#E9F0F5] focus:outline-none focus:border-[#FF693D]">
+                  <option value="star_fall" ${effect === 'star_fall' ? 'selected' : ''}>🌠 Cosmic Diagonal Glide</option>
+                  <option value="rabbit_discover" ${effect === 'rabbit_discover' ? 'selected' : ''}>🌲 Panoramic Forest Sweep</option>
+                  <option value="star_launch" ${effect === 'star_launch' ? 'selected' : ''}>🚀 Upward Crane Shot</option>
+                  <option value="star_shine" ${effect === 'star_shine' ? 'selected' : ''}>🌌 Celestial Pull-Back</option>
+                  <option value="zoom_in" ${effect === 'zoom_in' ? 'selected' : ''}>🔍 Dramatic Push In</option>
+                  <option value="zoom_out" ${effect === 'zoom_out' ? 'selected' : ''}>🔄 Smooth Pull Out</option>
+                  <option value="shake" ${effect === 'shake' ? 'selected' : ''}>⚡ Action Shake</option>
+                  <option value="pan" ${effect === 'pan' ? 'selected' : ''}>↔️ Smooth Pan</option>
+                </select>
+              </div>
+
+              <!-- AI Prompt Box -->
+              <textarea id="scene${sceneNum}Prompt" rows="2"
+                oninput="updateScenePrompt(${sceneNum}, this.value)"
+                class="w-full bg-[#0A1522] border border-[#172C45] rounded p-1 text-[9px] text-[#E9F0F5]/90 font-mono resize-none focus:outline-none focus:border-[#FF693D]"
+                placeholder="Scene prompt...">${sc.pixarPrompt || ''}</textarea>
+            </div>
+
+            <!-- Action Buttons: Generate AI Image & Replace Media -->
+            <div class="pt-2 border-t border-[#172C45] flex flex-col space-y-1">
+              <button onclick="generateSingleSceneImage(${sceneNum})" id="btnGenScene${sceneNum}"
+                class="w-full py-1 text-[10px] font-bold rounded-lg bg-gradient-to-r from-[#FF693D] to-[#FF855D] hover:from-[#E55428] hover:to-[#FF693D] text-white shadow-md shadow-[#FF693D]/20 transition flex items-center justify-center space-x-1">
+                <span>🎨 Auto-Generate Image</span>
+              </button>
+              <div class="flex space-x-1">
+                <input type="file" id="scene${sceneNum}File" accept="image/*,video/*" class="hidden" onchange="uploadSceneFile(${sceneNum}, this)">
+                <button onclick="document.getElementById('scene${sceneNum}File').click()" class="flex-1 py-1 text-[9px] rounded-lg bg-[#172C45] hover:bg-[#203A5B] text-[#E9F0F5]/80 border border-[#203A5B] transition">
+                  Upload / Replace
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderSubtitlesList(subs) {
+      const container = document.getElementById('subtitlesList');
+      if (!container) return;
+      container.innerHTML = subs.map((line, idx) => {
+        const clean = (line || "").replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F000}-\u{1F2FF}\u{1F680}-\u{1F6FF}\u{1FA00}-\u{1FAFF}]/gu, "").replace(/['":\\`]/g, "").trim().toUpperCase();
+        return `
+          <input type="text" id="subLine${idx + 1}" value="${clean}"
+            class="w-full bg-[#0A1522] border border-[#172C45] rounded-lg px-3 py-1.5 text-xs text-[#E9F0F5] focus:outline-none focus:border-[#FF693D]" />
+        `;
+      }).join('');
+    }
+
+    async function generateSingleSceneImage(sceneNum) {
+      const promptEl = document.getElementById(`scene${sceneNum}Prompt`);
+      const btn = document.getElementById(`btnGenScene${sceneNum}`);
+      const spinner = document.getElementById(`scene${sceneNum}Spinner`);
+      const prompt = promptEl ? promptEl.value.trim() : "";
+
+      if (spinner) spinner.classList.remove('hidden');
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = `<svg class="animate-spin -ml-1 mr-1 h-3 w-3 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg> Generating...`;
+      }
+
+      try {
+        const res = await fetch(`/api/generate-scene-image?_t=${Date.now()}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          cache: 'no-store',
+          body: JSON.stringify({
+            sceneNumber: sceneNum,
+            prompt,
+            characterStyle: selectedCharacterStyle
+          })
+        });
+        const data = await res.json();
+        if (data.success && data.url) {
+          renderSceneAssetBox(sceneNum, { url: data.url, type: 'image' });
+          return true;
+        } else {
+          console.warn(`Scene ${sceneNum} generation issue:`, data.error);
+          return false;
+        }
+      } catch (err) {
+        console.error(`Scene ${sceneNum} error:`, err);
+        return false;
+      } finally {
+        if (spinner) spinner.classList.add('hidden');
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = `<span>🎨 Auto-Generate Image</span>`;
+        }
+      }
+    }
+
+    async function generateAllSceneImages(silent = false) {
+      const btn = document.getElementById('btnGenerateAllImages');
+      if (btn && !silent) {
+        btn.disabled = true;
+        btn.innerHTML = `<svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg> Generating All Images (${selectedDuration}s)...`;
+      }
+
+      const sceneCount = (currentStoryboard?.scenes?.length) || (selectedDuration <= 6 ? 2 : (selectedDuration <= 16 ? 4 : 5));
+
+      // Progressively generate image for each scene one by one so frames update live!
+      for (let i = 1; i <= sceneCount; i++) {
+        await generateSingleSceneImage(i);
+      }
+
+      fetchStatus();
+
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = `<span>🎨 Auto-Generate All Scene Images (AI)</span>`;
+      }
+    }
+
+    // 🚀 MASTER 1-CLICK AUTO-PILOT
+    async function runOneClickAutoPilot() {
+      const btn = document.getElementById('btnAutoPilot');
+      const progressBox = document.getElementById('autopilotProgress');
+      const bar = document.getElementById('autoProgressBar');
+      const statusText = document.getElementById('autoStepStatus');
+      const percentText = document.getElementById('autoStepPercent');
+
+      btn.disabled = true;
+      progressBox.classList.remove('hidden');
+
+      function updateStatus(step, percent, msg) {
+        bar.style.width = `${percent}%`;
+        percentText.textContent = `${percent}%`;
+        statusText.textContent = msg;
+
+        for (let i = 1; i <= 4; i++) {
+          const badge = document.getElementById(`badgeStep${i}`);
+          if (i < step) {
+            badge.className = "text-[#FF855D] font-bold";
+          } else if (i === step) {
+            badge.className = "text-[#FF693D] font-bold animate-pulse";
+          } else {
+            badge.className = "text-[#E9F0F5]/40";
+          }
+        }
+      }
+
+      try {
+        // Step 1: Idea
+        let idea = document.getElementById('sbInput').value.trim();
+        if (!idea) {
+          const randomIdx = Math.floor(Math.random() * WORLDWIDE_IDEAS.length);
+          idea = WORLDWIDE_IDEAS[randomIdx].prompt;
+          document.getElementById('sbInput').value = idea;
+        }
+
+        // Step 2: Script & Breakdown
+        updateStatus(1, 25, `Generating ${selectedDuration}s script in ${STYLE_LABELS[selectedCharacterStyle]}...`);
+        const sbRes = await fetch(`/api/generate-storyboard?_t=${Date.now()}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          cache: 'no-store',
+          body: JSON.stringify({
+            prompt: idea,
+            duration: selectedDuration,
+            characterStyle: selectedCharacterStyle
+          })
+        });
+        const sbData = await sbRes.json();
+        if (!sbData.storyboard) throw new Error("Failed to generate storyboard script");
+        populateStoryboard(sbData.storyboard, false);
+
+        // Step 3: Images (Progressive Realtime Generation)
+        updateStatus(3, 55, `Generating ${sbData.storyboard.scenes.length} scene images in ${STYLE_LABELS[selectedCharacterStyle]}...`);
+        for (let i = 1; i <= sbData.storyboard.scenes.length; i++) {
+          updateStatus(3, 55 + Math.round((i / sbData.storyboard.scenes.length) * 20), `Generating Scene ${i} of ${sbData.storyboard.scenes.length}...`);
+          await generateSingleSceneImage(i);
+        }
+
+        // Step 4: Render Video
+        updateStatus(4, 80, `Rendering ${selectedDuration}s master movie with audio & subtitles...`);
+        await renderStoryboardMovie();
+
+        updateStatus(5, 100, `🎉 1-Click Master YouTube Short complete (${selectedDuration}s max)!`);
+        setTimeout(() => {
+          progressBox.classList.add('hidden');
+        }, 5000);
+
+      } catch (err) {
+        alert("Auto-Pilot error: " + err.message);
+        statusText.textContent = "❌ Error: " + err.message;
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    async function loadDefaultStoryboard() {
+      try {
+        const res = await fetch(`/api/storyboard?_t=${Date.now()}`, { cache: 'no-store' });
+        const data = await res.json();
+        if (data.storyboard && data.storyboard.scenes) {
+          populateStoryboard(data.storyboard, false);
+          return;
+        }
+      } catch (_) { }
+
+      const defaultSb = {
+        title: "The Little Star's Dream ⭐🐰",
+        duration: 10,
+        characterStyle: "stylized",
+        narration: "A glowing star fell into the forest! A cute rabbit came to help! With a magical jump, the star flew home! You are my hero!",
+        scenes: [
+          { sceneNumber: 1, title: "The Falling Star", duration: 2.5, effect: "star_fall", pixarPrompt: "Exaggerated stylized character design, joyful glowing yellow baby star sliding along a curving blue cosmic starlight ribbon across a starry night sky toward an enchanted nighttime forest below, 8k render." },
+          { sceneNumber: 2, title: "Rabbit's Discovery", duration: 2.5, effect: "rabbit_discover", pixarPrompt: "Exaggerated stylized character design, an adorable fluffy white cartoon bunny with expressive eyes in an enchanted nighttime forest discovering a glowing golden star on the mossy grass, 8k render." },
+          { sceneNumber: 3, title: "The Magical Flight", duration: 2.5, effect: "star_launch", pixarPrompt: "Exaggerated stylized character design, joyful fluffy white bunny jumping on a grassy hill launching a radiant golden star toward a luminous full moon, 8k render." },
+          { sceneNumber: 4, title: "You Are My Hero", duration: 2.5, effect: "star_shine", pixarPrompt: "Exaggerated stylized character design, cheerful golden baby star and smiling crescent moon waving down happily with the joyful white rabbit waving back from the hill, 8k render." }
+        ],
+        subtitles: [
+          "A GLOWING STAR FELL FROM THE SKY",
+          "A CUTE RABBIT CAME TO HELP",
+          "WITH A MAGIC JUMP IT FLIES HOME",
+          "YOU ARE MY HERO KINDNESS WINS"
+        ],
+        youtube: {
+          title: "The Little Star's Dream ⭐🐰 | 3D Pixar Bedtime Story Short",
+          description: "Once upon a magical night, a tiny star fell from the sky... A cute rabbit came to the rescue! Even the smallest act of kindness can create the biggest happiness. ❤️ #Shorts #Animation #3D #Pixar #BedtimeStory #Cute #Rabbit"
+        }
+      };
+      populateStoryboard(defaultSb, false);
+    }
+
+    async function renderStoryboardMovie() {
+      const btn = document.getElementById('btnRenderMain');
+      const statusMsg = document.getElementById('renderStatusMsg');
+      btn.disabled = true;
+      btn.classList.add('opacity-50');
+      statusMsg.textContent = `⏳ Rendering Master Movie (Max 20s)... Please wait...`;
+
+      const showCaptions = document.getElementById('toggleCaptions').checked;
+      const sceneCount = (currentStoryboard?.scenes?.length) || (selectedDuration <= 6 ? 2 : (selectedDuration <= 16 ? 4 : 5));
+
+      const scenesData = [];
+      for (let i = 1; i <= sceneCount; i++) {
+        const titleEl = document.getElementById(`scene${i}Title`);
+        const durEl = document.getElementById(`scene${i}Duration`);
+        const effectEl = document.getElementById(`scene${i}Effect`);
+        const promptEl = document.getElementById(`scene${i}Prompt`);
+
+        scenesData.push({
+          sceneNumber: i,
+          title: titleEl ? titleEl.value : `Scene ${i}`,
+          duration: durEl ? (parseFloat(durEl.value) || 2.5) : 2.5,
+          pixarPrompt: promptEl ? promptEl.value : `Scene ${i}`,
+          effect: effectEl ? effectEl.value : "zoom_in"
+        });
+      }
+
+      const subtitlesList = [];
+      for (let i = 1; i <= sceneCount; i++) {
+        const subEl = document.getElementById(`subLine${i}`);
+        if (subEl && subEl.value.trim().length > 0) {
+          subtitlesList.push(subEl.value.trim());
+        }
+      }
+
+      const payload = {
+        storyboard: {
+          title: document.getElementById('ytTitle').value || "Cartoon Short",
+          narration: document.getElementById('sbNarration').value,
+          duration: selectedDuration,
+          characterStyle: selectedCharacterStyle,
+          scenes: scenesData,
+          subtitles: subtitlesList,
+          youtube: {
+            title: document.getElementById('ytTitle').value,
+            description: document.getElementById('ytDescription').value
+          }
+        },
+        characterStyle: selectedCharacterStyle,
+        showCaptions: showCaptions,
+        position: document.getElementById('captionPosition').value,
+        font: document.getElementById('captionFont').value,
+        color: document.getElementById('captionColor').value,
+        fontSize: 54,
+        useBox: document.getElementById('captionBox').value === 'badge',
+        bgmVolume: parseFloat(document.getElementById('bgmVolumeSlider').value)
+      };
+
+      try {
+        const res = await fetch(`/api/render-storyboard?_t=${Date.now()}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          cache: 'no-store',
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+        if (data.success) {
+          statusMsg.textContent = `✅ Master Movie rendered successfully (${data.duration}s)!`;
+          const player = document.getElementById('videoPlayer');
+          const source = document.getElementById('videoSource');
+          source.src = `/api/video?_t=${Date.now()}`;
+          player.load();
+          player.play().catch(() => { });
+          fetchStatus();
+        } else {
+          statusMsg.textContent = "❌ Rendering error: " + (data.error || "Unknown error");
+        }
+      } catch (err) {
+        statusMsg.textContent = "❌ Render failed: " + err.message;
+      } finally {
+        btn.disabled = false;
+        btn.classList.remove('opacity-50');
+      }
+    }
+
+    async function fetchStatus() {
+      try {
+        const res = await fetch(`/api/status?_t=${Date.now()}`, { cache: 'no-store' });
+        const data = await res.json();
+
+        // AI Engine Status
+        const aiBadge = document.getElementById('aiEngineBadge');
+        const aiText = document.getElementById('aiEngineText');
+        if (data.hasGeminiKey) {
+          if (aiBadge) aiBadge.className = "flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#172C45] text-[#E9F0F5] border border-[#FF693D]/50 cursor-pointer hover:bg-[#203A5B] transition shadow";
+          if (aiText) aiText.innerHTML = `<span class="w-2 h-2 rounded-full bg-[#FF693D]"></span> Imagen 3 Key Active`;
+        } else {
+          if (aiBadge) aiBadge.className = "flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#172C45] text-[#E9F0F5]/80 border border-[#203A5B] cursor-pointer hover:bg-[#203A5B] transition shadow";
+          if (aiText) aiText.innerHTML = `<span class="w-2 h-2 rounded-full bg-[#FF693D]"></span> Free Tier (AI Horde)`;
+        }
+
+        // YouTube Status
+        const badge = document.getElementById('ytStatusBadge');
+        const text = document.getElementById('ytStatusText');
+        const btnAuth = document.getElementById('btnConnectYt');
+
+        if (data.youtubeAuthorized) {
+          badge.className = "flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#172C45] text-[#E9F0F5] border border-[#FF693D]/40";
+          text.innerHTML = `<span class="w-2 h-2 rounded-full bg-[#FF693D]"></span> Connected: <span class="font-bold ml-1">${data.channelTitle || 'My Story Star'}</span>`;
+          btnAuth.classList.add('hidden');
+        } else {
+          badge.className = "flex items-center space-x-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#172C45] text-[#E9F0F5]/80 border border-[#203A5B]";
+          text.innerHTML = `<span class="w-2 h-2 rounded-full bg-[#FF693D]/70 animate-pulse"></span> YouTube Disconnected`;
+          btnAuth.classList.remove('hidden');
+        }
+
+        // Render Scene Assets
+        if (data.assets) {
+          activeAssets = data.assets;
+          const sceneCount = (currentStoryboard?.scenes?.length) || (selectedDuration <= 6 ? 2 : (selectedDuration <= 16 ? 4 : 5));
+          for (let i = 1; i <= sceneCount; i++) {
+            renderSceneAssetBox(i, data.assets[`scene${i}`]);
+          }
+        }
+      } catch (err) {
+        console.error("Status fetch error:", err);
+      }
+    }
+
+    function renderSceneAssetBox(sceneNum, asset) {
+      const box = document.getElementById(`scene${sceneNum}Box`);
+      if (!box) return;
+      const img = document.getElementById(`scene${sceneNum}Img`);
+      const ph = document.getElementById(`scene${sceneNum}Placeholder`);
+      const spinner = document.getElementById(`scene${sceneNum}Spinner`);
+      if (spinner) spinner.classList.add('hidden');
+
+      if (asset && asset.url) {
+        const cleanUrl = asset.url.split('?')[0];
+        const cacheBuster = `?_t=${Date.now()}`;
+        if (asset.type === 'video') {
+          box.innerHTML = `
+            <video src="${cleanUrl}${cacheBuster}" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+            <div id="scene${sceneNum}Spinner" class="hidden absolute inset-0 bg-[#0A1522]/90 backdrop-blur-sm flex flex-col items-center justify-center space-y-1.5 text-center p-2 z-10">
+              <svg class="animate-spin h-6 w-6 text-[#FF693D]" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+              <span class="text-[10px] font-bold text-[#FF855D]">Generating AI Image...</span>
+            </div>`;
+        } else if (img) {
+          img.src = `${cleanUrl}${cacheBuster}`;
+          img.style.display = 'block';
+          if (ph) ph.style.display = 'none';
+        } else {
+          box.innerHTML = `
+            <img id="scene${sceneNum}Img" src="${cleanUrl}${cacheBuster}" class="w-full h-full object-cover">
+            <div id="scene${sceneNum}Placeholder" class="hidden flex-col items-center justify-center text-center p-2">
+              <span class="text-2xl mb-1 opacity-70">🖼️</span>
+              <span class="text-[10px] text-[#E9F0F5] font-bold">Scene ${sceneNum} Frame</span>
+            </div>
+            <div id="scene${sceneNum}Spinner" class="hidden absolute inset-0 bg-[#0A1522]/90 backdrop-blur-sm flex flex-col items-center justify-center space-y-1.5 text-center p-2 z-10">
+              <svg class="animate-spin h-6 w-6 text-[#FF693D]" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+              <span class="text-[10px] font-bold text-[#FF855D]">Generating AI Image...</span>
+            </div>`;
+        }
+      }
+    }
+
+    async function uploadSceneFile(sceneNumber, input) {
+      const file = input.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = async (e) => {
+        try {
+          const res = await fetch(`/api/upload-scene?_t=${Date.now()}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            cache: 'no-store',
+            body: JSON.stringify({ sceneNumber, filename: file.name, data: e.target.result })
+          });
+          const data = await res.json();
+          if (data.success) {
+            fetchStatus();
+          }
+        } catch (err) {
+          alert("Upload failed: " + err.message);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    async function publishToYouTube() {
+      const btn = document.getElementById('btnPublishYt');
+      btn.disabled = true;
+      btn.innerHTML = `<span>⏳ Uploading...</span>`;
+
+      try {
+        const res = await fetch(`/api/upload-youtube?_t=${Date.now()}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          cache: 'no-store',
+          body: JSON.stringify({
+            title: document.getElementById('ytTitle').value,
+            description: document.getElementById('ytDescription').value
+          })
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(`🎉 YouTube Short uploaded successfully!\n\nVideo ID: ${data.videoId}\nWatch: ${data.url}`);
+        } else {
+          alert("Upload error: " + (data.error || "Unknown error"));
+        }
+      } catch (err) {
+        alert("Publish failed: " + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<span>🚀 1-Click Publish to YouTube</span>`;
+      }
+    }
+
+    function toggleApiKeyModal() {
+      const modal = document.getElementById('apiKeyModal');
+      if (modal) modal.classList.toggle('hidden');
+    }
+
+    async function saveApiKey() {
+      const input = document.getElementById('geminiApiKeyInput');
+      const btn = document.getElementById('btnSaveApiKey');
+      const key = (input.value || "").trim();
+      if (!key) {
+        alert("Please paste your Gemini API key (e.g. AIzaSy...).");
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = "Saving...";
+
+      try {
+        const res = await fetch(`/api/save-api-key?_t=${Date.now()}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ apiKey: key })
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert("🎉 Gemini API Key activated! Google Imagen 3 will now generate 8K Pixar images!");
+          toggleApiKeyModal();
+          fetchStatus();
+        } else {
+          alert("Error saving key: " + (data.error || "Unknown"));
+        }
+      } catch (err) {
+        alert("Failed to save key: " + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Save Key";
+      }
+    }
+
+    function startYouTubeAuth() {
+      window.open('/api/auth/google', '_blank', 'width=600,height=700');
+    }
+  </script>
+</body>
+
+</html>

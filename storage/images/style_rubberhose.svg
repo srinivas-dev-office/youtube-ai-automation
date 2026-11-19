@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#f5f0e6"/>
+  <!-- Film grain / sepia circle -->
+  <circle cx="200" cy="150" r="140" fill="#e8dfce" stroke="#262626" stroke-width="4"/>
+  <!-- Rubber Hose Head -->
+  <ellipse cx="200" cy="120" rx="55" ry="50" fill="#171717"/>
+  <ellipse cx="200" cy="130" rx="42" ry="34" fill="#fafafa"/>
+  <!-- Pie-cut vintage cartoon eyes -->
+  <ellipse cx="185" cy="120" rx="10" ry="16" fill="#171717"/>
+  <polygon points="185,120 175,115 178,125" fill="#fafafa"/>
+  <ellipse cx="215" cy="120" rx="10" ry="16" fill="#171717"/>
+  <polygon points="215,120 225,115 222,125" fill="#fafafa"/>
+  <!-- Nose and wide vintage smile -->
+  <ellipse cx="200" cy="135" rx="8" ry="5" fill="#171717"/>
+  <path d="M175 145 Q200 175 225 145" stroke="#171717" stroke-width="5" fill="#ffffff"/>
+  <!-- Rubber Hose bending limbs -->
+  <path d="M160 170 Q110 200 130 240" stroke="#171717" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M240 170 Q290 200 270 240" stroke="#171717" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <!-- White 4-finger cartoon gloves -->
+  <circle cx="130" cy="245" r="18" fill="#fafafa" stroke="#171717" stroke-width="4"/>
+  <circle cx="270" cy="245" r="18" fill="#fafafa" stroke="#171717" stroke-width="4"/>
+  <!-- Style Label -->
+  <rect x="20" y="20" width="165" height="28" rx="6" fill="#171717" opacity="0.9"/>
+  <text x="32" y="38" fill="#f5f0e6" font-family="Inter, sans-serif" font-size="12" font-weight="700">CARTOON RUBBER HOSE</text>
+</svg>

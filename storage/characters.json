@@ -1,0 +1,29 @@
+[
+  {
+    "id": "char_leo_rossi_1794997842780",
+    "projectId": "proj_legacy_master",
+    "name": "Leo Rossi",
+    "role": "Lead Protagonist",
+    "type": "Lead Hero",
+    "age": "Young Adult (22 years)",
+    "gender": "Male",
+    "skinTone": "Olive Italian complexion with slight sweat and grit",
+    "hairStyle": "Short, dark, damp hair matted by the helmet",
+    "faceStructure": "Sharp jawline, intense hazel eyes, focused expression",
+    "bodyType": "Lean, athletic, and compact build",
+    "costume": "Black and red fire-retardant racing suit with carbon-fiber textures",
+    "accessories": "Aerodynamic matte black helmet with a tinted gold visor",
+    "identifyingFeatures": "A small scar on his left eyebrow and a determined gaze",
+    "personality": "Fearless, calculated, and fiercely competitive",
+    "description": "A high-realism portrait of a young F1 driver with authentic skin pores and intense focus, wearing a professional carbon-fiber racing suit.",
+    "primaryImage": "/storage/images/char_char_leo_rossi_1794997842780_front_1794997855447.png?_t=1794997855814",
+    "locked": false,
+    "views": [
+      {
+        "id": "v_front_1794997855814",
+        "type": "Front Portrait",
+        "url": "/storage/images/char_char_leo_rossi_1794997842780_front_1794997855447.png?_t=1794997855814"
+      }
+    ]
+  }
+]

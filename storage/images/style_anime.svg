@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAnime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="60%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bgAnime)"/>
+  <!-- Anime Speed lines -->
+  <line x1="0" y1="30" x2="120" y2="30" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  <line x1="280" y1="50" x2="400" y2="50" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  <!-- Anime Head & Pointy Chin -->
+  <polygon points="150,110 200,210 250,110" fill="#fed7aa"/>
+  <circle cx="200" cy="130" r="50" fill="#fed7aa"/>
+  <!-- Anime Luminous Spiky Hair -->
+  <polygon points="130,120 120,70 150,85 150,30 180,65 200,15 220,65 250,30 250,85 280,70 270,120 255,100 200,105 145,100" fill="#f59e0b"/>
+  <!-- Large Anime Eyes -->
+  <ellipse cx="175" cy="135" rx="14" ry="20" fill="#0369a1"/>
+  <ellipse cx="225" cy="135" rx="14" ry="20" fill="#0369a1"/>
+  <ellipse cx="173" cy="130" rx="6" ry="9" fill="#ffffff"/>
+  <ellipse cx="223" cy="130" rx="6" ry="9" fill="#ffffff"/>
+  <!-- Collar & Kimono -->
+  <polygon points="170,210 200,240 230,210 260,300 140,300" fill="#0f172a"/>
+  <!-- Style Label -->
+  <rect x="20" y="20" width="120" height="28" rx="6" fill="#0b1220" opacity="0.85"/>
+  <text x="32" y="38" fill="#38bdf8" font-family="Inter, sans-serif" font-size="12" font-weight="700">ANIME &amp; MANGA</text>
+</svg>

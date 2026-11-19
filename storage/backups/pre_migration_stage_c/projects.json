@@ -1,0 +1,1878 @@
+[
+  {
+    "id": "proj_1794982362088",
+    "name": "A young girl moves into an old haunted house",
+    "title": "A young girl moves into an old haunted house",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-18",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": {
+      "title": "A young girl moves into an old haunted house",
+      "category": "Horror",
+      "tone": "Horror and Cinematic",
+      "duration": 20,
+      "durationUnit": "s",
+      "totalDurationFormatted": "20 s",
+      "characterStyle": "realistic",
+      "narration": "Through the cold mist, the creaking gates of the forgotten house loomed. Footsteps echoed on ancient floorboards as cold air filled the silent room. The flickering lantern light cast dancing shadows against wallpapered walls. A faint child's whisper floated down from the winding dark stairs. In the mirror's reflection, an ethereal translucent silhouette stood silently. Silver hair floating weightlessly, the spectral girl looked with gentle eyes. The spirit reached out a translucent hand, pointing toward a locked music box. The ancient brass key turned, unveiling memories preserved in dust and light. A warm golden glow replaced the cold shadows as fear turned to empathy. The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+      "characters": [
+        {
+          "id": "char_lily_1794982212991",
+          "name": "Lily",
+          "type": "Lead Hero",
+          "role": "Lead Protagonist",
+          "age": "Young Girl (11 years)",
+          "gender": "Female",
+          "skinTone": "Fair complexion with rosy cheeks and light freckles",
+          "hairStyle": "Shoulder-length wavy chestnut brown hair with side clip",
+          "faceStructure": "Round expressive youthful face, wide curious hazel eyes",
+          "bodyType": "Petite, agile youthful build",
+          "costume": "Yellow hooded warm raincoat over cozy knitted sweater and dark denim dungarees, durable boots",
+          "accessories": "Vintage brass lantern emitting warm golden amber glow, worn leather satchel",
+          "identifyingFeatures": "Bright yellow raincoat, brass lantern illuminating shadows, brave inquisitive expression",
+          "personality": "Courageous, deeply curious, compassionate, perceptive",
+          "description": "A brave 11-year-old young girl with expressive eyes, wearing a yellow hooded raincoat and holding an antique glowing brass lantern in a spooky haunted manor, cinematic 8k.",
+          "primaryImage": "/storage/images/char_char_lily_1794982212991_front_1794982234949.png?_t=1794982235220",
+          "views": [
+            {
+              "id": "v_front",
+              "type": "Front Portrait",
+              "url": "/storage/images/style_realistic.svg"
+            }
+          ]
+        },
+        {
+          "id": "char_aria_the_ghost_girl_1794982212992",
+          "name": "Aria the Ghost Girl",
+          "type": "Supporting",
+          "role": "Mysterious Ghost / Supernatural Companion",
+          "age": "Ethereal Spirit (Ageless apparition)",
+          "gender": "Female",
+          "skinTone": "Translucent porcelain pale skin with soft bioluminescent blue-white aura",
+          "hairStyle": "Long ethereal silver-white hair floating weightlessly as if underwater",
+          "faceStructure": "Delicate porcelain features, luminous glowing cyan eyes, enigmatic gentle smile",
+          "bodyType": "Slender, floating weightlessly off the ground",
+          "costume": "Tattered antique Victorian lace dress that fades into misty vapor at the hem",
+          "accessories": "Faint glowing spectral crystal pendant around neck",
+          "identifyingFeatures": "Floating softly above floor, translucent silhouette casting no shadow, glowing cyan eyes",
+          "personality": "Mysterious, lonely, gentle, watchful guardian of the house",
+          "description": "A mysterious translucent ghost girl with floating silver hair, luminous cyan eyes, wearing a tattered antique lace dress, hovering gently with an ethereal misty aura, cinematic masterpiece.",
+          "primaryImage": "/storage/images/char_char_aria_the_ghost_girl_1794982212992_front_1794982248388.png?_t=1794982248655",
+          "views": [
+            {
+              "id": "v_front",
+              "type": "Front Portrait",
+              "url": "/storage/images/style_realistic.svg"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "scene": 1,
+          "duration": "0–2 s",
+          "story": "Approaching the haunted manor",
+          "spokenLine": "Through the cold mist, the creaking gates of the forgotten house loomed.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 1: Approaching the haunted manor, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 2,
+          "duration": "2–4 s",
+          "story": "Stepping into the shadowed hall",
+          "spokenLine": "Footsteps echoed on ancient floorboards as cold air filled the silent room.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 2: Stepping into the shadowed hall, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 3,
+          "duration": "4–6 s",
+          "story": "A lantern cuts through darkness",
+          "spokenLine": "The flickering lantern light cast dancing shadows against wallpapered walls.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 3: A lantern cuts through darkness, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 4,
+          "duration": "6–8 s",
+          "story": "Whispers from the staircase",
+          "spokenLine": "A faint child's whisper floated down from the winding dark stairs.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 4: Whispers from the staircase, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 5,
+          "duration": "8–10 s",
+          "story": "A glowing silhouette appears",
+          "spokenLine": "In the mirror's reflection, an ethereal translucent silhouette stood silently.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 5: A glowing silhouette appears, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 6,
+          "duration": "10–12 s",
+          "story": "The ghost girl steps forward",
+          "spokenLine": "Silver hair floating weightlessly, the spectral girl looked with gentle eyes.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 6: The ghost girl steps forward, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 7,
+          "duration": "12–14 s",
+          "story": "A secret unspoken message",
+          "spokenLine": "The spirit reached out a translucent hand, pointing toward a locked music box.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 7: A secret unspoken message, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 8,
+          "duration": "14–16 s",
+          "story": "Unlocking the old secret",
+          "spokenLine": "The ancient brass key turned, unveiling memories preserved in dust and light.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 8: Unlocking the old secret, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 9,
+          "duration": "16–18 s",
+          "story": "A moment of supernatural peace",
+          "spokenLine": "A warm golden glow replaced the cold shadows as fear turned to empathy.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 9: A moment of supernatural peace, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 10,
+          "duration": "18–20 s",
+          "story": "Guiding spirit of the house",
+          "spokenLine": "The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 10: Guiding spirit of the house, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        }
+      ],
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "timeRange": "0–2 s",
+          "storyBeat": "Approaching the haunted manor",
+          "title": "Act 1: Approaching the haunted manor",
+          "duration": 2,
+          "spokenLine": "Through the cold mist, the creaking gates of the forgotten house loomed.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 1: Approaching the haunted manor, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 2,
+          "timeRange": "2–4 s",
+          "storyBeat": "Stepping into the shadowed hall",
+          "title": "Act 2: Stepping into the shadowed hall",
+          "duration": 2,
+          "spokenLine": "Footsteps echoed on ancient floorboards as cold air filled the silent room.",
+          "effect": "pan",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 2: Stepping into the shadowed hall, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 3,
+          "timeRange": "4–6 s",
+          "storyBeat": "A lantern cuts through darkness",
+          "title": "Act 3: A lantern cuts through darkness",
+          "duration": 2,
+          "spokenLine": "The flickering lantern light cast dancing shadows against wallpapered walls.",
+          "effect": "star_fall",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 3: A lantern cuts through darkness, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 4,
+          "timeRange": "6–8 s",
+          "storyBeat": "Whispers from the staircase",
+          "title": "Act 4: Whispers from the staircase",
+          "duration": 2,
+          "spokenLine": "A faint child's whisper floated down from the winding dark stairs.",
+          "effect": "zoom_out",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 4: Whispers from the staircase, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 5,
+          "timeRange": "8–10 s",
+          "storyBeat": "A glowing silhouette appears",
+          "title": "Act 5: A glowing silhouette appears",
+          "duration": 2,
+          "spokenLine": "In the mirror's reflection, an ethereal translucent silhouette stood silently.",
+          "effect": "shake",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 5: A glowing silhouette appears, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 6,
+          "timeRange": "10–12 s",
+          "storyBeat": "The ghost girl steps forward",
+          "title": "Act 6: The ghost girl steps forward",
+          "duration": 2,
+          "spokenLine": "Silver hair floating weightlessly, the spectral girl looked with gentle eyes.",
+          "effect": "rabbit_discover",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 6: The ghost girl steps forward, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 7,
+          "timeRange": "12–14 s",
+          "storyBeat": "A secret unspoken message",
+          "title": "Act 7: A secret unspoken message",
+          "duration": 2,
+          "spokenLine": "The spirit reached out a translucent hand, pointing toward a locked music box.",
+          "effect": "star_launch",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 7: A secret unspoken message, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 8,
+          "timeRange": "14–16 s",
+          "storyBeat": "Unlocking the old secret",
+          "title": "Act 8: Unlocking the old secret",
+          "duration": 2,
+          "spokenLine": "The ancient brass key turned, unveiling memories preserved in dust and light.",
+          "effect": "star_shine",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 8: Unlocking the old secret, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 9,
+          "timeRange": "16–18 s",
+          "storyBeat": "A moment of supernatural peace",
+          "title": "Act 9: A moment of supernatural peace",
+          "duration": 2,
+          "spokenLine": "A warm golden glow replaced the cold shadows as fear turned to empathy.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 9: A moment of supernatural peace, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 10,
+          "timeRange": "18–20 s",
+          "storyBeat": "Guiding spirit of the house",
+          "title": "Act 10: Guiding spirit of the house",
+          "duration": 2,
+          "spokenLine": "The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+          "effect": "pan",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 10: Guiding spirit of the house, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        }
+      ],
+      "subtitles": [
+        "THROUGH THE COLD MIST, THE CREAKING GATES OF THE FORGOTTEN HOUSE LOOMED.",
+        "FOOTSTEPS ECHOED ON ANCIENT FLOORBOARDS AS COLD AIR FILLED THE SILENT ROOM.",
+        "THE FLICKERING LANTERN LIGHT CAST DANCING SHADOWS AGAINST WALLPAPERED WALLS.",
+        "A FAINT CHILD'S WHISPER FLOATED DOWN FROM THE WINDING DARK STAIRS."
+      ],
+      "youtube": {
+        "title": "A young girl moves into an old haunted house • #Horror Short",
+        "description": "Watch this Horror story about A young girl moves into an old haunted house! #Shorts #Story #Horror"
+      }
+    }
+  },
+  {
+    "id": "proj_1794982355504",
+    "name": "A young girl moves into an old haunted house",
+    "title": "A young girl moves into an old haunted house",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-18",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": {
+      "title": "A young girl moves into an old haunted house",
+      "category": "Horror",
+      "tone": "Horror and Cinematic",
+      "duration": 20,
+      "durationUnit": "s",
+      "totalDurationFormatted": "20 s",
+      "characterStyle": "realistic",
+      "narration": "Through the cold mist, the creaking gates of the forgotten house loomed. Footsteps echoed on ancient floorboards as cold air filled the silent room. The flickering lantern light cast dancing shadows against wallpapered walls. A faint child's whisper floated down from the winding dark stairs. In the mirror's reflection, an ethereal translucent silhouette stood silently. Silver hair floating weightlessly, the spectral girl looked with gentle eyes. The spirit reached out a translucent hand, pointing toward a locked music box. The ancient brass key turned, unveiling memories preserved in dust and light. A warm golden glow replaced the cold shadows as fear turned to empathy. The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+      "characters": [
+        {
+          "id": "char_lily_1794982212991",
+          "name": "Lily",
+          "type": "Lead Hero",
+          "role": "Lead Protagonist",
+          "age": "Young Girl (11 years)",
+          "gender": "Female",
+          "skinTone": "Fair complexion with rosy cheeks and light freckles",
+          "hairStyle": "Shoulder-length wavy chestnut brown hair with side clip",
+          "faceStructure": "Round expressive youthful face, wide curious hazel eyes",
+          "bodyType": "Petite, agile youthful build",
+          "costume": "Yellow hooded warm raincoat over cozy knitted sweater and dark denim dungarees, durable boots",
+          "accessories": "Vintage brass lantern emitting warm golden amber glow, worn leather satchel",
+          "identifyingFeatures": "Bright yellow raincoat, brass lantern illuminating shadows, brave inquisitive expression",
+          "personality": "Courageous, deeply curious, compassionate, perceptive",
+          "description": "A brave 11-year-old young girl with expressive eyes, wearing a yellow hooded raincoat and holding an antique glowing brass lantern in a spooky haunted manor, cinematic 8k.",
+          "primaryImage": "/storage/images/char_char_lily_1794982212991_front_1794982234949.png?_t=1794982235220",
+          "views": [
+            {
+              "id": "v_front",
+              "type": "Front Portrait",
+              "url": "/storage/images/style_realistic.svg"
+            }
+          ]
+        },
+        {
+          "id": "char_aria_the_ghost_girl_1794982212992",
+          "name": "Aria the Ghost Girl",
+          "type": "Supporting",
+          "role": "Mysterious Ghost / Supernatural Companion",
+          "age": "Ethereal Spirit (Ageless apparition)",
+          "gender": "Female",
+          "skinTone": "Translucent porcelain pale skin with soft bioluminescent blue-white aura",
+          "hairStyle": "Long ethereal silver-white hair floating weightlessly as if underwater",
+          "faceStructure": "Delicate porcelain features, luminous glowing cyan eyes, enigmatic gentle smile",
+          "bodyType": "Slender, floating weightlessly off the ground",
+          "costume": "Tattered antique Victorian lace dress that fades into misty vapor at the hem",
+          "accessories": "Faint glowing spectral crystal pendant around neck",
+          "identifyingFeatures": "Floating softly above floor, translucent silhouette casting no shadow, glowing cyan eyes",
+          "personality": "Mysterious, lonely, gentle, watchful guardian of the house",
+          "description": "A mysterious translucent ghost girl with floating silver hair, luminous cyan eyes, wearing a tattered antique lace dress, hovering gently with an ethereal misty aura, cinematic masterpiece.",
+          "primaryImage": "/storage/images/char_char_aria_the_ghost_girl_1794982212992_front_1794982248388.png?_t=1794982248655",
+          "views": [
+            {
+              "id": "v_front",
+              "type": "Front Portrait",
+              "url": "/storage/images/style_realistic.svg"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "scene": 1,
+          "duration": "0–2 s",
+          "story": "Approaching the haunted manor",
+          "spokenLine": "Through the cold mist, the creaking gates of the forgotten house loomed.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 1: Approaching the haunted manor, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 2,
+          "duration": "2–4 s",
+          "story": "Stepping into the shadowed hall",
+          "spokenLine": "Footsteps echoed on ancient floorboards as cold air filled the silent room.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 2: Stepping into the shadowed hall, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 3,
+          "duration": "4–6 s",
+          "story": "A lantern cuts through darkness",
+          "spokenLine": "The flickering lantern light cast dancing shadows against wallpapered walls.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 3: A lantern cuts through darkness, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 4,
+          "duration": "6–8 s",
+          "story": "Whispers from the staircase",
+          "spokenLine": "A faint child's whisper floated down from the winding dark stairs.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 4: Whispers from the staircase, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 5,
+          "duration": "8–10 s",
+          "story": "A glowing silhouette appears",
+          "spokenLine": "In the mirror's reflection, an ethereal translucent silhouette stood silently.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 5: A glowing silhouette appears, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 6,
+          "duration": "10–12 s",
+          "story": "The ghost girl steps forward",
+          "spokenLine": "Silver hair floating weightlessly, the spectral girl looked with gentle eyes.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 6: The ghost girl steps forward, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 7,
+          "duration": "12–14 s",
+          "story": "A secret unspoken message",
+          "spokenLine": "The spirit reached out a translucent hand, pointing toward a locked music box.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 7: A secret unspoken message, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 8,
+          "duration": "14–16 s",
+          "story": "Unlocking the old secret",
+          "spokenLine": "The ancient brass key turned, unveiling memories preserved in dust and light.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 8: Unlocking the old secret, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 9,
+          "duration": "16–18 s",
+          "story": "A moment of supernatural peace",
+          "spokenLine": "A warm golden glow replaced the cold shadows as fear turned to empathy.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 9: A moment of supernatural peace, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 10,
+          "duration": "18–20 s",
+          "story": "Guiding spirit of the house",
+          "spokenLine": "The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 10: Guiding spirit of the house, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        }
+      ],
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "timeRange": "0–2 s",
+          "storyBeat": "Approaching the haunted manor",
+          "title": "Act 1: Approaching the haunted manor",
+          "duration": 2,
+          "spokenLine": "Through the cold mist, the creaking gates of the forgotten house loomed.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 1: Approaching the haunted manor, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 2,
+          "timeRange": "2–4 s",
+          "storyBeat": "Stepping into the shadowed hall",
+          "title": "Act 2: Stepping into the shadowed hall",
+          "duration": 2,
+          "spokenLine": "Footsteps echoed on ancient floorboards as cold air filled the silent room.",
+          "effect": "pan",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 2: Stepping into the shadowed hall, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 3,
+          "timeRange": "4–6 s",
+          "storyBeat": "A lantern cuts through darkness",
+          "title": "Act 3: A lantern cuts through darkness",
+          "duration": 2,
+          "spokenLine": "The flickering lantern light cast dancing shadows against wallpapered walls.",
+          "effect": "star_fall",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 3: A lantern cuts through darkness, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 4,
+          "timeRange": "6–8 s",
+          "storyBeat": "Whispers from the staircase",
+          "title": "Act 4: Whispers from the staircase",
+          "duration": 2,
+          "spokenLine": "A faint child's whisper floated down from the winding dark stairs.",
+          "effect": "zoom_out",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 4: Whispers from the staircase, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 5,
+          "timeRange": "8–10 s",
+          "storyBeat": "A glowing silhouette appears",
+          "title": "Act 5: A glowing silhouette appears",
+          "duration": 2,
+          "spokenLine": "In the mirror's reflection, an ethereal translucent silhouette stood silently.",
+          "effect": "shake",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 5: A glowing silhouette appears, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 6,
+          "timeRange": "10–12 s",
+          "storyBeat": "The ghost girl steps forward",
+          "title": "Act 6: The ghost girl steps forward",
+          "duration": 2,
+          "spokenLine": "Silver hair floating weightlessly, the spectral girl looked with gentle eyes.",
+          "effect": "rabbit_discover",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 6: The ghost girl steps forward, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 7,
+          "timeRange": "12–14 s",
+          "storyBeat": "A secret unspoken message",
+          "title": "Act 7: A secret unspoken message",
+          "duration": 2,
+          "spokenLine": "The spirit reached out a translucent hand, pointing toward a locked music box.",
+          "effect": "star_launch",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 7: A secret unspoken message, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 8,
+          "timeRange": "14–16 s",
+          "storyBeat": "Unlocking the old secret",
+          "title": "Act 8: Unlocking the old secret",
+          "duration": 2,
+          "spokenLine": "The ancient brass key turned, unveiling memories preserved in dust and light.",
+          "effect": "star_shine",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 8: Unlocking the old secret, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 9,
+          "timeRange": "16–18 s",
+          "storyBeat": "A moment of supernatural peace",
+          "title": "Act 9: A moment of supernatural peace",
+          "duration": 2,
+          "spokenLine": "A warm golden glow replaced the cold shadows as fear turned to empathy.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 9: A moment of supernatural peace, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 10,
+          "timeRange": "18–20 s",
+          "storyBeat": "Guiding spirit of the house",
+          "title": "Act 10: Guiding spirit of the house",
+          "duration": 2,
+          "spokenLine": "The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+          "effect": "pan",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 10: Guiding spirit of the house, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        }
+      ],
+      "subtitles": [
+        "THROUGH THE COLD MIST, THE CREAKING GATES OF THE FORGOTTEN HOUSE LOOMED.",
+        "FOOTSTEPS ECHOED ON ANCIENT FLOORBOARDS AS COLD AIR FILLED THE SILENT ROOM.",
+        "THE FLICKERING LANTERN LIGHT CAST DANCING SHADOWS AGAINST WALLPAPERED WALLS.",
+        "A FAINT CHILD'S WHISPER FLOATED DOWN FROM THE WINDING DARK STAIRS."
+      ],
+      "youtube": {
+        "title": "A young girl moves into an old haunted house • #Horror Short",
+        "description": "Watch this Horror story about A young girl moves into an old haunted house! #Shorts #Story #Horror"
+      }
+    }
+  },
+  {
+    "id": "proj_1794982355496",
+    "name": "A young girl moves into an old haunted house",
+    "title": "A young girl moves into an old haunted house",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-18",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": {
+      "title": "A young girl moves into an old haunted house",
+      "category": "Horror",
+      "tone": "Horror and Cinematic",
+      "duration": 20,
+      "durationUnit": "s",
+      "totalDurationFormatted": "20 s",
+      "characterStyle": "realistic",
+      "narration": "Through the cold mist, the creaking gates of the forgotten house loomed. Footsteps echoed on ancient floorboards as cold air filled the silent room. The flickering lantern light cast dancing shadows against wallpapered walls. A faint child's whisper floated down from the winding dark stairs. In the mirror's reflection, an ethereal translucent silhouette stood silently. Silver hair floating weightlessly, the spectral girl looked with gentle eyes. The spirit reached out a translucent hand, pointing toward a locked music box. The ancient brass key turned, unveiling memories preserved in dust and light. A warm golden glow replaced the cold shadows as fear turned to empathy. The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+      "characters": [
+        {
+          "id": "char_lily_1794982212991",
+          "name": "Lily",
+          "type": "Lead Hero",
+          "role": "Lead Protagonist",
+          "age": "Young Girl (11 years)",
+          "gender": "Female",
+          "skinTone": "Fair complexion with rosy cheeks and light freckles",
+          "hairStyle": "Shoulder-length wavy chestnut brown hair with side clip",
+          "faceStructure": "Round expressive youthful face, wide curious hazel eyes",
+          "bodyType": "Petite, agile youthful build",
+          "costume": "Yellow hooded warm raincoat over cozy knitted sweater and dark denim dungarees, durable boots",
+          "accessories": "Vintage brass lantern emitting warm golden amber glow, worn leather satchel",
+          "identifyingFeatures": "Bright yellow raincoat, brass lantern illuminating shadows, brave inquisitive expression",
+          "personality": "Courageous, deeply curious, compassionate, perceptive",
+          "description": "A brave 11-year-old young girl with expressive eyes, wearing a yellow hooded raincoat and holding an antique glowing brass lantern in a spooky haunted manor, cinematic 8k.",
+          "primaryImage": "/storage/images/char_char_lily_1794982212991_front_1794982234949.png?_t=1794982235220",
+          "views": [
+            {
+              "id": "v_front",
+              "type": "Front Portrait",
+              "url": "/storage/images/style_realistic.svg"
+            }
+          ]
+        },
+        {
+          "id": "char_aria_the_ghost_girl_1794982212992",
+          "name": "Aria the Ghost Girl",
+          "type": "Supporting",
+          "role": "Mysterious Ghost / Supernatural Companion",
+          "age": "Ethereal Spirit (Ageless apparition)",
+          "gender": "Female",
+          "skinTone": "Translucent porcelain pale skin with soft bioluminescent blue-white aura",
+          "hairStyle": "Long ethereal silver-white hair floating weightlessly as if underwater",
+          "faceStructure": "Delicate porcelain features, luminous glowing cyan eyes, enigmatic gentle smile",
+          "bodyType": "Slender, floating weightlessly off the ground",
+          "costume": "Tattered antique Victorian lace dress that fades into misty vapor at the hem",
+          "accessories": "Faint glowing spectral crystal pendant around neck",
+          "identifyingFeatures": "Floating softly above floor, translucent silhouette casting no shadow, glowing cyan eyes",
+          "personality": "Mysterious, lonely, gentle, watchful guardian of the house",
+          "description": "A mysterious translucent ghost girl with floating silver hair, luminous cyan eyes, wearing a tattered antique lace dress, hovering gently with an ethereal misty aura, cinematic masterpiece.",
+          "primaryImage": "/storage/images/char_char_aria_the_ghost_girl_1794982212992_front_1794982248388.png?_t=1794982248655",
+          "views": [
+            {
+              "id": "v_front",
+              "type": "Front Portrait",
+              "url": "/storage/images/style_realistic.svg"
+            }
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "scene": 1,
+          "duration": "0–2 s",
+          "story": "Approaching the haunted manor",
+          "spokenLine": "Through the cold mist, the creaking gates of the forgotten house loomed.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 1: Approaching the haunted manor, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 2,
+          "duration": "2–4 s",
+          "story": "Stepping into the shadowed hall",
+          "spokenLine": "Footsteps echoed on ancient floorboards as cold air filled the silent room.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 2: Stepping into the shadowed hall, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 3,
+          "duration": "4–6 s",
+          "story": "A lantern cuts through darkness",
+          "spokenLine": "The flickering lantern light cast dancing shadows against wallpapered walls.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 3: A lantern cuts through darkness, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 4,
+          "duration": "6–8 s",
+          "story": "Whispers from the staircase",
+          "spokenLine": "A faint child's whisper floated down from the winding dark stairs.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 4: Whispers from the staircase, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 5,
+          "duration": "8–10 s",
+          "story": "A glowing silhouette appears",
+          "spokenLine": "In the mirror's reflection, an ethereal translucent silhouette stood silently.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 5: A glowing silhouette appears, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 6,
+          "duration": "10–12 s",
+          "story": "The ghost girl steps forward",
+          "spokenLine": "Silver hair floating weightlessly, the spectral girl looked with gentle eyes.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 6: The ghost girl steps forward, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 7,
+          "duration": "12–14 s",
+          "story": "A secret unspoken message",
+          "spokenLine": "The spirit reached out a translucent hand, pointing toward a locked music box.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 7: A secret unspoken message, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 8,
+          "duration": "14–16 s",
+          "story": "Unlocking the old secret",
+          "spokenLine": "The ancient brass key turned, unveiling memories preserved in dust and light.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 8: Unlocking the old secret, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 9,
+          "duration": "16–18 s",
+          "story": "A moment of supernatural peace",
+          "spokenLine": "A warm golden glow replaced the cold shadows as fear turned to empathy.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 9: A moment of supernatural peace, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "scene": 10,
+          "duration": "18–20 s",
+          "story": "Guiding spirit of the house",
+          "spokenLine": "The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+          "prompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 10: Guiding spirit of the house, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        }
+      ],
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "timeRange": "0–2 s",
+          "storyBeat": "Approaching the haunted manor",
+          "title": "Act 1: Approaching the haunted manor",
+          "duration": 2,
+          "spokenLine": "Through the cold mist, the creaking gates of the forgotten house loomed.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 1: Approaching the haunted manor, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 2,
+          "timeRange": "2–4 s",
+          "storyBeat": "Stepping into the shadowed hall",
+          "title": "Act 2: Stepping into the shadowed hall",
+          "duration": 2,
+          "spokenLine": "Footsteps echoed on ancient floorboards as cold air filled the silent room.",
+          "effect": "pan",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 2: Stepping into the shadowed hall, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 3,
+          "timeRange": "4–6 s",
+          "storyBeat": "A lantern cuts through darkness",
+          "title": "Act 3: A lantern cuts through darkness",
+          "duration": 2,
+          "spokenLine": "The flickering lantern light cast dancing shadows against wallpapered walls.",
+          "effect": "star_fall",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 3: A lantern cuts through darkness, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 4,
+          "timeRange": "6–8 s",
+          "storyBeat": "Whispers from the staircase",
+          "title": "Act 4: Whispers from the staircase",
+          "duration": 2,
+          "spokenLine": "A faint child's whisper floated down from the winding dark stairs.",
+          "effect": "zoom_out",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 4: Whispers from the staircase, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 5,
+          "timeRange": "8–10 s",
+          "storyBeat": "A glowing silhouette appears",
+          "title": "Act 5: A glowing silhouette appears",
+          "duration": 2,
+          "spokenLine": "In the mirror's reflection, an ethereal translucent silhouette stood silently.",
+          "effect": "shake",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 5: A glowing silhouette appears, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 6,
+          "timeRange": "10–12 s",
+          "storyBeat": "The ghost girl steps forward",
+          "title": "Act 6: The ghost girl steps forward",
+          "duration": 2,
+          "spokenLine": "Silver hair floating weightlessly, the spectral girl looked with gentle eyes.",
+          "effect": "rabbit_discover",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 6: The ghost girl steps forward, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 7,
+          "timeRange": "12–14 s",
+          "storyBeat": "A secret unspoken message",
+          "title": "Act 7: A secret unspoken message",
+          "duration": 2,
+          "spokenLine": "The spirit reached out a translucent hand, pointing toward a locked music box.",
+          "effect": "star_launch",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 7: A secret unspoken message, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 8,
+          "timeRange": "14–16 s",
+          "storyBeat": "Unlocking the old secret",
+          "title": "Act 8: Unlocking the old secret",
+          "duration": 2,
+          "spokenLine": "The ancient brass key turned, unveiling memories preserved in dust and light.",
+          "effect": "star_shine",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 8: Unlocking the old secret, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 9,
+          "timeRange": "16–18 s",
+          "storyBeat": "A moment of supernatural peace",
+          "title": "Act 9: A moment of supernatural peace",
+          "duration": 2,
+          "spokenLine": "A warm golden glow replaced the cold shadows as fear turned to empathy.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 9: A moment of supernatural peace, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        },
+        {
+          "sceneNumber": 10,
+          "timeRange": "18–20 s",
+          "storyBeat": "Guiding spirit of the house",
+          "title": "Act 10: Guiding spirit of the house",
+          "duration": 2,
+          "spokenLine": "The ghost smiled softly, fading into starlight as a peaceful guardian of the home.",
+          "effect": "pan",
+          "pixarPrompt": "Cinematic 85mm photograph, A young girl moves into an old haunted house, Scene 10: Guiding spirit of the house, Horror atmosphere, realistic human anatomy and skin pores, 8k photographic lighting"
+        }
+      ],
+      "subtitles": [
+        "THROUGH THE COLD MIST, THE CREAKING GATES OF THE FORGOTTEN HOUSE LOOMED.",
+        "FOOTSTEPS ECHOED ON ANCIENT FLOORBOARDS AS COLD AIR FILLED THE SILENT ROOM.",
+        "THE FLICKERING LANTERN LIGHT CAST DANCING SHADOWS AGAINST WALLPAPERED WALLS.",
+        "A FAINT CHILD'S WHISPER FLOATED DOWN FROM THE WINDING DARK STAIRS."
+      ],
+      "youtube": {
+        "title": "A young girl moves into an old haunted house • #Horror Short",
+        "description": "Watch this Horror story about A young girl moves into an old haunted house! #Shorts #Story #Horror"
+      }
+    }
+  },
+  {
+    "id": "proj_1794977707359",
+    "name": "The Little Star's Dream ⭐",
+    "title": "The Little Star's Dream ⭐",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-18",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": null
+  },
+  {
+    "id": "proj_1794919695429",
+    "name": "The Silent Guardian of Dandakaranya",
+    "title": "The Silent Guardian of Dandakaranya",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": {
+      "title": "The Silent Guardian of Dandakaranya",
+      "tone": "Epic and Cinematic",
+      "duration": 20,
+      "durationUnit": "s",
+      "totalDurationFormatted": "20 s",
+      "narration": "Through the ancient woods of Dandakaranya, the brothers tread with purpose. Rama, the prince of righteousness, moves with silent grace. Lakshmana follows, his bow ever ready. Yet, they are not alone in this sacred realm. Hidden amidst the towering boughs, a divine witness observes. Hanuman watches, his heart brimming with silent devotion. A secret pact between destiny and the divine. The forest holds its breath in their presence. Two legends walk the path of exile. One silent shadow guards their every step.",
+      "timeline": [
+        {
+          "scene": 1,
+          "duration": "0–2 s",
+          "story": "Sunlight filters through dense ancient jungle canopy",
+          "spokenLine": "Through the ancient woods of Dandakaranya, the brothers tread with purpose.",
+          "prompt": "Anime style, cinematic wide shot of a lush, mystical ancient forest, sunlight filtering through dense leaves, 8k, vibrant colors."
+        },
+        {
+          "scene": 2,
+          "duration": "2–4 s",
+          "story": "Rama walking forward, focused and calm",
+          "spokenLine": "Rama, the prince of righteousness, moves with silent grace.",
+          "prompt": "Anime style, close up of Lord Rama walking with regal posture, peaceful expression, traditional silk garments, soft lighting, 8k."
+        },
+        {
+          "scene": 3,
+          "duration": "4–6 s",
+          "story": "Lakshmana walking behind, vigilant",
+          "spokenLine": "Lakshmana follows, his bow ever ready.",
+          "prompt": "Anime style, medium shot of Lakshmana walking with a bow slung over his shoulder, vigilant eyes scanning the forest, dynamic composition, 8k."
+        },
+        {
+          "scene": 4,
+          "duration": "6–8 s",
+          "story": "Wide shot of the brothers moving deeper",
+          "spokenLine": "Yet, they are not alone in this sacred realm.",
+          "prompt": "Anime style, low angle wide shot of Rama and Lakshmana walking through a forest path, towering ancient trees surrounding them, 8k."
+        },
+        {
+          "scene": 5,
+          "duration": "8–10 s",
+          "story": "Hanuman's silhouette appearing behind a tree",
+          "spokenLine": "Hidden amidst the towering boughs, a divine witness observes.",
+          "prompt": "Anime style, close up of Hanuman's silhouette standing partially hidden behind a giant banyan tree, mysterious and awe-inspiring, 8k."
+        },
+        {
+          "scene": 6,
+          "duration": "10–12 s",
+          "story": "Hanuman's face showing deep reverence",
+          "spokenLine": "Hanuman watches, his heart brimming with silent devotion.",
+          "prompt": "Anime style, detailed close-up of Hanuman's face, eyes filled with tears of devotion and reverence, soft golden light, 8k."
+        },
+        {
+          "scene": 7,
+          "duration": "12–14 s",
+          "story": "Magical aura flickering around the trees",
+          "spokenLine": "A secret pact between destiny and the divine.",
+          "prompt": "Anime style, magical shimmering particles floating in the forest air, ethereal atmosphere, high fantasy aesthetic, 8k."
+        },
+        {
+          "scene": 8,
+          "duration": "14–16 s",
+          "story": "Birds taking flight as they pass",
+          "spokenLine": "The forest holds its breath in their presence.",
+          "prompt": "Anime style, flock of birds taking flight from tree branches, cinematic motion blur, lush green forest background, 8k."
+        },
+        {
+          "scene": 9,
+          "duration": "16–18 s",
+          "story": "Rama and Lakshmana walking into the distance",
+          "spokenLine": "Two legends walk the path of exile.",
+          "prompt": "Anime style, long shot of the two figures walking away into the deep woods, sunset light creating long shadows, epic scale, 8k."
+        },
+        {
+          "scene": 10,
+          "duration": "18–20 s",
+          "story": "Hanuman jumping silently into the canopy",
+          "spokenLine": "One silent shadow guards their every step.",
+          "prompt": "Anime style, Hanuman leaping gracefully into the high tree canopy, vanishing into the leaves, cinematic wide shot, 8k."
+        }
+      ],
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "timeRange": "0–2 s",
+          "storyBeat": "Beautiful forest introduction",
+          "title": "Act 1: Forest Introduction",
+          "duration": 2,
+          "spokenLine": "Through the ancient woods of Dandakaranya, the brothers tread with purpose.",
+          "effect": "fade_in",
+          "pixarPrompt": "Anime style, cinematic wide shot of a lush, mystical ancient forest, sunlight filtering through dense leaves, 8k, vibrant colors."
+        },
+        {
+          "sceneNumber": 2,
+          "timeRange": "2–4 s",
+          "storyBeat": "Rama walking forward",
+          "title": "Act 2: Rama's Grace",
+          "duration": 2,
+          "spokenLine": "Rama, the prince of righteousness, moves with silent grace.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Anime style, close up of Lord Rama walking with regal posture, peaceful expression, traditional silk garments, soft lighting, 8k."
+        },
+        {
+          "sceneNumber": 3,
+          "timeRange": "4–6 s",
+          "storyBeat": "Lakshmana's vigilance",
+          "title": "Act 3: Lakshmana's Watch",
+          "duration": 2,
+          "spokenLine": "Lakshmana follows, his bow ever ready.",
+          "effect": "pan_right",
+          "pixarPrompt": "Anime style, medium shot of Lakshmana walking with a bow slung over his shoulder, vigilant eyes scanning the forest, dynamic composition, 8k."
+        },
+        {
+          "sceneNumber": 4,
+          "timeRange": "6–8 s",
+          "storyBeat": "The brothers moving through the wild",
+          "title": "Act 4: The Sacred Path",
+          "duration": 2,
+          "spokenLine": "Yet, they are not alone in this sacred realm.",
+          "effect": "zoom_out",
+          "pixarPrompt": "Anime style, low angle wide shot of Rama and Lakshmana walking through a forest path, towering ancient trees surrounding them, 8k."
+        },
+        {
+          "sceneNumber": 5,
+          "timeRange": "8–10 s",
+          "storyBeat": "Hanuman appears in the background",
+          "title": "Act 5: The Divine Witness",
+          "duration": 2,
+          "spokenLine": "Hidden amidst the towering boughs, a divine witness observes.",
+          "effect": "focus_shift",
+          "pixarPrompt": "Anime style, close up of Hanuman's silhouette standing partially hidden behind a giant banyan tree, mysterious and awe-inspiring, 8k."
+        },
+        {
+          "sceneNumber": 6,
+          "timeRange": "10–12 s",
+          "storyBeat": "Hanuman's reaction",
+          "title": "Act 6: Heart of Devotion",
+          "duration": 2,
+          "spokenLine": "Hanuman watches, his heart brimming with silent devotion.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Anime style, detailed close-up of Hanuman's face, eyes filled with tears of devotion and reverence, soft golden light, 8k."
+        },
+        {
+          "sceneNumber": 7,
+          "timeRange": "12–14 s",
+          "storyBeat": "Magical atmosphere",
+          "title": "Act 7: Destiny's Pact",
+          "duration": 2,
+          "spokenLine": "A secret pact between destiny and the divine.",
+          "effect": "cross_fade",
+          "pixarPrompt": "Anime style, magical shimmering particles floating in the forest air, ethereal atmosphere, high fantasy aesthetic, 8k."
+        },
+        {
+          "sceneNumber": 8,
+          "timeRange": "14–16 s",
+          "storyBeat": "Forest reaction",
+          "title": "Act 8: The Silent Woods",
+          "duration": 2,
+          "spokenLine": "The forest holds its breath in their presence.",
+          "effect": "pan_left",
+          "pixarPrompt": "Anime style, flock of birds taking flight from tree branches, cinematic motion blur, lush green forest background, 8k."
+        },
+        {
+          "sceneNumber": 9,
+          "timeRange": "16–18 s",
+          "storyBeat": "Continuing the journey",
+          "title": "Act 9: Path of Exile",
+          "duration": 2,
+          "spokenLine": "Two legends walk the path of exile.",
+          "effect": "zoom_out",
+          "pixarPrompt": "Anime style, long shot of the two figures walking away into the deep woods, sunset light creating long shadows, epic scale, 8k."
+        },
+        {
+          "sceneNumber": 10,
+          "timeRange": "18–20 s",
+          "storyBeat": "Hanuman guarding from above",
+          "title": "Act 10: The Eternal Guardian",
+          "duration": 2,
+          "spokenLine": "One silent shadow guards their every step.",
+          "effect": "fade_out",
+          "pixarPrompt": "Anime style, Hanuman leaping gracefully into the high tree canopy, vanishing into the leaves, cinematic wide shot, 8k."
+        }
+      ],
+      "subtitles": [
+        "THE BROTHERS TREAD WITH PURPOSE",
+        "THE DIVINE WITNESS WATCHES FROM THE SHADOWS"
+      ],
+      "youtube": {
+        "title": "The Silent Guardian: Hanuman Watches Rama #Shorts",
+        "description": "An epic cinematic journey of Lord Rama, Lakshmana, and the silent devotion of Hanuman in the deep forests of Dandakaranya. #Shorts #Ramayana #Hanuman #AnimeArt #CinematicStory"
+      },
+      "characterStyle": "anime"
+    }
+  },
+  {
+    "id": "proj_1794919695416",
+    "name": "The Silent Guardian of Dandakaranya",
+    "title": "The Silent Guardian of Dandakaranya",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": {
+      "title": "The Silent Guardian of Dandakaranya",
+      "tone": "Epic and Cinematic",
+      "duration": 20,
+      "durationUnit": "s",
+      "totalDurationFormatted": "20 s",
+      "narration": "Through the ancient woods of Dandakaranya, the brothers tread with purpose. Rama, the prince of righteousness, moves with silent grace. Lakshmana follows, his bow ever ready. Yet, they are not alone in this sacred realm. Hidden amidst the towering boughs, a divine witness observes. Hanuman watches, his heart brimming with silent devotion. A secret pact between destiny and the divine. The forest holds its breath in their presence. Two legends walk the path of exile. One silent shadow guards their every step.",
+      "timeline": [
+        {
+          "scene": 1,
+          "duration": "0–2 s",
+          "story": "Sunlight filters through dense ancient jungle canopy",
+          "spokenLine": "Through the ancient woods of Dandakaranya, the brothers tread with purpose.",
+          "prompt": "Anime style, cinematic wide shot of a lush, mystical ancient forest, sunlight filtering through dense leaves, 8k, vibrant colors."
+        },
+        {
+          "scene": 2,
+          "duration": "2–4 s",
+          "story": "Rama walking forward, focused and calm",
+          "spokenLine": "Rama, the prince of righteousness, moves with silent grace.",
+          "prompt": "Anime style, close up of Lord Rama walking with regal posture, peaceful expression, traditional silk garments, soft lighting, 8k."
+        },
+        {
+          "scene": 3,
+          "duration": "4–6 s",
+          "story": "Lakshmana walking behind, vigilant",
+          "spokenLine": "Lakshmana follows, his bow ever ready.",
+          "prompt": "Anime style, medium shot of Lakshmana walking with a bow slung over his shoulder, vigilant eyes scanning the forest, dynamic composition, 8k."
+        },
+        {
+          "scene": 4,
+          "duration": "6–8 s",
+          "story": "Wide shot of the brothers moving deeper",
+          "spokenLine": "Yet, they are not alone in this sacred realm.",
+          "prompt": "Anime style, low angle wide shot of Rama and Lakshmana walking through a forest path, towering ancient trees surrounding them, 8k."
+        },
+        {
+          "scene": 5,
+          "duration": "8–10 s",
+          "story": "Hanuman's silhouette appearing behind a tree",
+          "spokenLine": "Hidden amidst the towering boughs, a divine witness observes.",
+          "prompt": "Anime style, close up of Hanuman's silhouette standing partially hidden behind a giant banyan tree, mysterious and awe-inspiring, 8k."
+        },
+        {
+          "scene": 6,
+          "duration": "10–12 s",
+          "story": "Hanuman's face showing deep reverence",
+          "spokenLine": "Hanuman watches, his heart brimming with silent devotion.",
+          "prompt": "Anime style, detailed close-up of Hanuman's face, eyes filled with tears of devotion and reverence, soft golden light, 8k."
+        },
+        {
+          "scene": 7,
+          "duration": "12–14 s",
+          "story": "Magical aura flickering around the trees",
+          "spokenLine": "A secret pact between destiny and the divine.",
+          "prompt": "Anime style, magical shimmering particles floating in the forest air, ethereal atmosphere, high fantasy aesthetic, 8k."
+        },
+        {
+          "scene": 8,
+          "duration": "14–16 s",
+          "story": "Birds taking flight as they pass",
+          "spokenLine": "The forest holds its breath in their presence.",
+          "prompt": "Anime style, flock of birds taking flight from tree branches, cinematic motion blur, lush green forest background, 8k."
+        },
+        {
+          "scene": 9,
+          "duration": "16–18 s",
+          "story": "Rama and Lakshmana walking into the distance",
+          "spokenLine": "Two legends walk the path of exile.",
+          "prompt": "Anime style, long shot of the two figures walking away into the deep woods, sunset light creating long shadows, epic scale, 8k."
+        },
+        {
+          "scene": 10,
+          "duration": "18–20 s",
+          "story": "Hanuman jumping silently into the canopy",
+          "spokenLine": "One silent shadow guards their every step.",
+          "prompt": "Anime style, Hanuman leaping gracefully into the high tree canopy, vanishing into the leaves, cinematic wide shot, 8k."
+        }
+      ],
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "timeRange": "0–2 s",
+          "storyBeat": "Beautiful forest introduction",
+          "title": "Act 1: Forest Introduction",
+          "duration": 2,
+          "spokenLine": "Through the ancient woods of Dandakaranya, the brothers tread with purpose.",
+          "effect": "fade_in",
+          "pixarPrompt": "Anime style, cinematic wide shot of a lush, mystical ancient forest, sunlight filtering through dense leaves, 8k, vibrant colors."
+        },
+        {
+          "sceneNumber": 2,
+          "timeRange": "2–4 s",
+          "storyBeat": "Rama walking forward",
+          "title": "Act 2: Rama's Grace",
+          "duration": 2,
+          "spokenLine": "Rama, the prince of righteousness, moves with silent grace.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Anime style, close up of Lord Rama walking with regal posture, peaceful expression, traditional silk garments, soft lighting, 8k."
+        },
+        {
+          "sceneNumber": 3,
+          "timeRange": "4–6 s",
+          "storyBeat": "Lakshmana's vigilance",
+          "title": "Act 3: Lakshmana's Watch",
+          "duration": 2,
+          "spokenLine": "Lakshmana follows, his bow ever ready.",
+          "effect": "pan_right",
+          "pixarPrompt": "Anime style, medium shot of Lakshmana walking with a bow slung over his shoulder, vigilant eyes scanning the forest, dynamic composition, 8k."
+        },
+        {
+          "sceneNumber": 4,
+          "timeRange": "6–8 s",
+          "storyBeat": "The brothers moving through the wild",
+          "title": "Act 4: The Sacred Path",
+          "duration": 2,
+          "spokenLine": "Yet, they are not alone in this sacred realm.",
+          "effect": "zoom_out",
+          "pixarPrompt": "Anime style, low angle wide shot of Rama and Lakshmana walking through a forest path, towering ancient trees surrounding them, 8k."
+        },
+        {
+          "sceneNumber": 5,
+          "timeRange": "8–10 s",
+          "storyBeat": "Hanuman appears in the background",
+          "title": "Act 5: The Divine Witness",
+          "duration": 2,
+          "spokenLine": "Hidden amidst the towering boughs, a divine witness observes.",
+          "effect": "focus_shift",
+          "pixarPrompt": "Anime style, close up of Hanuman's silhouette standing partially hidden behind a giant banyan tree, mysterious and awe-inspiring, 8k."
+        },
+        {
+          "sceneNumber": 6,
+          "timeRange": "10–12 s",
+          "storyBeat": "Hanuman's reaction",
+          "title": "Act 6: Heart of Devotion",
+          "duration": 2,
+          "spokenLine": "Hanuman watches, his heart brimming with silent devotion.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Anime style, detailed close-up of Hanuman's face, eyes filled with tears of devotion and reverence, soft golden light, 8k."
+        },
+        {
+          "sceneNumber": 7,
+          "timeRange": "12–14 s",
+          "storyBeat": "Magical atmosphere",
+          "title": "Act 7: Destiny's Pact",
+          "duration": 2,
+          "spokenLine": "A secret pact between destiny and the divine.",
+          "effect": "cross_fade",
+          "pixarPrompt": "Anime style, magical shimmering particles floating in the forest air, ethereal atmosphere, high fantasy aesthetic, 8k."
+        },
+        {
+          "sceneNumber": 8,
+          "timeRange": "14–16 s",
+          "storyBeat": "Forest reaction",
+          "title": "Act 8: The Silent Woods",
+          "duration": 2,
+          "spokenLine": "The forest holds its breath in their presence.",
+          "effect": "pan_left",
+          "pixarPrompt": "Anime style, flock of birds taking flight from tree branches, cinematic motion blur, lush green forest background, 8k."
+        },
+        {
+          "sceneNumber": 9,
+          "timeRange": "16–18 s",
+          "storyBeat": "Continuing the journey",
+          "title": "Act 9: Path of Exile",
+          "duration": 2,
+          "spokenLine": "Two legends walk the path of exile.",
+          "effect": "zoom_out",
+          "pixarPrompt": "Anime style, long shot of the two figures walking away into the deep woods, sunset light creating long shadows, epic scale, 8k."
+        },
+        {
+          "sceneNumber": 10,
+          "timeRange": "18–20 s",
+          "storyBeat": "Hanuman guarding from above",
+          "title": "Act 10: The Eternal Guardian",
+          "duration": 2,
+          "spokenLine": "One silent shadow guards their every step.",
+          "effect": "fade_out",
+          "pixarPrompt": "Anime style, Hanuman leaping gracefully into the high tree canopy, vanishing into the leaves, cinematic wide shot, 8k."
+        }
+      ],
+      "subtitles": [
+        "THE BROTHERS TREAD WITH PURPOSE",
+        "THE DIVINE WITNESS WATCHES FROM THE SHADOWS"
+      ],
+      "youtube": {
+        "title": "The Silent Guardian: Hanuman Watches Rama #Shorts",
+        "description": "An epic cinematic journey of Lord Rama, Lakshmana, and the silent devotion of Hanuman in the deep forests of Dandakaranya. #Shorts #Ramayana #Hanuman #AnimeArt #CinematicStory"
+      },
+      "characterStyle": "anime"
+    }
+  },
+  {
+    "id": "proj_1794919160991",
+    "name": "The Silent Guardian",
+    "title": "The Silent Guardian",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": {
+      "title": "The Silent Guardian",
+      "tone": "Epic and Cinematic",
+      "duration": 20,
+      "durationUnit": "s",
+      "totalDurationFormatted": "20 s",
+      "narration": "Through the ancient woods they tread, the princes of Ayodhya. Bound by duty, guided by destiny. Unseen eyes watch from the shadows. A devotee, humbled by their presence. Their path is set in stone. The forest breathes in silence. Hanuman bows his head in reverence. A divine connection across the leaves. The journey continues toward the horizon. Destiny follows their every step.",
+      "timeline": [
+        {
+          "scene": 1,
+          "duration": "0–2 s",
+          "story": "Rama and Lakshmana walking through sun-drenched ancient forest.",
+          "spokenLine": "Through the ancient woods they tread, the princes of Ayodhya.",
+          "prompt": "Photorealistic cinematic 8k film capture of two men in traditional period drapes walking through a dense, ancient forest, 85mm lens, dappled sunlight, authentic skin textures."
+        },
+        {
+          "scene": 2,
+          "duration": "2–4 s",
+          "story": "Rama leads with focused gaze, Lakshmana follows closely.",
+          "spokenLine": "Bound by duty, guided by destiny.",
+          "prompt": "Close-up of a man with noble features walking through a forest, authentic skin pores, linen woven fabric, soft focus background, cinematic lighting."
+        },
+        {
+          "scene": 3,
+          "duration": "4–6 s",
+          "story": "Hanuman appears partially behind a massive tree trunk.",
+          "spokenLine": "Unseen eyes watch from the shadows.",
+          "prompt": "A man with a powerful, athletic build standing behind a large ancient oak tree, peeking out with intense, respectful eyes, photorealistic, cinematic film grain."
+        },
+        {
+          "scene": 4,
+          "duration": "6–8 s",
+          "story": "Hanuman observes with hands folded in prayer.",
+          "spokenLine": "A devotee, humbled by their presence.",
+          "prompt": "A man in traditional attire standing in the shadows of a forest, hands folded in a prayer position, face illuminated by a soft shaft of light, 85mm portrait, highly detailed."
+        },
+        {
+          "scene": 5,
+          "duration": "8–10 s",
+          "story": "Low angle shot of the princes walking forward.",
+          "spokenLine": "Their path is set in stone.",
+          "prompt": "Low angle tracking shot of feet walking on a forest floor covered in ancient leaves, authentic textures, cinematic atmosphere."
+        },
+        {
+          "scene": 6,
+          "duration": "10–12 s",
+          "story": "Wide shot of the forest canopy swaying.",
+          "spokenLine": "The forest breathes in silence.",
+          "prompt": "Cinematic wide shot of sunlight filtering through dense forest canopy, dust particles in the air, hyper-realistic, 8k film aesthetic."
+        },
+        {
+          "scene": 7,
+          "duration": "12–14 s",
+          "story": "Hanuman bows his head in deep reverence.",
+          "spokenLine": "Hanuman bows his head in reverence.",
+          "prompt": "Close-up of a man with a humble, meditative expression, head bowed, soft shadows on his face, photorealistic, 85mm portrait lens."
+        },
+        {
+          "scene": 8,
+          "duration": "14–16 s",
+          "story": "Rama glances back slightly, sensing a presence.",
+          "spokenLine": "A divine connection across the leaves.",
+          "prompt": "Cinematic profile shot of a man turning his head slightly, natural skin pores, realistic lighting, forest background with bokeh."
+        },
+        {
+          "scene": 9,
+          "duration": "16–18 s",
+          "story": "The princes walk toward a bright clearing.",
+          "spokenLine": "The journey continues toward the horizon.",
+          "prompt": "Two men walking toward a bright light at the edge of the forest, epic scale, cinematic composition, photorealistic."
+        },
+        {
+          "scene": 10,
+          "duration": "18–20 s",
+          "story": "Wide shot of the forest path fading into the distance.",
+          "spokenLine": "Destiny follows their every step.",
+          "prompt": "Wide cinematic shot of a forest path, fading into the golden sunset, ethereal atmosphere, photorealistic film quality."
+        }
+      ],
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "timeRange": "0–2 s",
+          "storyBeat": "Rama and Lakshmana walking through sun-drenched ancient forest.",
+          "title": "Act 1: The Princes Walk",
+          "duration": 2,
+          "spokenLine": "Through the ancient woods they tread, the princes of Ayodhya.",
+          "effect": "pan_right",
+          "pixarPrompt": "Photorealistic cinematic 8k film capture of two men in traditional period drapes walking through a dense, ancient forest, 85mm lens, dappled sunlight, authentic skin textures."
+        },
+        {
+          "sceneNumber": 2,
+          "timeRange": "2–4 s",
+          "storyBeat": "Rama leads with focused gaze, Lakshmana follows closely.",
+          "title": "Act 2: Duty and Destiny",
+          "duration": 2,
+          "spokenLine": "Bound by duty, guided by destiny.",
+          "effect": "zoom_in",
+          "pixarPrompt": "Close-up of a man with noble features walking through a forest, authentic skin pores, linen woven fabric, soft focus background, cinematic lighting."
+        },
+        {
+          "sceneNumber": 3,
+          "timeRange": "4–6 s",
+          "storyBeat": "Hanuman appears partially behind a massive tree trunk.",
+          "title": "Act 3: The Hidden Observer",
+          "duration": 2,
+          "spokenLine": "Unseen eyes watch from the shadows.",
+          "effect": "fade_in",
+          "pixarPrompt": "A man with a powerful, athletic build standing behind a large ancient oak tree, peeking out with intense, respectful eyes, photorealistic, cinematic film grain."
+        },
+        {
+          "sceneNumber": 4,
+          "timeRange": "6–8 s",
+          "storyBeat": "Hanuman observes with hands folded in prayer.",
+          "title": "Act 4: Humble Devotion",
+          "duration": 2,
+          "spokenLine": "A devotee, humbled by their presence.",
+          "effect": "soft_focus",
+          "pixarPrompt": "A man in traditional attire standing in the shadows of a forest, hands folded in a prayer position, face illuminated by a soft shaft of light, 85mm portrait, highly detailed."
+        },
+        {
+          "sceneNumber": 5,
+          "timeRange": "8–10 s",
+          "storyBeat": "Low angle shot of the princes walking forward.",
+          "title": "Act 5: Path Set in Stone",
+          "duration": 2,
+          "spokenLine": "Their path is set in stone.",
+          "effect": "tracking_shot",
+          "pixarPrompt": "Low angle tracking shot of feet walking on a forest floor covered in ancient leaves, authentic textures, cinematic atmosphere."
+        },
+        {
+          "sceneNumber": 6,
+          "timeRange": "10–12 s",
+          "storyBeat": "Wide shot of the forest canopy swaying.",
+          "title": "Act 6: Silent Forest",
+          "duration": 2,
+          "spokenLine": "The forest breathes in silence.",
+          "effect": "pan_up",
+          "pixarPrompt": "Cinematic wide shot of sunlight filtering through dense forest canopy, dust particles in the air, hyper-realistic, 8k film aesthetic."
+        },
+        {
+          "sceneNumber": 7,
+          "timeRange": "12–14 s",
+          "storyBeat": "Hanuman bows his head in deep reverence.",
+          "title": "Act 7: Bow of Reverence",
+          "duration": 2,
+          "spokenLine": "Hanuman bows his head in reverence.",
+          "effect": "close_up",
+          "pixarPrompt": "Close-up of a man with a humble, meditative expression, head bowed, soft shadows on his face, photorealistic, 85mm portrait lens."
+        },
+        {
+          "sceneNumber": 8,
+          "timeRange": "14–16 s",
+          "storyBeat": "Rama glances back slightly, sensing a presence.",
+          "title": "Act 8: The Divine Sense",
+          "duration": 2,
+          "spokenLine": "A divine connection across the leaves.",
+          "effect": "zoom_out",
+          "pixarPrompt": "Cinematic profile shot of a man turning his head slightly, natural skin pores, realistic lighting, forest background with bokeh."
+        },
+        {
+          "sceneNumber": 9,
+          "timeRange": "16–18 s",
+          "storyBeat": "The princes walk toward a bright clearing.",
+          "title": "Act 9: Toward the Horizon",
+          "duration": 2,
+          "spokenLine": "The journey continues toward the horizon.",
+          "effect": "dolly_forward",
+          "pixarPrompt": "Two men walking toward a bright light at the edge of the forest, epic scale, cinematic composition, photorealistic."
+        },
+        {
+          "sceneNumber": 10,
+          "timeRange": "18–20 s",
+          "storyBeat": "Wide shot of the forest path fading into the distance.",
+          "title": "Act 10: Destiny's Path",
+          "duration": 2,
+          "spokenLine": "Destiny follows their every step.",
+          "effect": "fade_out",
+          "pixarPrompt": "Wide cinematic shot of a forest path, fading into the golden sunset, ethereal atmosphere, photorealistic film quality."
+        }
+      ],
+      "subtitles": [
+        "THE PRINCES OF AYODHYA TREAD THE ANCIENT WOODS",
+        "UNSEEN EYES WATCH FROM THE SHADOWS IN REVERENCE"
+      ],
+      "youtube": {
+        "title": "The Silent Guardian: Rama and Hanuman #Shorts",
+        "description": "Witness the epic moment when the princes of Ayodhya walk through the forest while Hanuman watches in devotion. #Shorts #Ramayana #Cinematic #EpicStory"
+      },
+      "characterStyle": "realistic"
+    }
+  },
+  {
+    "id": "proj_1794919010988",
+    "name": "The Hidden Guardian of the Forest",
+    "title": "The Hidden Guardian of the Forest",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": {
+      "title": "The Hidden Guardian of the Forest",
+      "tone": "Epic and Cinematic",
+      "duration": 20,
+      "durationUnit": "s",
+      "totalDurationFormatted": "20 s",
+      "narration": "Through the emerald depths of the ancient woods, two princes tread a path of destiny. Rama and Lakshmana walk with purpose, unaware of the divine eyes watching from the shadows. There, amidst the ancient bark and silver leaves, the mighty Hanuman watches in silent reverence. His heart swells with devotion as he beholds his Lord. A sacred bond begins, hidden in the heart of the deep forest.",
+      "timeline": [
+        {
+          "scene": 1,
+          "duration": "0–2 s",
+          "story": "Beautiful forest introduction",
+          "spokenLine": "Through the emerald depths of the ancient woods,",
+          "prompt": "Chibi style cinematic wide shot of a lush, magical forest with giant glowing flowers and ancient gnarled trees, 8k render, soft morning light filtering through leaves."
+        },
+        {
+          "scene": 2,
+          "duration": "2–4 s",
+          "story": "Rama enters the foreground",
+          "spokenLine": "two princes tread a path of destiny.",
+          "prompt": "Chibi Prince Rama with blue skin and a golden crown walking gracefully, big expressive eyes, carrying a bow, vibrant forest background, 8k render, cinematic lighting."
+        },
+        {
+          "scene": 3,
+          "duration": "4–6 s",
+          "story": "Lakshmana follows Rama",
+          "spokenLine": "Rama and Lakshmana walk with purpose,",
+          "prompt": "Chibi Rama and Lakshmana walking side by side in the forest foreground, Lakshmana has fair skin and a determined look, both in traditional yellow dhotis, 8k high detail."
+        },
+        {
+          "scene": 4,
+          "duration": "6–8 s",
+          "story": "The dense forest surroundings",
+          "spokenLine": "unaware of the divine eyes watching from the shadows.",
+          "prompt": "Low angle shot of the chibi princes walking, dense foliage in the background with mysterious shadows and sparkling fireflies, epic composition, 8k."
+        },
+        {
+          "scene": 5,
+          "duration": "8–10 s",
+          "story": "Hanuman appears in the background",
+          "spokenLine": "There, amidst the ancient bark and silver leaves,",
+          "prompt": "Wide shot, Rama and Lakshmana in the foreground, a small chibi Hanuman with white fur peeking from behind a massive ancient tree in the background, 8k render."
+        },
+        {
+          "scene": 6,
+          "duration": "10–12 s",
+          "story": "Close-up of Hanuman's reverence",
+          "spokenLine": "the mighty Hanuman watches in silent reverence.",
+          "prompt": "Close-up of chibi Hanuman's face, large eyes filled with tears of joy and devotion, looking toward the foreground, soft cinematic glow, 8k render."
+        },
+        {
+          "scene": 7,
+          "duration": "12–14 s",
+          "story": "Rama's calm profile",
+          "spokenLine": "His heart swells with devotion",
+          "prompt": "Side profile of chibi Rama walking, a gentle smile on his face, glowing aura, blurred forest background where Hanuman is partially visible, 8k."
+        },
+        {
+          "scene": 8,
+          "duration": "14–16 s",
+          "story": "Hanuman's prayer",
+          "spokenLine": "as he beholds his Lord.",
+          "prompt": "Chibi Hanuman in the background folding his hands in a namaste gesture, looking at Rama with deep love, surrounded by mystical forest mist, 8k render."
+        },
+        {
+          "scene": 9,
+          "duration": "16–18 s",
+          "story": "The journey continues",
+          "spokenLine": "A sacred bond begins,",
+          "prompt": "Rama and Lakshmana moving further away into the deep forest, Hanuman stepping out slightly from the trees to follow them, epic scale, chibi style, 8k."
+        },
+        {
+          "scene": 10,
+          "duration": "18–20 s",
+          "story": "Final forest silhouette",
+          "spokenLine": "hidden in the heart of the deep forest.",
+          "prompt": "Silhouette of the two princes and their hidden guardian walking into a golden sunset filtered through forest trees, chibi proportions, magical atmosphere, 8k."
+        }
+      ],
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "timeRange": "0–2 s",
+          "storyBeat": "Beautiful forest introduction",
+          "title": "Act 1: Forest Introduction",
+          "duration": 2,
+          "spokenLine": "Through the emerald depths of the ancient woods,",
+          "effect": "zoom_in",
+          "pixarPrompt": "Chibi style cinematic wide shot of a lush, magical forest with giant glowing flowers and ancient gnarled trees, 8k render, soft morning light filtering through leaves."
+        },
+        {
+          "sceneNumber": 2,
+          "timeRange": "2–4 s",
+          "storyBeat": "Rama enters the foreground",
+          "title": "Act 2: The Blue Prince",
+          "duration": 2,
+          "spokenLine": "two princes tread a path of destiny.",
+          "effect": "pan_right",
+          "pixarPrompt": "Chibi Prince Rama with blue skin and a golden crown walking gracefully, big expressive eyes, carrying a bow, vibrant forest background, 8k render, cinematic lighting."
+        },
+        {
+          "sceneNumber": 3,
+          "timeRange": "4–6 s",
+          "storyBeat": "Lakshmana follows Rama",
+          "title": "Act 3: Brothers in Arms",
+          "duration": 2,
+          "spokenLine": "Rama and Lakshmana walk with purpose,",
+          "effect": "dolly_track",
+          "pixarPrompt": "Chibi Rama and Lakshmana walking side by side in the forest foreground, Lakshmana has fair skin and a determined look, both in traditional yellow dhotis, 8k high detail."
+        },
+        {
+          "sceneNumber": 4,
+          "timeRange": "6–8 s",
+          "storyBeat": "The dense forest surroundings",
+          "title": "Act 4: The Unseen Watcher",
+          "duration": 2,
+          "spokenLine": "unaware of the divine eyes watching from the shadows.",
+          "effect": "rack_focus",
+          "pixarPrompt": "Low angle shot of the chibi princes walking, dense foliage in the background with mysterious shadows and sparkling fireflies, epic composition, 8k."
+        },
+        {
+          "sceneNumber": 5,
+          "timeRange": "8–10 s",
+          "storyBeat": "Hanuman appears in the background",
+          "title": "Act 5: The Shadow Emerges",
+          "duration": 2,
+          "spokenLine": "There, amidst the ancient bark and silver leaves,",
+          "effect": "pan_left",
+          "pixarPrompt": "Wide shot, Rama and Lakshmana in the foreground, a small chibi Hanuman with white fur peeking from behind a massive ancient tree in the background, 8k render."
+        },
+        {
+          "sceneNumber": 6,
+          "timeRange": "10–12 s",
+          "storyBeat": "Close-up of Hanuman's reverence",
+          "title": "Act 6: Eyes of Devotion",
+          "duration": 2,
+          "spokenLine": "the mighty Hanuman watches in silent reverence.",
+          "effect": "extreme_close_up",
+          "pixarPrompt": "Close-up of chibi Hanuman's face, large eyes filled with tears of joy and devotion, looking toward the foreground, soft cinematic glow, 8k render."
+        },
+        {
+          "sceneNumber": 7,
+          "timeRange": "12–14 s",
+          "storyBeat": "Rama's calm profile",
+          "title": "Act 7: The Divine Presence",
+          "duration": 2,
+          "spokenLine": "His heart swells with devotion",
+          "effect": "soft_blur",
+          "pixarPrompt": "Side profile of chibi Rama walking, a gentle smile on his face, glowing aura, blurred forest background where Hanuman is partially visible, 8k."
+        },
+        {
+          "sceneNumber": 8,
+          "timeRange": "14–16 s",
+          "storyBeat": "Hanuman's prayer",
+          "title": "Act 8: The Sacred Salutation",
+          "duration": 2,
+          "spokenLine": "as he beholds his Lord.",
+          "effect": "fade_in",
+          "pixarPrompt": "Chibi Hanuman in the background folding his hands in a namaste gesture, looking at Rama with deep love, surrounded by mystical forest mist, 8k render."
+        },
+        {
+          "sceneNumber": 9,
+          "timeRange": "16–18 s",
+          "storyBeat": "The journey continues",
+          "title": "Act 9: Bound by Fate",
+          "duration": 2,
+          "spokenLine": "A sacred bond begins,",
+          "effect": "zoom_out",
+          "pixarPrompt": "Rama and Lakshmana moving further away into the deep forest, Hanuman stepping out slightly from the trees to follow them, epic scale, chibi style, 8k."
+        },
+        {
+          "sceneNumber": 10,
+          "timeRange": "18–20 s",
+          "storyBeat": "Final forest silhouette",
+          "title": "Act 10: Into the Deep",
+          "duration": 2,
+          "spokenLine": "hidden in the heart of the deep forest.",
+          "effect": "fade_to_black",
+          "pixarPrompt": "Silhouette of the two princes and their hidden guardian walking into a golden sunset filtered through forest trees, chibi proportions, magical atmosphere, 8k."
+        }
+      ],
+      "subtitles": [
+        "THROUGH THE EMERALD DEPTHS OF THE ANCIENT WOODS",
+        "TWO PRINCES TREAD A PATH OF DESTINY",
+        "RAMA AND LAKSHMANA WALK WITH PURPOSE",
+        "UNAWARE OF THE DIVINE EYES WATCHING",
+        "THE MIGHTY HANUMAN WATCHES IN REVERENCE",
+        "HIS HEART SWELLS WITH DEVOTION",
+        "A SACRED BOND BEGINS IN THE DEEP FOREST"
+      ],
+      "youtube": {
+        "title": "The Secret Guardian: Rama and Hanuman's First Encounter #Shorts",
+        "description": "Witness the epic and cinematic beginning of a divine bond. In the heart of the ancient forest, Rama and Lakshmana walk toward their destiny, while Hanuman watches with sacred reverence. #Shorts #Ramayana #Hanuman #Chibi #Animation #EpicStory"
+      },
+      "characterStyle": "chibi"
+    }
+  },
+  {
+    "id": "proj_1794918965995",
+    "name": "The Little Star's Dream ⭐",
+    "title": "The Little Star's Dream ⭐",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": null
+  },
+  {
+    "id": "proj_1794917864295",
+    "name": "The Little Star's Dream ⭐",
+    "title": "The Little Star's Dream ⭐",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": null
+  },
+  {
+    "id": "proj_1794917849288",
+    "name": "The Little Star's Dream ⭐",
+    "title": "The Little Star's Dream ⭐",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": null
+  },
+  {
+    "id": "proj_1794917834291",
+    "name": "The Little Star's Dream ⭐",
+    "title": "The Little Star's Dream ⭐",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": null
+  },
+  {
+    "id": "proj_1794917819340",
+    "name": "The Little Star's Dream ⭐",
+    "title": "The Little Star's Dream ⭐",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": null
+  },
+  {
+    "id": "proj_1794916813403",
+    "name": "The Silent Observer: Rama and the Son of the Wind",
+    "title": "The Silent Observer: Rama and the Son of the Wind",
+    "characterStyle": "realistic",
+    "format": "9:16",
+    "duration": "20s",
+    "createdDate": "2026-11-17",
+    "videoStatus": "Ready",
+    "thumbnail": "/assets/scene1.png",
+    "uploadStatus": "Ready to Publish",
+    "storyboard": {
+      "title": "The Silent Observer: Rama and the Son of the Wind",
+      "tone": "Epic and Cinematic",
+      "duration": 20,
+      "durationUnit": "s",
+      "totalDurationFormatted": "20 s",
+      "narration": "Through the ancient shadows of the Dandaka forest, the exiled princes tread with silent grace. Rama leads with unyielding spirit, while Lakshmana guards their path with unwavering loyalty. Unseen, a divine observer watches from the emerald depths. Hanuman, the son of the wind, gazes upon them with profound devotion. He recognizes the light of the cosmos in their stride. A silent bond is forged before a single word is spoken. The destiny of worlds begins to shift in this sacred silence. Their journey continues into the golden light of the unknown. The epic of ages unfolds with every step. The legend breathes in the heart of the wild.",
+      "timeline": [
+        {
+          "scene": 1,
+          "duration": "0–2 s",
+          "story": "Establishing the ancient forest",
+          "spokenLine": "Through the ancient shadows of the Dandaka forest, the exiled princes tread with silent grace.",
+          "prompt": "Cinematic 8k wide shot of an ancient Indian forest with massive banyan trees, morning mist, and shafts of golden sunlight piercing through dense canopy, photorealistic, 35mm lens."
+        },
+        {
+          "scene": 2,
+          "duration": "2–4 s",
+          "story": "Rama leads the way",
+          "spokenLine": "Rama leads with unyielding spirit, while Lakshmana guards their path with unwavering loyalty.",
+          "prompt": "Medium shot of a real human actor as Rama, wearing woven saffron silk, carrying a traditional bow, authentic skin texture with light sweat, determined expression, 85mm lens portrait."
+        },
+        {
+          "scene": 3,
+          "duration": "4–6 s",
+          "story": "Lakshmana's vigilance",
+          "spokenLine": "Unseen, a divine observer watches from the emerald depths.",
+          "prompt": "Close-up of Lakshmana, muscular build, sharp features, scanning the forest with intense eyes, hand resting on a leather quiver, highly detailed fabric textures, cinematic lighting."
+        },
+        {
+          "scene": 4,
+          "duration": "6–8 s",
+          "story": "Hanuman appears in background",
+          "spokenLine": "Hanuman, the son of the wind, gazes upon them with profound devotion.",
+          "prompt": "Deep focus shot showing Rama and Lakshmana in the foreground and a muscular, realistic Hanuman partially hidden by leaves in the background, his eyes fixed on them with reverence."
+        },
+        {
+          "scene": 5,
+          "duration": "8–10 s",
+          "story": "Hanuman's spiritual recognition",
+          "spokenLine": "He recognizes the light of the cosmos in their stride.",
+          "prompt": "Extreme close-up of Hanuman's face, realistic features with fine facial hair, expressive human-like eyes filled with tears of joy, soft golden rim lighting, 100mm macro lens."
+        },
+        {
+          "scene": 6,
+          "duration": "10–12 s",
+          "story": "The silent bond",
+          "spokenLine": "A silent bond is forged before a single word is spoken.",
+          "prompt": "Over-the-shoulder shot from Hanuman's perspective looking at the two brothers walking away, the forest floor covered in moss and ancient roots, cinematic depth of field."
+        },
+        {
+          "scene": 7,
+          "duration": "12–14 s",
+          "story": "The shift in destiny",
+          "spokenLine": "The destiny of worlds begins to shift in this sacred silence.",
+          "prompt": "Low angle shot of Rama's feet treading on dry leaves, realistic leather sandals, dust motes dancing in the sunlight, slow motion, epic atmosphere."
+        },
+        {
+          "scene": 8,
+          "duration": "14–16 s",
+          "story": "Continuing the journey",
+          "spokenLine": "Their journey continues into the golden light of the unknown.",
+          "prompt": "Rama and Lakshmana walking toward a bright clearing, their silhouettes framed by massive ancient trees, photorealistic textures of bark and leaves, 8k resolution."
+        },
+        {
+          "scene": 9,
+          "duration": "16–18 s",
+          "story": "The epic unfolds",
+          "spokenLine": "The epic of ages unfolds with every step.",
+          "prompt": "Hanuman bowing his head in the shadows, a gesture of absolute surrender and respect, his muscular frame illuminated by dappled light, realistic fur and skin details."
+        },
+        {
+          "scene": 10,
+          "duration": "18–20 s",
+          "story": "Final cinematic wide shot",
+          "spokenLine": "The legend breathes in the heart of the wild.",
+          "prompt": "Grand panoramic view of the vast Indian jungle at sunrise, two small figures walking into the distance, epic scale, cinematic film grain, National Geographic style photography."
+        }
+      ],
+      "scenes": [
+        {
+          "sceneNumber": 1,
+          "timeRange": "0–2 s",
+          "storyBeat": "Beautiful forest introduction",
+          "title": "Act 1: The Sacred Wild",
+          "duration": 2,
+          "spokenLine": "Through the ancient shadows of the Dandaka forest, the exiled princes tread with silent grace.",
+          "effect": "slow_pan",
+          "pixarPrompt": "Cinematic 8k wide shot of an ancient Indian forest with massive banyan trees, morning mist, and shafts of golden sunlight piercing through dense canopy, photorealistic, 35mm lens."
+        },
+        {
+          "sceneNumber": 2,
+          "timeRange": "2–4 s",
+          "storyBeat": "Rama and Lakshmana walking",
+          "title": "Act 2: The Princes of Ayodhya",
+          "duration": 2,
+          "spokenLine": "Rama leads with unyielding spirit, while Lakshmana guards their path with unwavering loyalty.",
+          "effect": "tracking_shot",
+          "pixarPrompt": "Medium shot of a real human actor as Rama, wearing woven saffron silk, carrying a traditional bow, authentic skin texture with light sweat, determined expression, 85mm lens portrait."
+        },
+        {
+          "sceneNumber": 3,
+          "timeRange": "4–6 s",
+          "storyBeat": "Lakshmana's vigilance",
+          "title": "Act 3: The Guardian",
+          "duration": 2,
+          "spokenLine": "Unseen, a divine observer watches from the emerald depths.",
+          "effect": "close_up",
+          "pixarPrompt": "Close-up of Lakshmana, muscular build, sharp features, scanning the forest with intense eyes, hand resting on a leather quiver, highly detailed fabric textures, cinematic lighting."
+        },
+        {
+          "sceneNumber": 4,
+          "timeRange": "6–8 s",
+          "storyBeat": "Hanuman appears in the background",
+          "title": "Act 4: The Hidden Devotee",
+          "duration": 2,
+          "spokenLine": "Hanuman, the son of the wind, gazes upon them with profound devotion.",
+          "effect": "rack_focus",
+          "pixarPrompt": "Deep focus shot showing Rama and Lakshmana in the foreground and a muscular, realistic Hanuman partially hidden by leaves in the background, his eyes fixed on them with reverence."
+        },
+        {
+          "sceneNumber": 5,
+          "timeRange": "8–10 s",
+          "storyBeat": "Hanuman's reverence",
+          "title": "Act 5: Eyes of Devotion",
+          "duration": 2,
+          "spokenLine": "He recognizes the light of the cosmos in their stride.",
+          "effect": "extreme_close_up",
+          "pixarPrompt": "Extreme close-up of Hanuman's face, realistic features with fine facial hair, expressive human-like eyes filled with tears of joy, soft golden rim lighting, 100mm macro lens."
+        },
+        {
+          "sceneNumber": 6,
+          "timeRange": "10–12 s",
+          "storyBeat": "The silent connection",
+          "title": "Act 6: The Unspoken Vow",
+          "duration": 2,
+          "spokenLine": "A silent bond is forged before a single word is spoken.",
+          "effect": "pov_shot",
+          "pixarPrompt": "Over-the-shoulder shot from Hanuman's perspective looking at the two brothers walking away, the forest floor covered in moss and ancient roots, cinematic depth of field."
+        },
+        {
+          "sceneNumber": 7,
+          "timeRange": "12–14 s",
+          "storyBeat": "Footsteps of destiny",
+          "title": "Act 7: Steps of Fate",
+          "duration": 2,
+          "spokenLine": "The destiny of worlds begins to shift in this sacred silence.",
+          "effect": "low_angle",
+          "pixarPrompt": "Low angle shot of Rama's feet treading on dry leaves, realistic leather sandals, dust motes dancing in the sunlight, slow motion, epic atmosphere."
+        },
+        {
+          "sceneNumber": 8,
+          "timeRange": "14–16 s",
+          "storyBeat": "Walking into the light",
+          "title": "Act 8: Toward the Horizon",
+          "duration": 2,
+          "spokenLine": "Their journey continues into the golden light of the unknown.",
+          "effect": "dolly_out",
+          "pixarPrompt": "Rama and Lakshmana walking toward a bright clearing, their silhouettes framed by massive ancient trees, photorealistic textures of bark and leaves, 8k resolution."
+        },
+        {
+          "sceneNumber": 9,
+          "timeRange": "16–18 s",
+          "storyBeat": "Hanuman's bow",
+          "title": "Act 9: The Humble Servant",
+          "duration": 2,
+          "spokenLine": "The epic of ages unfolds with every step.",
+          "effect": "fade_in_shadow",
+          "pixarPrompt": "Hanuman bowing his head in the shadows, a gesture of absolute surrender and respect, his muscular frame illuminated by dappled light, realistic fur and skin details."
+        },
+        {
+          "sceneNumber": 10,
+          "timeRange": "18–20 s",
+          "storyBeat": "Grand finale",
+          "title": "Act 10: The Legend Begins",
+          "duration": 2,
+          "spokenLine": "The legend breathes in the heart of the wild.",
+          "effect": "zoom_out_wide",
+          "pixarPrompt": "Grand panoramic view of the vast Indian jungle at sunrise, two small figures walking into the distance, epic scale, cinematic film grain, National Geographic style photography."
+        }
+      ],
+      "subtitles": [
+        "THROUGH THE ANCIENT SHADOWS OF THE DANDAKA FOREST",
+        "RAMA LEADS WITH UNYIELDING SPIRIT",
+        "A DIVINE OBSERVER WATCHES FROM THE DEPTHS",
+        "HANUMAN RECOGNIZES THE LIGHT OF THE COSMOS",
+        "THE DESTINY OF WORLDS BEGINS TO SHIFT",
+        "THE LEGEND BREATHES IN THE HEART OF THE WILD"
+      ],
+      "youtube": {
+        "title": "The First Meeting: Rama and Hanuman | Epic Cinematic Short",
+        "description": "Witness the powerful moment in the Dandaka forest as Rama and Lakshmana are observed by the mighty Hanuman. An epic cinematic retelling of the Ramayana. #Ramayana #Hanuman #Rama #Cinematic #Shorts #Epic"
+      },
+      "characterStyle": "realistic"
+    }
+  }
+]

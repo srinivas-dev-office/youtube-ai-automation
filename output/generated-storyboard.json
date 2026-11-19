@@ -1,0 +1,172 @@
+{
+  "title": "The Horizon's Eternal Kiss",
+  "category": "Romance",
+  "tone": "Romance and Cinematic",
+  "duration": 20,
+  "durationUnit": "s",
+  "totalDurationFormatted": "20s",
+  "narration": "In the vast velvet of the cosmos, Aurora wakes with the golden light of dawn. Across the horizon, Vesper descends in a cloak of starlight and purple shadows. When their hands touch, day and night entwine in a heartbeat. Together, they weave a dance that paints the sky.",
+  "characters": [
+    {
+      "id": "char_aurora_1795002778206",
+      "name": "Aurora",
+      "type": "Lead Hero",
+      "role": "Lead Protagonist",
+      "age": "Young Spirit (Appears 10-12)",
+      "gender": "Female",
+      "skinTone": "Radiant porcelain with a golden shimmer",
+      "hairStyle": "Long, flowing hair made of pink and orange sunrise clouds",
+      "faceStructure": "Round chibi face, large sparkling amber eyes, joyful smile",
+      "bodyType": "Small, ethereal, and lightweight",
+      "costume": "Gown woven from morning mist and sunlight threads",
+      "accessories": "A crown of sunbeams and a trailing ribbon of light",
+      "identifyingFeatures": "Leaves a trail of golden glitter when she moves",
+      "personality": "Optimistic, energetic, and deeply affectionate",
+      "description": "A chibi-style celestial spirit of the dawn with glowing amber eyes and hair like a pink sunrise, wearing a dress made of light.",
+      "primaryImage": "/storage/images/char_char_aurora_1795002778206_front_1795002785086.png?_t=1795002785403",
+      "views": [
+        {
+          "id": "v_front",
+          "type": "Front Portrait",
+          "url": "/storage/images/style_chibi.svg"
+        }
+      ]
+    },
+    {
+      "id": "char_vesper_1795002778207",
+      "name": "Vesper",
+      "type": "Supporting",
+      "role": "Lead Protagonist",
+      "age": "Young Spirit (Appears 10-12)",
+      "gender": "Male",
+      "skinTone": "Soft pale with a cool lavender undertone",
+      "hairStyle": "Short, ruffled deep indigo hair with tiny twinkling stars embedded",
+      "faceStructure": "Round chibi face, calm deep violet eyes, gentle expression",
+      "bodyType": "Small, graceful, and slender",
+      "costume": "Velvet robes the color of midnight with silver embroidery",
+      "accessories": "A silver crescent moon pendant and a cloak of shadows",
+      "identifyingFeatures": "Faint blue aura and starlight glowing within his hair",
+      "personality": "Quiet, poetic, and devotedly romantic",
+      "description": "A chibi-style celestial spirit of the dusk with violet eyes and star-flecked indigo hair, wearing midnight velvet robes.",
+      "primaryImage": "/storage/images/char_char_vesper_1795002778207_front_1795002786903.png?_t=1795002787091",
+      "views": [
+        {
+          "id": "v_front",
+          "type": "Front Portrait",
+          "url": "/storage/images/style_chibi.svg"
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "scene": 1,
+      "duration": "0–5s",
+      "story": "Aurora awakens in the golden morning sky.",
+      "spokenLine": "In the vast velvet of the cosmos, Aurora wakes with the golden light of dawn.",
+      "prompt": "Chibi Aurora spirit waking up on a bed of golden clouds, big amber eyes, hair like a pink sunrise, soft cinematic lighting, romance aesthetic, 8k render, hyper-detailed."
+    },
+    {
+      "scene": 2,
+      "duration": "5–10s",
+      "story": "Vesper descends as evening falls.",
+      "spokenLine": "Across the horizon, Vesper descends in a cloak of starlight and purple shadows.",
+      "prompt": "Chibi Vesper spirit floating down from a starry sky, deep violet eyes, indigo hair with star glints, midnight velvet robes, dreamy romantic atmosphere, 8k render."
+    },
+    {
+      "scene": 3,
+      "duration": "10–15s",
+      "story": "The two spirits meet and touch hands.",
+      "spokenLine": "When their hands touch, day and night entwine in a single, glowing heartbeat.",
+      "prompt": "Close-up of chibi Aurora and Vesper reaching for each other, hands touching, sparks of gold and purple light, romantic gaze, soft focus background, chibi art style, 8k."
+    },
+    {
+      "scene": 4,
+      "duration": "15–20s",
+      "story": "They dance together, blending their colors.",
+      "spokenLine": "Together, they weave an eternal dance that paints the world's sky in love forever.",
+      "prompt": "Wide shot of chibi Aurora and Vesper dancing in the sky, pink and purple clouds swirling together, cinematic horizon, romantic lighting, magical atmosphere, 8k render."
+    }
+  ],
+  "scenes": [
+    {
+      "sceneNumber": 1,
+      "timeRange": "0–5s",
+      "storyBeat": "Aurora awakens in the golden morning sky.",
+      "title": "Act 1: The Golden Awakening",
+      "duration": 5,
+      "spokenLine": "In the vast velvet of the cosmos, Aurora wakes with the golden light of dawn.",
+      "effect": "zoom_in",
+      "pixarPrompt": "Chibi Aurora spirit waking up on a bed of golden clouds, big amber eyes, hair like a pink sunrise, soft cinematic lighting, romance aesthetic, 8k render, hyper-detailed.",
+      "videoClipPath": "C:\\Users\\alath\\Documents\\youtube-cartoon-agent\\storage\\projects\\proj_default\\videos\\scene_1_clip.mp4",
+      "videoStatus": "ready",
+      "isAiGenerated": false,
+      "fallbackUsed": true,
+      "status": "ready",
+      "hasClip": true,
+      "imageUrl": "/storage/images/scene1.png"
+    },
+    {
+      "sceneNumber": 2,
+      "timeRange": "5–10s",
+      "storyBeat": "Vesper descends as evening falls.",
+      "title": "Act 2: The Starlight Descent",
+      "duration": 5,
+      "spokenLine": "Across the horizon, Vesper descends in a cloak of starlight and purple shadows.",
+      "effect": "pan_right",
+      "pixarPrompt": "Chibi Vesper spirit floating down from a starry sky, deep violet eyes, indigo hair with star glints, midnight velvet robes, dreamy romantic atmosphere, 8k render.",
+      "videoClipPath": "C:\\Users\\alath\\Documents\\youtube-cartoon-agent\\storage\\projects\\proj_default\\videos\\scene_2_clip.mp4",
+      "videoStatus": "ready",
+      "isAiGenerated": false,
+      "fallbackUsed": true,
+      "status": "ready",
+      "hasClip": true,
+      "imageUrl": "/storage/images/scene2.png"
+    },
+    {
+      "sceneNumber": 3,
+      "timeRange": "10–15s",
+      "storyBeat": "The two spirits meet and touch hands.",
+      "title": "Act 3: The Celestial Contact",
+      "duration": 5,
+      "spokenLine": "When their hands touch, day and night entwine in a single, glowing heartbeat.",
+      "effect": "close_up",
+      "pixarPrompt": "Close-up of chibi Aurora and Vesper reaching for each other, hands touching, sparks of gold and purple light, romantic gaze, soft focus background, chibi art style, 8k.",
+      "videoClipPath": "C:\\Users\\alath\\Documents\\youtube-cartoon-agent\\storage\\projects\\proj_default\\videos\\scene_3_clip.mp4",
+      "videoStatus": "ready",
+      "isAiGenerated": false,
+      "fallbackUsed": true,
+      "status": "ready",
+      "hasClip": true,
+      "imageUrl": "/storage/images/scene3.png"
+    },
+    {
+      "sceneNumber": 4,
+      "timeRange": "15–20s",
+      "storyBeat": "They dance together, blending their colors.",
+      "title": "Act 4: The Eternal Dance",
+      "duration": 5,
+      "spokenLine": "Together, they weave an eternal dance that paints the world's sky in love forever.",
+      "effect": "wide_angle",
+      "pixarPrompt": "Wide shot of chibi Aurora and Vesper dancing in the sky, pink and purple clouds swirling together, cinematic horizon, romantic lighting, magical atmosphere, 8k render.",
+      "videoClipPath": "C:\\Users\\alath\\Documents\\youtube-cartoon-agent\\storage\\projects\\proj_default\\videos\\scene_4_clip.mp4",
+      "videoStatus": "ready",
+      "isAiGenerated": false,
+      "fallbackUsed": true,
+      "status": "ready",
+      "hasClip": true,
+      "imageUrl": "/storage/images/scene4.png"
+    }
+  ],
+  "subtitles": [
+    "AURORA WAKES WITH THE GOLDEN LIGHT OF DAWN.",
+    "VESPER DESCENDS IN A CLOAK OF STARLIGHT.",
+    "DAY AND NIGHT ENTWINE IN A HEARTBEAT.",
+    "THEY WEAVE A DANCE THAT PAINTS THE SKY."
+  ],
+  "youtube": {
+    "title": "A Celestial Romance: Dawn Meets Dusk #Shorts",
+    "description": "Watch the eternal dance of Aurora and Vesper as day and night fall in love. A cinematic chibi romance. #Shorts #Romance #Celestial #ChibiStyle #Cinematic"
+  },
+  "characterStyle": "chibi"
+}

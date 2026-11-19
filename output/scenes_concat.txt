@@ -1,0 +1,4 @@
+file 'C:/Users/alath/Documents/youtube-cartoon-agent/output/scene_clip_1.mp4'
+file 'C:/Users/alath/Documents/youtube-cartoon-agent/output/scene_clip_2.mp4'
+file 'C:/Users/alath/Documents/youtube-cartoon-agent/output/scene_clip_3.mp4'
+file 'C:/Users/alath/Documents/youtube-cartoon-agent/output/scene_clip_4.mp4'

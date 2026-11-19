@@ -1,0 +1,27 @@
+[
+  {
+    "id": "char_leo_rossi_1794984674976",
+    "name": "Leo Rossi",
+    "type": "Lead Hero",
+    "role": "Lead Protagonist",
+    "age": "Young Man (22 years)",
+    "gender": "Male",
+    "skinTone": "Olive-toned Italian complexion with beads of sweat",
+    "hairStyle": "Short, dark, damp hair matted against his forehead",
+    "faceStructure": "Sharp jawline, intense blue eyes focused with adrenaline, determined expression",
+    "bodyType": "Lean, athletic build built for high G-force endurance",
+    "costume": "Fire-retardant carbon-fiber weave racing suit in matte black and neon red",
+    "accessories": "Aerodynamic carbon-fiber helmet with a polarized iridescent visor",
+    "identifyingFeatures": "A small scar on his left eyebrow, visible grit and oil smudges on his face",
+    "personality": "Fearless, hyper-focused, and strategically brilliant",
+    "description": "A photorealistic 22-year-old male racing driver with intense blue eyes and an olive complexion, wearing a professional black and red racing suit, exhibiting extreme focus and grit.",
+    "primaryImage": "/storage/images/char_char_leo_rossi_1794984674976_front_1794984681329.png?_t=1794984681596",
+    "views": [
+      {
+        "id": "v_front",
+        "type": "Front Portrait",
+        "url": "/storage/images/style_realistic.svg"
+      }
+    ]
+  }
+]
